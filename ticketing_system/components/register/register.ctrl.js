@@ -20,7 +20,7 @@ angular.module('app.ctrl').register.controller('registerController', function (u
 
         userService.register(user, function () {
             alert("Account registered");
-            window.location.href = "../panel";
+            window.location.href = "#/login";
         }, function () {
             alert("Invalid register");
         });
