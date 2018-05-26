@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="section">
+        <p class="caption">Hello {{profileController.profileForm.firstName}}! Here you can see and edit your
+            information</p>
+        <div class="divider"></div>
+        <div id="contact-page" class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <form class="contact-form">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="First name" id="firstName" type="text"
+                                           ng-model="profileController.profileForm.firstName">
+                                    <label for="firstName" class="active">First name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Last name" id="lastName" type="text"
+                                           ng-model="profileController.profileForm.lastName">
+                                    <label for="lastName" class="active">Last name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Email" id="email" type="email"
+                                           ng-model="profileController.profileForm.email">
+                                    <label for="email" class="active">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Password" id="password" type="password"
+                                           ng-model="profileController.profileForm.password">
+                                    <label for="password" class="active">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Confirm password" id="confirmPassword" type="password"
+                                           ng-model="profileController.profileForm.confirmPassword">
+                                    <label for="password" class="active">Confirm password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s12 light-blue darken-3"
+                                           ng-click="profileController.update()">
+                                    </input>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

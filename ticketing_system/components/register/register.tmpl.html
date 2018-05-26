@@ -1,0 +1,60 @@
+<div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+        <form class="login-form">
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <p class="center login-form-text">Ticketing system</p>
+                    <h4>Register</h4>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">person_outline</i>
+                    <input id="first_name" type="text" ng-model="registerController.registerForm.firstName">
+                    <label for="first_name" class="center-align">First name</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">person_outline</i>
+                    <input id="last_name" type="text" ng-model="registerController.registerForm.lastName">
+                    <label for="last_name" class="center-align">Last name</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">mail_outline</i>
+                    <input id="username" type="text" ng-model="registerController.registerForm.email">
+                    <label for="username" class="center-align">Email</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">lock_outline</i>
+                    <input id="password" type="password" ng-model="registerController.registerForm.password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">lock_outline</i>
+                    <input id="confirm_password" type="password"
+                           ng-model="registerController.registerForm.confirmPassword">
+                    <label for="confirm_password">Confirm password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="submit" value="Register now"
+                           class="btn waves-effect waves-light col s12 light-blue darken-3"
+                           ng-click="registerController.register()">
+                </div>
+                <div class="input-field col s12">
+                    <p class="margin center medium-small sign-up">Already have an account? <a href="#/login"
+                                                                                              class="light-blue-text text-darken-3">Login</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

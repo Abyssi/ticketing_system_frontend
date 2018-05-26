@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700%7CRubik:400,400i,500");
+
+html {
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.avatar-status {
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    width: 28px;
+    white-space: nowrap;
+    border-radius: 1000px;
+    vertical-align: bottom;
+}
+
+.avatar-status img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: #e6e6e6;
+    border: 0 none;
+    border-radius: 1000px;
+}
+
+.margin {
+    margin: 0 !important;
+}
+
+.more-text {
+    padding: 5px 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#left-sidebar-nav {
+    position: fixed;
+    width: 100px;
+    left: 180px;
+    z-index: 999;
+    height: auto;
+}
+
+#main {
+    min-height: calc(100vh - 50px);
+}
+
+@media only screen and (max-width: 992px) {
+    ul.sidenav.leftside-navigation {
+        top: 56px !important;
+    }
+}
+
+ul.sidenav.leftside-navigation {
+    top: 64px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.sidenav {
+    width: 240px
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+h1.logo-wrapper {
+    margin: 0;
+}
+
+h1 span.logo-text {
+    font-size: 26px;
+    padding-left: 8px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+footer {
+    padding-left: 100px;
+}
+
+.side-nav li > a {
+    padding: 0 16px;
+}
+
+.side-nav .divider {
+    margin: 0;
+    height: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+}
+
+section {
+    padding-left: 100px;
+}
+
+.container {
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    max-width: 100% !important;
+}
+
+.caption {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.opened {
+    display: block;
+}
+
+/*----------------------------------------
+    Inputs
+------------------------------------------*/
+.input-field input:focus + label {
+    color: #03a9f4 !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #03a9f4 !important;
+    box-shadow: 0 1px 0 0 #03a9f4 !important;
+}
+
+.input-field .prefix.active {
+    color: #2196F3 !important;
+}

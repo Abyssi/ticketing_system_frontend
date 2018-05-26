@@ -1,0 +1,42 @@
+<div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+        <form class="login-form">
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <p class="center login-form-text">Ticketing system</p>
+                    <h4>Login</h4>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">mail_outline</i>
+                    <input id="username" type="text" ng-model="loginController.loginForm.email">
+                    <label for="username" class="center-align">Email</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-5 light-blue-text">lock_outline</i>
+                    <input id="password" type="password" ng-model="loginController.loginForm.password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="submit" value="Login" class="btn waves-effect waves-light col s12 light-blue darken-3"
+                           ng-click="loginController.login()">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 m6 l6">
+                    <p class="margin medium-small"><a href="#/register" class="light-blue-text text-darken-3">Register
+                        Now!</a></p>
+                </div>
+                <div class="input-field col s6 m6 l6">
+                    <p class="margin right-align medium-small"><a href="#/forgot" class="light-blue-text text-darken-3">Forgot
+                        password?</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
