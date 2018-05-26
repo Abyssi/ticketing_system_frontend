@@ -9,6 +9,7 @@
             <li ng-repeat="ticket in ticketListController.tickets">
                 <a href="#/ticketEdit/{{ticket.id}}">
                     <div class="collection-item">
+                        <span class="secondary-content description">{{ticket.creationTimestamp | toYear}}</span>
                         <span class="task-cat light-blue">{{ticket.title}}</span>
                         <span class="description">{{ticket.description}}</span>
                     </div>
@@ -17,6 +18,8 @@
         </ul>
     </div>
     <ul class="pagination">
-        <li ng-repeat="i in ticketListController.getPages()" class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/ticketList/{{i}}">{{i}}</a></li>
+        <li ng-repeat="i in ticketListController.getPages()"
+            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/ticketList/{{i}}">{{i}}</a>
+        </li>
     </ul>
 </div>

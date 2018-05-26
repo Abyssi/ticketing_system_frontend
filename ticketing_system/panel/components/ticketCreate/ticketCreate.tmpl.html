@@ -1,62 +1,94 @@
 <div class="container">
     <div class="section">
-        <p class="caption">Hello {{profileController.profileForm.firstName}}! Here you can see and edit your
-            information</p>
+        <p class="caption">Here you can create a ticket</p>
         <div class="divider"></div>
-        <div id="contact-page" class="card">
+        <div id="ticket-create-page" class="card">
             <div class="card-content">
                 <div class="row">
                     <div class="col s12">
-                        <form class="contact-form">
+                        <form>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="First name" id="firstName" type="text"
-                                           ng-model="profileController.profileForm.firstName">
-                                    <label for="firstName" class="active">First name</label>
+                                    <input placeholder="Title" id="title" type="text"
+                                           ng-model="ticketCreateController.ticketForm.title">
+                                    <label for="title" class="active">Title</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Last name" id="lastName" type="text"
-                                           ng-model="profileController.profileForm.lastName">
-                                    <label for="lastName" class="active">Last name</label>
+                                    <input placeholder="Description" id="description" type="text"
+                                           ng-model="ticketCreateController.ticketForm.description">
+                                    <label for="description" class="active">Description</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Email" id="email" type="email"
-                                           ng-model="profileController.profileForm.email">
-                                    <label for="email" class="active">Email</label>
+                                    <select ng-model="ticketCreateController.ticketForm.visibility.id">
+                                        <option value="" disabled selected>Choose visibility</option>
+                                        <option ng-repeat="visibility in ticketCreateController.visibilities"
+                                                value="{{visibility.id}}">{{visibility.name}}
+                                        </option>
+                                    </select>
+                                    <label>Choose visibility</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Password" id="password" type="password"
-                                           ng-model="profileController.profileForm.password">
-                                    <label for="password" class="active">Password</label>
+                                    <select ng-model="ticketCreateController.ticketForm.assignee.id">
+                                        <option value="" disabled selected>Choose assignee</option>
+                                        <option ng-repeat="assignee in ticketCreateController.assignees"
+                                                value="{{assignee.id}}">{{assignee.firstName}}
+                                        </option>
+                                    </select>
+                                    <label>Choose assignee</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Confirm password" id="confirmPassword" type="password"
-                                           ng-model="profileController.profileForm.confirmPassword">
-                                    <label for="password" class="active">Confirm password</label>
+                                    <select ng-model="ticketCreateController.ticketForm.category.id">
+                                        <option value="" disabled selected>Choose category</option>
+                                        <option ng-repeat="category in ticketCreateController.categories"
+                                                value="{{category.id}}">{{category.name}}
+                                        </option>
+                                    </select>
+                                    <label>Choose category</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input type="submit" value="Update"
+                                    <select ng-model="ticketCreateController.ticketForm.target.id">
+                                        <option value="" disabled selected>Choose target</option>
+                                        <option ng-repeat="target in ticketCreateController.targets"
+                                                value="{{target.id}}">{{target.name}}
+                                        </option>
+                                    </select>
+                                    <label>Choose target</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select ng-model="ticketCreateController.ticketForm.customerPriority.id">
+                                        <option value="" disabled selected>Choose priority</option>
+                                        <option ng-repeat="priority in ticketCreateController.priorities"
+                                                value="{{priority.id}}">{{priority.name}}
+                                        </option>
+                                    </select>
+                                    <label>Choose priority</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" value="Create"
                                            class="btn waves-effect waves-light col s12 light-blue darken-3"
-                                           ng-click="profileController.update()">
+                                           ng-click="ticketCreateController.create()">
                                     </input>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>

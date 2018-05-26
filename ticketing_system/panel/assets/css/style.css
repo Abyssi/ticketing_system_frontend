@@ -166,7 +166,6 @@ p {
     padding: 20px;
 }
 
-
 #task-card .task-cat {
     padding: 2px 4px;
     color: #fff;
@@ -199,10 +198,11 @@ p {
 .pagination li.active {
     background-color: #03a9f4;
 }
-.sidenav .collapsible-body>ul:not(.collapsible)>li.active, .sidenav.sidenav-fixed .collapsible-body>ul:not(.collapsible)>li.active {
+
+.sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
     background-color: #03a9f4;
 }
 
-.dropdown-content li>a, .dropdown-content li>span {
+.dropdown-content li > a, .dropdown-content li > span {
     color: #03a9f4;
 }

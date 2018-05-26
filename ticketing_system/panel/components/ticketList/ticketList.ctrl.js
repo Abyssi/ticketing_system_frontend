@@ -8,6 +8,8 @@ angular.module('app.ctrl').register.controller('ticketListController', function 
     self.totalPages = -1;
 
     self.init = function () {
+        if (!userService.isLogged()) window.location.href = "../";
+
         ticketService.get(self.currentPage - 1, 10, function (response) {
             self.tickets = response.data.content;
             self.totalPages = response.data.totalPages;

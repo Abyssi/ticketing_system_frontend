@@ -10,6 +10,7 @@ $script.ready('angular', function () {
         $script(['directives/sidebar.drct.js']);
         angular.element(document.querySelector('#slide-out')).attr('sidebar-active-link', 'true');
 
+        $script(['filters/timestamp.fltr.js']);
         $script.ready('ticketing_system-dep', function () {
             $script('app/app.js', function () {
                 angular.bootstrap(document, ['app']);

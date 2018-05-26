@@ -13,6 +13,20 @@ angular.module('app.srvc').register.service('ticketService', function ($http, $q
         });
     };
 
+    self.create = function (ticket, success, error) {
+        self.httpAsync($http.put(self.SERVER_URI + self.TICKET_API_ENDPOINT, ticket), success, function (response) {
+            console.log("Error during create");
+            if (error != null) error(response);
+        });
+    };
+
+    self.metadata = function (success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT + "metadata"), success, function (response) {
+            console.log("Error during metadata");
+            if (error != null) error(response);
+        });
+    };
+
     self.httpAsync = function (httpRequest, success, error) {
         const deferred = $q.defer();
         httpRequest.then(
