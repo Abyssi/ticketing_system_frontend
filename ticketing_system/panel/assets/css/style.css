@@ -202,3 +202,7 @@ p {
 .sidenav .collapsible-body>ul:not(.collapsible)>li.active, .sidenav.sidenav-fixed .collapsible-body>ul:not(.collapsible)>li.active {
     background-color: #03a9f4;
 }
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #03a9f4;
+}
