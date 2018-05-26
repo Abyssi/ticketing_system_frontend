@@ -13,7 +13,7 @@ angular.module('app.ctrl').register.controller('profileController', function (us
             self.profileForm.email = response.data["email"];
         }, function () {
             userService.logout(function () {
-                window.location.href = "../"
+                window.location.href = "../";
             });
             alert("Invalid self");
         });

@@ -32,7 +32,10 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
     $routeProvider
         .when('/profile', resolveRoute("components/", "profile", "profileController as profileController", ["services/user.srvc.js"]))
         .when('/logout', resolveRoute("components/", "logout", "logoutController as logoutController", ["services/user.srvc.js"]))
-        .when('/ticketList', resolveRoute("components/", "ticketList", "ticketListController as ticketListController", ["services/ticket.srvc.js"]))
-        .when('/ticketCreate', resolveRoute("components/", "ticketCreate", "ticketCreateController as ticketCreateController", ["services/ticket.srvc.js"]))
+        .when('/ticketList', {redirectTo: '/ticketList/1'})
+        .when('/ticketList/:page', resolveRoute("components/", "ticketList", "ticketListController as ticketListController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/ticketCreate', resolveRoute("components/", "ticketCreate", "ticketCreateController as ticketCreateController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/ticketEdit/:id', resolveRoute("components/", "ticketEdit", "ticketEditController as ticketEditController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+
         .otherwise({redirectTo: '/profile'});
 });
