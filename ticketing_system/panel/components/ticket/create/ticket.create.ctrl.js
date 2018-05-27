@@ -54,10 +54,9 @@ angular.module('app.ctrl').register.controller('ticketCreateController', functio
 
         const ticket = self.ticketForm;
 
-        console.log(ticket);
         ticketService.create(ticket, function () {
             alert("Ticket created");
-            window.location.reload();
+            window.location.href = "#/ticket/list";
         }, function () {
             alert("Invalid create");
         });

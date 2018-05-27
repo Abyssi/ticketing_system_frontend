@@ -24,18 +24,19 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
     };
 
     var resolveRoute = function (basePath, name, controller, services) {
-        return route(basePath + name + "/" + name + ".tmpl.html", controller, null, (services == null ? [] : services).concat([basePath + name + "/" + name + ".ctrl.js"]));
+        return route(basePath + "/" + name + ".tmpl.html", controller, null, (services == null ? [] : services).concat([basePath + "/" + name + ".ctrl.js"]));
     };
 
     $locationProvider.hashPrefix('');
 
     $routeProvider
-        .when('/profile', resolveRoute("components/", "profile", "profileController as profileController", ["services/user.srvc.js"]))
-        .when('/logout', resolveRoute("components/", "logout", "logoutController as logoutController", ["services/user.srvc.js"]))
-        .when('/ticketList', {redirectTo: '/ticketList/1'})
-        .when('/ticketList/:page', resolveRoute("components/", "ticketList", "ticketListController as ticketListController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
-        .when('/ticketCreate', resolveRoute("components/", "ticketCreate", "ticketCreateController as ticketCreateController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
-        .when('/ticketEdit/:id', resolveRoute("components/", "ticketEdit", "ticketEditController as ticketEditController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/profile', resolveRoute("components/profile", "profile", "profileController as profileController", ["services/user.srvc.js"]))
+        .when('/logout', resolveRoute("components/logout", "logout", "logoutController as logoutController", ["services/user.srvc.js"]))
+
+        .when('/ticket/create', resolveRoute("components/ticket/create", "ticket.create", "ticketCreateController as ticketCreateController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/ticket/edit/:id', resolveRoute("components/ticket/edit", "ticket.edit", "ticketEditController as ticketEditController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/ticket/list/:page', resolveRoute("components/ticket/list", "ticket.list", "ticketListController as ticketListController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
+        .when('/ticket/list', {redirectTo: '/ticket/list/1'})
 
         .otherwise({redirectTo: '/profile'});
 });

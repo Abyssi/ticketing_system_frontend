@@ -1,21 +1,44 @@
 'use strict';
 
-angular.module('app.srvc').register.service('ticketService', function ($http, $q, $cookies, userService) {
+angular.module('app.srvc').register.service('ticketService', function ($http, $q) {
     const self = this;
 
     self.SERVER_URI = 'http://localhost:8200/';
     self.TICKET_API_ENDPOINT = 'api/v1/tickets/';
 
-    self.get = function (page, pageSize, success, error) {
-        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT + "?page=" + page + (pageSize != null ? "&pageSize=" + pageSize : "")), success, function (response) {
+    // API
+
+    self.create = function (ticket, success, error) {
+        self.httpAsync($http.put(self.SERVER_URI + self.TICKET_API_ENDPOINT, ticket), success, function (response) {
+            console.log("Error during create");
+            if (error != null) error(response);
+        });
+    };
+
+    self.get = function (id, success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT + id), success, function (response) {
             console.log("Error during get");
             if (error != null) error(response);
         });
     };
 
-    self.create = function (ticket, success, error) {
-        self.httpAsync($http.put(self.SERVER_URI + self.TICKET_API_ENDPOINT, ticket), success, function (response) {
-            console.log("Error during create");
+    self.update = function (id, ticket, success, error) {
+        self.httpAsync($http.post(self.SERVER_URI + self.TICKET_API_ENDPOINT + id, ticket), success, function (response) {
+            console.log("Error during update");
+            if (error != null) error(response);
+        });
+    };
+
+    self.delete = function (id, success, error) {
+        self.httpAsync($http.delete(self.SERVER_URI + self.TICKET_API_ENDPOINT + id), success, function (response) {
+            console.log("Error during delete");
+            if (error != null) error(response);
+        });
+    };
+
+    self.list = function (page, pageSize, success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT + "?page=" + page + (pageSize != null ? "&pageSize=" + pageSize : "")), success, function (response) {
+            console.log("Error during list");
             if (error != null) error(response);
         });
     };
@@ -26,6 +49,8 @@ angular.module('app.srvc').register.service('ticketService', function ($http, $q
             if (error != null) error(response);
         });
     };
+
+    // Support functions
 
     self.httpAsync = function (httpRequest, success, error) {
         const deferred = $q.defer();
@@ -41,9 +66,4 @@ angular.module('app.srvc').register.service('ticketService', function ($http, $q
         );
         return deferred.promise;
     };
-
-    self.init = function () {
-        if (userService.isLogged())
-            $http.defaults.headers.common["Authorization"] = 'Bearer ' + $cookies.get("access_token");
-    }();
 });

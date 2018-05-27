@@ -22,5 +22,6 @@
     "by": false
   },
   "debug": true,
-  "devel": true
+  "devel": true,
+  "esversion": 6
 }
