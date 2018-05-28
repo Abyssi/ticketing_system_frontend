@@ -10,7 +10,14 @@ $script.ready('angular', function () {
         $script(['directives/sidebar.drct.js']);
         angular.element(document.querySelector('#slide-out')).attr('sidebar-active-link', 'true');
 
-        $script(['filters/timestamp.fltr.js']);
+        $script(['../bower_components/later/later.min.js','../bower_components/moment/moment.js'], 'pretty');
+
+        $script.ready('pretty', function () {
+            $script(['../bower_components/prettycron/prettycron.js']);
+        });
+
+        $script(['filters/timestamp.fltr.js', 'filters/cron.fltr.js']);
+
         $script.ready('ticketing_system-dep', function () {
             $script('app/app.js', function () {
                 angular.bootstrap(document, ['app']);
