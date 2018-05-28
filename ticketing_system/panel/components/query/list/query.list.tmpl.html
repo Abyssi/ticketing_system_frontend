@@ -1,0 +1,25 @@
+<div class="section">
+    <p class="caption">Here you can view all team</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <ul id="task-card" class="collection with-header">
+            <li class="collection-header gradient-45deg-light-blue-cyan">
+                <h4 class="task-card-title">My Teams</h4>
+            </li>
+            <li ng-repeat="query in queryListController.queries">
+                <a href="#/query/edit/{{query.id}}">
+                    <div class="collection-item">
+                        <span class="secondary-content description">{{query.cron}}</span>
+                        <span class="task-cat light-blue">{{query.description}}</span>
+                        <span class="description">{{query.queryText}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="pagination">
+        <li ng-repeat="i in queryListController.getPages()"
+            class="{{queryListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/query/list/{{i}}">{{i}}</a>
+        </li>
+    </ul>
+</div>
