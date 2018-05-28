@@ -29,6 +29,13 @@ angular.module('app.srvc').register.service('userService', function ($http, $q, 
         });
     };
 
+    self.list = function (page, pageSize, success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.USER_API_ENDPOINT + "?page=" + page + (pageSize != null ? "&pageSize=" + pageSize : "")), success, function (response) {
+            console.log("Error during list");
+            if (error != null) error(response);
+        });
+    };
+
     // Authentication
 
     self.isLogged = function () {

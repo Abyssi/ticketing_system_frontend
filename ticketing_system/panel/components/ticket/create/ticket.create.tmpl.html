@@ -34,17 +34,6 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.assignee.id">
-                                        <option value="" disabled selected>Choose assignee</option>
-                                        <option ng-repeat="assignee in ticketCreateController.assignees"
-                                                value="{{assignee.id}}">{{assignee.firstName}}
-                                        </option>
-                                    </select>
-                                    <label>Choose assignee</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
                                     <select ng-model="ticketCreateController.ticketForm.category.id">
                                         <option value="" disabled selected>Choose category</option>
                                         <option ng-repeat="category in ticketCreateController.categories"

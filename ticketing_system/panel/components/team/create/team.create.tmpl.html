@@ -9,79 +9,62 @@
                         <form>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Title" id="title" type="text"
-                                           ng-model="ticketCreateController.ticketForm.title">
-                                    <label for="title" class="active">Title</label>
+                                    <input placeholder="Name" id="name" type="text"
+                                           ng-model="teamCreateController.teamForm.name">
+                                    <label for="name" class="active">Name</label>
                                 </div>
                             </div>
+
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="Description" id="description" type="text"
-                                           ng-model="ticketCreateController.ticketForm.description">
-                                    <label for="description" class="active">Description</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.visibility.id">
-                                        <option value="" disabled selected>Choose visibility</option>
-                                        <option ng-repeat="visibility in ticketCreateController.visibilities"
-                                                value="{{visibility.id}}">{{visibility.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose visibility</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.assignee.id">
-                                        <option value="" disabled selected>Choose assignee</option>
-                                        <option ng-repeat="assignee in ticketCreateController.assignees"
-                                                value="{{assignee.id}}">{{assignee.firstName}}
-                                        </option>
-                                    </select>
-                                    <label>Choose assignee</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.category.id">
-                                        <option value="" disabled selected>Choose category</option>
-                                        <option ng-repeat="category in ticketCreateController.categories"
-                                                value="{{category.id}}">{{category.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose category</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.target.id">
-                                        <option value="" disabled selected>Choose target</option>
-                                        <option ng-repeat="target in ticketCreateController.targets"
-                                                value="{{target.id}}">{{target.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose target</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.customerPriority.id">
-                                        <option value="" disabled selected>Choose priority</option>
-                                        <option ng-repeat="priority in ticketCreateController.priorities"
-                                                value="{{priority.id}}">{{priority.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose priority</label>
+                                <div class="input-field col s12 ">
+                                    <div id="leader" class="collection-item task-card" ng-if="teamCreateController.teamForm.leader !== ''">
+                                        <button class="secondary-content btn-small waves-effect waves-light red darken-3" ng-click="teamCreateController.removeLeader()">X</button>
+                                        <span class="task-cat light-blue">{{teamCreateController.teamForm.leader.firstName}} {{teamCreateController.teamForm.leader.lastName}}</span>
+                                        <span class="description">{{teamCreateController.teamForm.leader.email}}</span>
+                                    </div>
+                                    <label for="leader" class="active">Leader</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="input-field col s12">
+                                    <ul id="members" class="collection task-card">
+                                        <li ng-repeat="user in teamCreateController.teamForm.members">
+                                            <a ng-click="teamCreateController.setLeader(user)">
+                                                <div class="collection-item">
+                                                    <button class="secondary-content btn-small waves-effect waves-light red darken-3" ng-click="teamCreateController.removeMember(user)">X</button>
+                                                    <span class="task-cat light-blue">{{user.firstName}} {{user.lastName}}</span>
+                                                    <span class="description">{{user.email}}</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <label for="members" class="active">Members</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <ul id="users" class="collection task-card">
+                                        <li ng-repeat="user in teamCreateController.users">
+                                            <a ng-click="teamCreateController.addMember(user)">
+                                                <div class="collection-item">
+                                                    <span class="task-cat light-blue">{{user.firstName}} {{user.lastName}}</span>
+                                                    <span class="description">{{user.email}}</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <label for="users" class="active">Users</label>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="input-field col s12">
                                     <input type="submit" value="Create"
                                            class="btn waves-effect waves-light col s12 light-blue darken-3"
-                                           ng-click="ticketCreateController.create()">
+                                           ng-click="teamCreateController.create()">
                                     </input>
                                 </div>
                             </div>

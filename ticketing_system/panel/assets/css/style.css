@@ -141,7 +141,7 @@ footer {
     background: linear-gradient(45deg, #0288d1 0%, #26c6da 100%);
 }
 
-#task-card .task-card-title {
+.task-card .task-card-title {
     margin: 0;
     color: #fff;
     font-weight: 300;
@@ -156,17 +156,17 @@ p {
     font-family: "Roboto", sans-serif;
 }
 
-#task-card .task-card-date {
+.task-card .task-card-date {
     font-size: 1.0rem;
     margin: 0;
     color: #fff;
 }
 
-#task-card .collection-header {
+.task-card .collection-header {
     padding: 20px;
 }
 
-#task-card .task-cat {
+.task-card .task-cat {
     padding: 2px 4px;
     color: #fff;
     font-weight: 300;

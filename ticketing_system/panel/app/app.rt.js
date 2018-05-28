@@ -38,5 +38,10 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         .when('/ticket/list/:page', resolveRoute("components/ticket/list", "ticket.list", "ticketListController as ticketListController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
         .when('/ticket/list', {redirectTo: '/ticket/list/1'})
 
+        .when('/team/create', resolveRoute("components/team/create", "team.create", "teamCreateController as teamCreateController", ["services/user.srvc.js", "services/team.srvc.js"]))
+        .when('/team/edit/:id', resolveRoute("components/team/edit", "team.edit", "teamEditController as teamEditController", ["services/user.srvc.js", "services/team.srvc.js"]))
+        .when('/team/list/:page', resolveRoute("components/team/list", "team.list", "teamListController as teamListController", ["services/user.srvc.js", "services/team.srvc.js"]))
+        .when('/team/list', {redirectTo: '/team/list/1'})
+
         .otherwise({redirectTo: '/profile'});
 });
