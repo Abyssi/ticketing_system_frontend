@@ -38,5 +38,10 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         .when('/ticket/list/:page', resolveRoute("components/ticket/list", "ticket.list", "ticketListController as ticketListController", ["services/user.srvc.js", "services/ticket.srvc.js"]))
         .when('/ticket/list', {redirectTo: '/ticket/list/1'})
 
+        .when('/product/create', resolveRoute("components/product/create", "product.create", "productCreateController as productCreateController", ["services/user.srvc.js", "services/ticket.srvc.js", "services/product.srvc.js"]))
+        .when('/product/edit/:id', resolveRoute("components/product/edit", "product.edit", "productEditController as productEditController", ["services/user.srvc.js", "services/ticket.srvc.js", "services/product.srvc.js"]))
+        .when('/product/list/:page', resolveRoute("components/product/list", "product.list", "productListController as productListController", ["services/user.srvc.js", "services/ticket.srvc.js", "services/product.srvc.js"]))
+        .when('/product/list', {redirectTo: '/product/list/1'})
+
         .otherwise({redirectTo: '/profile'});
 });

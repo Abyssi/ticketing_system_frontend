@@ -1,0 +1,24 @@
+<div class="section">
+    <p class="caption">Here you can view all opened products</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <ul id="task-card" class="collection with-header">
+            <li class="collection-header gradient-45deg-light-blue-cyan">
+                <h4 class="task-card-title">My products</h4>
+            </li>
+            <li ng-repeat="product in productListController.products">
+                <a href="#/product/edit/{{product.id}}">
+                    <div class="collection-item">
+                        <span class="task-cat light-blue">{{product.name}}</span>
+                        <span class="description">{{product.version}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="pagination">
+        <li ng-repeat="i in productListController.getPages()"
+            class="{{productListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/product/list/{{i}}">{{i}}</a>
+        </li>
+    </ul>
+</div>
