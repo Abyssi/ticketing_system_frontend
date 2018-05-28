@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="section">
+        <p class="caption">Here you can create a product</p>
+        <div class="divider"></div>
+        <div id="product-create-page" class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Name" id="name" type="text"
+                                           ng-model="productCreateController.productForm.name">
+                                    <label for="name" class="active">Name</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Version" id="version" type="text"
+                                           ng-model="productCreateController.productForm.version">
+                                    <label for="version" class="active">Version</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" value="Create"
+                                           class="btn waves-effect waves-light col s12 light-blue darken-3"
+                                           ng-click="productCreateController.create()">
+                                    </input>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
