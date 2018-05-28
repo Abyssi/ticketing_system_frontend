@@ -16,6 +16,7 @@
             </li>
         </ul>
     </div>
+
     <ul class="pagination">
         <li ng-repeat="i in productListController.getPages()"
             class="{{productListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/product/list/{{i}}">{{i}}</a>

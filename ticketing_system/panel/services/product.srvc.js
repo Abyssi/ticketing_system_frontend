@@ -59,4 +59,5 @@ angular.module('app.srvc').register.service('productService', function ($http, $
         );
         return deferred.promise;
     };
+
 });

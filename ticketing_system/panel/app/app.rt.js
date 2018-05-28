@@ -43,5 +43,6 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         .when('/product/list/:page', resolveRoute("components/product/list", "product.list", "productListController as productListController", ["services/user.srvc.js", "services/ticket.srvc.js", "services/product.srvc.js"]))
         .when('/product/list', {redirectTo: '/product/list/1'})
 
+
         .otherwise({redirectTo: '/profile'});
 });

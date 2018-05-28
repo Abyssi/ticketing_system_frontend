@@ -53,4 +53,5 @@ angular.module('app.ctrl').register.controller('productEditController', function
         return form.name.length > 1 &&
             form.version.length > 1;
     };
+
 });

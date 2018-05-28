@@ -8,7 +8,6 @@ angular.module('app.ctrl').register.controller('productCreateController', functi
         version: ''
     };
 
-
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
