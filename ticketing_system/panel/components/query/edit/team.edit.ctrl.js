@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').register.controller('ticketEditController', function ($routeParams, userService, ticketService, $timeout) {
+angular.module('app.ctrl').register.controller('teamEditController', function ($routeParams, userService, ticketService, $timeout) {
     const self = this;
 
     self.ticketForm = {
@@ -8,9 +8,9 @@ angular.module('app.ctrl').register.controller('ticketEditController', function 
             id: ''
         },
         description: '',
-        //assignee: {
-            //id: ''
-        //},
+        assignee: {
+            id: ''
+        },
         category: {
             id: ''
         },
@@ -25,7 +25,7 @@ angular.module('app.ctrl').register.controller('ticketEditController', function 
     self.ticketId = $routeParams.id;
 
     self.visibilities = [];
-    //self.assignees = [];
+    self.assignees = [];
     self.categories = [];
     self.targets = [];
     self.priorities = [];
@@ -36,7 +36,7 @@ angular.module('app.ctrl').register.controller('ticketEditController', function 
         ticketService.get(self.ticketId, function (response) {
             self.ticketForm.visibility.id = response.data.visibility.id.toString();
             self.ticketForm.description = response.data.description;
-            //self.ticketForm.assignee.id = response.data.assignee.id.toString();
+            self.ticketForm.assignee.id = response.data.assignee.id.toString();
             self.ticketForm.category.id = response.data.category.id.toString();
             self.ticketForm.title = response.data.title;
             self.ticketForm.target.id = response.data.target.id.toString();
@@ -47,7 +47,7 @@ angular.module('app.ctrl').register.controller('ticketEditController', function 
 
         ticketService.metadata(function (response) {
             self.visibilities = response.data.visibilities;
-            //self.assignees = response.data.assignees;
+            self.assignees = response.data.assignees;
             self.categories = response.data.categories;
             self.targets = response.data.targets;
             self.priorities = response.data.priorities;

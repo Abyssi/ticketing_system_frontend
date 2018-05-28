@@ -1,11 +1,22 @@
 'use strict';
 
-angular.module('app.ctrl').register.controller('teamListController', function ($routeParams, userService, teamService) {
+angular.module('app.ctrl').register.controller('productListController', function ($routeParams, userService, ticketService, productService) {
     const self = this;
 
-    self.teams = [];
+    self.products = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
+
+    self.init = function () {
+        if (!userService.isLogged()) window.location.href = "../";
+
+        productService.list(self.currentPage - 1, 10, function (response) {
+            self.products = response.data.content;
+            self.totalPages = response.data.totalPages;
+        }, function () {
+            alert("Invalid get");
+        });
+    }();
 
     self.range = function (min, max) {
         var res = [];
@@ -27,16 +38,5 @@ angular.module('app.ctrl').register.controller('teamListController', function ($
         min = min < givenMin ? givenMin : min;
         return self.range(min, max);
     };
-
-    self.init = function () {
-        if (!userService.isLogged()) window.location.href = "../";
-
-        teamService.list(self.currentPage - 1, null, function (response) {
-            self.teams = response.data.content;
-            self.totalPages = response.data.totalPages;
-        }, function () {
-            alert("Invalid get");
-        });
-    }();
 
 });

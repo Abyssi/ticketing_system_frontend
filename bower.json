@@ -13,6 +13,9 @@
     "angular-base64": "~2.0.5",
     "scriptjs": "^2.5.8",
     "materialize": "^1.0.0-rc.1",
-    "jQuery": "^3.3.1"
+    "jQuery": "^3.3.1",
+    "later": "1.2.0",
+    "moment": "2.22.1",
+    "prettycron" : "0.10.0"
   }
 }

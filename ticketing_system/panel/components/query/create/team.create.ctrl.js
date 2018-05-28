@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').register.controller('ticketCreateController', function (userService, ticketService, $timeout) {
+angular.module('app.ctrl').register.controller('teamCreateController', function (userService, ticketService, $timeout) {
     const self = this;
 
     self.ticketForm = {
@@ -8,6 +8,9 @@ angular.module('app.ctrl').register.controller('ticketCreateController', functio
             id: ''
         },
         description: '',
+        assignee: {
+            id: ''
+        },
         category: {
             id: ''
         },
@@ -21,6 +24,7 @@ angular.module('app.ctrl').register.controller('ticketCreateController', functio
     };
 
     self.visibilities = [];
+    self.assignees = [];
     self.categories = [];
     self.targets = [];
     self.priorities = [];
@@ -30,6 +34,7 @@ angular.module('app.ctrl').register.controller('ticketCreateController', functio
 
         ticketService.metadata(function (response) {
             self.visibilities = response.data.visibilities;
+            self.assignees = response.data.assignees;
             self.categories = response.data.categories;
             self.targets = response.data.targets;
             self.priorities = response.data.priorities;
