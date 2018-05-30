@@ -2,82 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a083ed-17f2-473e-a010-cbda93823cd7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.bowerrc" beforeDir="false" afterPath="$PROJECT_DIR$/.bowerrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jshintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e-tests/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e-tests/scenarios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/app/app.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.cnfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.cnfg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.drct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.drct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.fctr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.fctr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.fltr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.fltr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.rt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.rt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/app/app.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/components/login/login.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/components/login/login.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/components/register/register.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/register.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/components/register/register.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/register.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.cnfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.cnfg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.drct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.drct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.fctr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.fctr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.fltr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.fltr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.rt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.rt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/app/app.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/app/app.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/assets/img/user_icon@200x200.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/assets/img/user_icon@200x200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/logout/logout.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/logout/logout.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/logout/logout.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/logout/logout.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/create/product.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/create/product.create.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/create/product.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/create/product.create.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/edit/product.edit.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/edit/product.edit.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/edit/product.edit.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/edit/product.edit.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/list/product.list.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/list/product.list.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/product/list/product.list.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/product/list/product.list.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/profile/profile.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/profile/profile.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/profile/profile.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/profile/profile.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/create/team.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/query.create.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/create/team.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/edit/team.edit.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/edit/team.edit.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/edit/team.edit.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/list/query.list.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/list/query.list.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/query/list/query.list.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/create/team.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/create/team.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/edit/team.edit.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/edit/team.edit.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/edit/team.edit.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/edit/team.edit.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/list/team.list.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/list/team.list.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/team/list/team.list.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/list/team.list.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/create/ticket.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/create/ticket.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/edit/ticket.edit.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/edit/ticket.edit.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/edit/ticket.edit.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/edit/ticket.edit.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/list/ticket.list.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/components/ticket/list/ticket.list.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/directives/sidebar.drct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/directives/sidebar.drct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/filters/cron.fltr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/filters/cron.fltr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/filters/timestamp.fltr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/filters/timestamp.fltr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/services/product.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/services/product.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/services/query.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/services/query.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/services/team.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/services/team.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/services/ticket.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/services/ticket.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/panel/services/user.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/services/user.srvc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing_system/services/user.srvc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.srvc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,38 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.srvc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/services/product.srvc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="query.srvc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/services/query.srvc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="team.srvc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/panel/services/team.srvc.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -176,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/panel/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="89" column="77" lean-forward="true" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
+              <caret line="89" column="77" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -234,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/app/app.rt.js" />
         <option value="$PROJECT_DIR$/app/view2/view2.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/panel/app/app.rt.js" />
         <option value="$PROJECT_DIR$/src/panel/components/logout/logout.ctrl.js" />
@@ -259,6 +166,7 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/panel/index.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -285,6 +193,9 @@
           </GulpTaskState>
           <GulpTaskState>
             <task-name>minify-html</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify-in-loco</task-name>
           </GulpTaskState>
           <GulpTaskState>
             <task-name>minify</task-name>
@@ -367,7 +278,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.home">
+  <component name="RunManager" selected="JavaScript Debug.home-dist">
+    <configuration name="home-dist" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/ticketing_system_frontend/dist/index.html" />
     <configuration name="home" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/ticketing_system_frontend/src/" />
     <configuration name="panel" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/ticketing_system_frontend/src/panel/" />
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -378,26 +290,40 @@
       <arguments />
       <envs />
     </configuration>
-    <configuration name="minify" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+    <configuration name="minify-in-loco" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
       <tasks>
-        <task>minify</task>
+        <task>minify-in-loco</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration name="minify-in.loco" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>minify-in.loco</task>
       </tasks>
       <arguments />
       <envs />
     </configuration>
     <list>
-      <item itemvalue="Gulp.js.minify" />
+      <item itemvalue="Gulp.js.minify-in.loco" />
+      <item itemvalue="Gulp.js.minify-in-loco" />
       <item itemvalue="JavaScript Debug.home" />
       <item itemvalue="JavaScript Debug.panel" />
+      <item itemvalue="JavaScript Debug.home-dist" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.home-dist" />
+        <item itemvalue="Gulp.js.minify-in-loco" />
+        <item itemvalue="Gulp.js.minify-in.loco" />
         <item itemvalue="JavaScript Debug.home" />
         <item itemvalue="JavaScript Debug.panel" />
-        <item itemvalue="Gulp.js.minify" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +345,7 @@
       <workItem from="1527667224948" duration="2870000" />
       <workItem from="1527688269931" duration="1160000" />
       <workItem from="1527697938857" duration="4716000" />
-      <workItem from="1527708184060" duration="4168000" />
+      <workItem from="1527708184060" duration="4635000" />
     </task>
     <task id="LOCAL-00001" summary="team">
       <created>1527502292927</created>
@@ -446,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47714000" />
+    <option name="totallyTimeSpent" value="48181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,8 +393,8 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.328877" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Gulp" order="2" sideWeight="0.2526738" side_tool="true" weight="0.24921875" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7473262" visible="true" weight="0.24921875" />
+      <window_info id="Gulp" order="2" sideWeight="0.25298804" side_tool="true" visible="true" weight="0.24921875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74701196" visible="true" weight="0.24921875" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -495,15 +421,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="little index problem fixed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/app.rt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view2/view2.html" />
-    <entry file="file://$PROJECT_DIR$/app/index.html" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -513,9 +430,6 @@
           <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/css/styles.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -743,17 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="89" column="77" lean-forward="true" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
+          <caret line="89" column="77" selection-start-line="89" selection-start-column="77" selection-end-line="89" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -764,6 +671,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.min.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/app.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/app.cnfg.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -773,8 +699,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        <state relative-caret-position="258">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
         </state>
       </provider>
     </entry>
