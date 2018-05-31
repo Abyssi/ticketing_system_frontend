@@ -70,17 +70,17 @@ angular.module('app.ctrl').register.controller('teamEditController', function ($
 
         ticketService.update(self.ticketId, ticket, function () {
             alert("Ticket updated");
-            window.location.reload();
-        }, function () {
+            window.location.href = "#/team/list";
+            }, function () {
             alert("Invalid update");
         });
     };
 
     self.delete = function () {
-        if (confirm("Are you sure you want to delete this ticket?")) {
+        if (confirm("Are you sure you want to delete this team?")) {
             ticketService.delete(self.ticketId, function () {
-                alert("Ticket deleted");
-                window.location.href = "#/ticket/list";
+                alert("Team deleted");
+                window.location.href = "#/team/list";
             }, function () {
                 alert("Invalid delete");
             });

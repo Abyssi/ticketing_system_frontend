@@ -70,8 +70,8 @@ angular.module('app.ctrl').register.controller('ticketEditController', function 
 
         ticketService.update(self.ticketId, ticket, function () {
             alert("Ticket updated");
-            window.location.reload();
-        }, function () {
+            window.location.href = "#/ticket/list";
+            }, function () {
             alert("Invalid update");
         });
     };
