@@ -1,0 +1,25 @@
+<div class="section">
+    <p class="caption">Here you can view all teams</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <ul class="collection with-header task-card">
+            <li class="collection-header gradient-45deg-light-blue-cyan">
+                <h4 class="task-card-title">My Teams</h4>
+            </li>
+            <li ng-repeat="team in teamListController.teams">
+                <a>
+                    <div class="collection-item">
+                        <!--<span class="secondary-content description">{{ticket.creationTimestamp | toDaysDiff}}</span>-->
+                        <span class="task-cat light-blue">{{team.name}}</span>
+                        <span class="description">{{team.members.length}} members</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="pagination">
+        <li ng-repeat="i in teamListController.getPages()"
+            class="{{teamListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/team/list/{{i}}">{{i}}</a>
+        </li>
+    </ul>
+</div>

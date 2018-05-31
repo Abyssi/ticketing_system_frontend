@@ -1,19 +1,16 @@
 {
-  "name": "Ticketing System",
+  "name": "ticketing_system_frontend",
   "description": "Ticketing System Frontend",
   "version": "1.0.0",
   "homepage": "https://github.com/Abyssi/ticketing_system_frontend",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "~1.5.0",
-    "angular-route": "~1.5.0",
-    "angular-mocks": "~1.5.0",
-    "angular-cookies": "~1.5.0",
-    "angular-base64": "~2.0.5",
-    "scriptjs": "^2.5.8",
-    "materialize": "^1.0.0-rc.1",
-    "jQuery": "^3.3.1",
-    "prettycron" : "0.10.0"
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-cookies": "latest",
+    "angular-base64": "latest",
+
+    "materialize": "1.0.0-rc.1"
   }
 }
