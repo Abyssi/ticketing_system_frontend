@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').register.controller('productEditController', function ($routeParams, userService, ticketService, productService) {
+angular.module('app.ctrl').controller('productEditController', function ($routeParams, userService, ticketService, productService) {
     const self = this;
 
     self.productForm = {

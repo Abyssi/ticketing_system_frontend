@@ -60,10 +60,15 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
             });
     };
 
-    self.logout = function (success) {
-        $http.defaults.headers.common.Authorization = null;
-        $cookies.remove("access_token", {path: '/'});
-        if (success != null) success();
+    self.logout = function (success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + "oauth/revoke-token"), function (response) {
+            $http.defaults.headers.common.Authorization = null;
+            $cookies.remove("access_token", {path: '/'});
+            if (success != null) success(response);
+        }, function (response) {
+            console.log("Error during logout");
+            if (error != null) error(response);
+        });
     };
 
     // Initialization
