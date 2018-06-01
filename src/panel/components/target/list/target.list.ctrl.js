@@ -1,17 +1,17 @@
 'use strict';
 
-angular.module('app.ctrl').controller('productListController', function ($routeParams, userService, ticketService, productService) {
+angular.module('app.ctrl').controller('targetListController', function ($routeParams, userService, ticketService, targetService) {
     const self = this;
 
-    self.products = [];
+    self.targets = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
-        productService.list(self.currentPage - 1, 10, function (response) {
-            self.products = response.data.content;
+        targetService.list(self.currentPage - 1, 10, function (response) {
+            self.targets = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
             alert("Invalid get");

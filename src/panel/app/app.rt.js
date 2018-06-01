@@ -55,19 +55,19 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         })
         .when('/query/list', {redirectTo: '/query/list/1'})
 
-        .when('/product/create', {
-            templateUrl: 'components/product/create/product.create.tmpl.html',
-            controller: 'productCreateController as productCreateController'
+        .when('/target/create', {
+            templateUrl: 'components/target/create/target.create.tmpl.html',
+            controller: 'targetCreateController as targetCreateController'
         })
-        .when('/product/edit/:id', {
-            templateUrl: 'components/product/edit/product.edit.tmpl.html',
-            controller: 'productEditController as productEditController'
+        .when('/target/edit/:id', {
+            templateUrl: 'components/target/edit/target.edit.tmpl.html',
+            controller: 'targetEditController as targetEditController'
         })
-        .when('/product/list/:page', {
-            templateUrl: 'components/product/list/product.list.tmpl.html',
-            controller: 'productListController as productListController'
+        .when('/target/list/:page', {
+            templateUrl: 'components/target/list/target.list.tmpl.html',
+            controller: 'targetListController as targetListController'
         })
-        .when('/product/list', {redirectTo: '/product/list/1'})
+        .when('/target/list', {redirectTo: '/target/list/1'})
 
         .otherwise({redirectTo: '/profile'});
 });

@@ -1,8 +1,8 @@
 <div class="container">
     <div class="section">
-        <p class="caption">Here you can create a product</p>
+        <p class="caption">Here you can create a target</p>
         <div class="divider"></div>
-        <div id="product-create-page" class="card">
+        <div id="target-create-page" class="card">
             <div class="card-content">
                 <div class="row">
                     <div class="col s12">
@@ -10,7 +10,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input placeholder="Name" id="name" type="text"
-                                           ng-model="productCreateController.productForm.name">
+                                           ng-model="targetCreateController.targetForm.name">
                                     <label for="name" class="active">Name</label>
                                 </div>
                             </div>
@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input placeholder="Version" id="version" type="text"
-                                           ng-model="productCreateController.productForm.version">
+                                           ng-model="targetCreateController.targetForm.version">
                                     <label for="version" class="active">Version</label>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="input-field col s12">
                                     <input type="submit" value="Create"
                                            class="btn waves-effect waves-light col s12 light-blue darken-3"
-                                           ng-click="productCreateController.create()">
+                                           ng-click="targetCreateController.create()">
                                     </input>
                                 </div>
                             </div>

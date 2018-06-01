@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('app.ctrl').controller('productCreateController', function (userService, ticketService, productService, $timeout) {
+angular.module('app.ctrl').controller('targetCreateController', function (userService, ticketService, targetService, $timeout) {
     const self = this;
 
-    self.productForm = {
+    self.targetForm = {
         name: '',
         version: ''
     };
@@ -21,16 +21,16 @@ angular.module('app.ctrl').controller('productCreateController', function (userS
     }();
 
     self.create = function () {
-        if (!self.validateForm(this.productForm)) {
+        if (!self.validateForm(this.targetForm)) {
             alert("Invalid form");
             return;
         }
 
-        const product = self.productForm;
+        const product = self.targetForm;
 
-        productService.create(product, function () {
-            alert("Product created");
-            window.location.href = "#/product/list";
+        targetService.create(product, function () {
+            alert("Target created");
+            window.location.href = "#/target/list";
         }, function () {
             alert("Invalid create");
         });

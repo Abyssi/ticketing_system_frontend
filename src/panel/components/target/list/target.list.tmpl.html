@@ -1,0 +1,26 @@
+<div class="section">
+    <p class="caption">Here you can view all opened targets</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <ul class="collection with-header task-card">
+            <li class="collection-header gradient-45deg-light-blue-cyan">
+                <h4 class="task-card-title">My targets</h4>
+            </li>
+            <li ng-repeat="target in targetListController.targets">
+                <a href="#/target/edit/{{target.id}}">
+                    <div class="collection-item">
+                        <span class="task-cat light-blue">{{target.name}}</span>
+                        <span class="description">{{target.version}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="pagination">
+        <li ng-repeat="i in targetListController.getPages()"
+            class="{{targetListController.currentPage == i ? 'active' : 'waves-effect'}}"><a
+                href="#/target/list/{{i}}">{{i}}</a>
+        </li>
+    </ul>
+</div>
