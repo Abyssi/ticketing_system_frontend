@@ -78,7 +78,6 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
 
     self.removeMember = function (user) {
         self.teamForm.members.splice(self.findById(self.teamForm.members, user.id), 1);
-        self.users.push(user);
         if (self.teamForm.leader === user) self.removeLeader();
     };
 
