@@ -45,6 +45,10 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             templateUrl: 'components/query/create/query.create.tmpl.html',
             controller: 'queryCreateController as queryCreateController'
         })
+        .when('/query/create/custom', {
+            templateUrl: 'components/query/create//custom/query.custom.create.tmpl.html',
+            controller: 'queryCustomCreateController as queryCustomCreateController'
+        })
         .when('/query/edit/:id', {
             templateUrl: 'components/query/edit/query.edit.tmpl.html',
             controller: 'queryEditController as queryEditController'

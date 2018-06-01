@@ -1,92 +1,36 @@
 <div class="container">
-    <div class="section">
-        <p class="caption">Here you can create a ticket</p>
-        <div class="divider"></div>
-        <div id="ticket-create-page" class="card">
-            <div class="card-content">
-                <div class="row">
-                    <div class="col s12">
-                        <form>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="Title" id="title" type="text"
-                                           ng-model="ticketCreateController.ticketForm.title">
-                                    <label for="title" class="active">Title</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="Description" id="description" type="text"
-                                           ng-model="ticketCreateController.ticketForm.description">
-                                    <label for="description" class="active">Description</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.visibility.id">
-                                        <option value="" disabled selected>Choose visibility</option>
-                                        <option ng-repeat="visibility in ticketCreateController.visibilities"
-                                                value="{{visibility.id}}">{{visibility.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose visibility</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.assignee.id">
-                                        <option value="" disabled selected>Choose assignee</option>
-                                        <option ng-repeat="assignee in ticketCreateController.assignees"
-                                                value="{{assignee.id}}">{{assignee.firstName}}
-                                        </option>
-                                    </select>
-                                    <label>Choose assignee</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.category.id">
-                                        <option value="" disabled selected>Choose category</option>
-                                        <option ng-repeat="category in ticketCreateController.categories"
-                                                value="{{category.id}}">{{category.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose category</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.target.id">
-                                        <option value="" disabled selected>Choose target</option>
-                                        <option ng-repeat="target in ticketCreateController.targets"
-                                                value="{{target.id}}">{{target.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose target</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select ng-model="ticketCreateController.ticketForm.customerPriority.id">
-                                        <option value="" disabled selected>Choose priority</option>
-                                        <option ng-repeat="priority in ticketCreateController.priorities"
-                                                value="{{priority.id}}">{{priority.name}}
-                                        </option>
-                                    </select>
-                                    <label>Choose priority</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input type="submit" value="Create"
-                                           class="btn waves-effect waves-light col s12 light-blue darken-3"
-                                           ng-click="ticketCreateController.create()">
-                                    </input>
-                                </div>
-                            </div>
-                        </form>
+    <div class="row">
+        <!-- Custom query card -->
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="container">
+                    <div class="card-image">
+                        <img src="assets/img/query_custom_icon.png">
                     </div>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Custom Query</span>
+                    <p>Create a custom data base query. You can insert directly SQL in it and create a new db listener!</p>
+                </div>
+                <div class="card-action">
+                    <a href="#/query/create/custom" class="blue-text">Let's create new one!</a>
+                </div>
+            </div>
+        </div>
+        <!-- DB query card -->
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="container">
+                    <div class="card-image">
+                        <img src="assets/img/query_db_icon.png">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">DB Query</span>
+                    <p>Create a data base query. Generate new query while navigate!</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="blue-text">Let's go!</a>
                 </div>
             </div>
         </div>

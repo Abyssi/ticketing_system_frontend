@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryCreateController', function (userService, ticketService, $timeout) {
+angular.module('app.ctrl').controller('queryCreateController', function (userService, $timeout) {
     const self = this;
 
     self.ticketForm = {

@@ -8,8 +8,8 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
 
     // API
 
-    self.create = function (ticket, success, error) {
-        self.httpAsync($http.put(self.SERVER_URI + self.QUERY_API_ENDPOINT, ticket), success, function (response) {
+    self.create = function (query, success, error) {
+        self.httpAsync($http.put(self.SERVER_URI + self.QUERY_API_ENDPOINT, query), success, function (response) {
             console.log("Error during create");
             if (error != null) error(response);
         });

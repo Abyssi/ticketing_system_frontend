@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="section">
+        <p class="caption">Insert new query information</p>
+        <div id="query-create-page" class="card">
+            <div class="card-content">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="query_custom_sql" class="materialize-textarea"
+                                          ng-model="queryCustomCreateController.queryForm.queryText"></textarea>
+                                <label for="query_custom_sql">SQL</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="query_custom_description" class="materialize-textarea"
+                                          ng-model="queryCustomCreateController.queryForm.description"></textarea>
+                                <label for="query_custom_description">Description (It will appear as ticket description)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="queryCustomCreateController.queryForm.queryPriority.id">
+                                    <option value="" disabled selected>Choose priority</option>
+                                    <option ng-repeat="priority in queryCustomCreateController.priorities"
+                                            value="{{priority.id}}">{{priority.name}}
+                                    </option>
+                                </select>
+                                <label>Choose query priority (It will be ticket priority)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="cron" type="text"
+                                       ng-model="queryCustomCreateController.queryForm.cron">
+                                <label for="cron" class="active">Cron</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="queryCustomCreateController.queryForm.comparisonOperator">
+                                    <option value="" disabled selected>Choose comparison</option>
+                                    <option value="GRATHER">></option>
+                                    <option value="LESS"><</option>
+                                    <option value="EQUALS">=</option>
+                                    <option value="GRATHER_EQUALS">>=</option>
+                                    <option value="LESS_EQUALS"><=</option>
+                                </select>
+                                <label>Choose query priority (It will be ticket priority)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="reference_value" type="number"
+                                       ng-model="queryCustomCreateController.queryForm.referenceValue">
+                                <label for="reference_value" class="active">Reference value</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select ng-model="queryCustomCreateController.queryForm.queryType">
+                                    <option value="" disabled selected>Choose query type</option>
+                                    <option value="DATA_BASE_INSTANT_CHECK">Instant check</option>
+                                    <option value="DATA_BASE_TABLE_MONITOR">Monitoring</option>
+                                </select>
+                                <label>Choose query type (It will influence query's behaviour)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" value="Create"
+                                       class="btn waves-effect waves-light col s12 light-blue darken-3"
+                                       ng-click="queryCustomCreateController.create()">
+                                </input>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
