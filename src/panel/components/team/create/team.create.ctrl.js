@@ -6,6 +6,7 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
     self.teamForm = {
         name: '',
         leader: '',
+        searchTerm: '',
         members: []
     };
 
@@ -13,15 +14,6 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
-
-        userService.list(0, 50, function (response) {
-            self.users = response.data.content;
-            $timeout(function () {
-                M.AutoInit();
-            });
-        }, function () {
-            alert("Invalid list");
-        });
     }();
 
     self.create = function () {
@@ -50,6 +42,27 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
         });
     };
 
+    self.search = function () {
+        if (self.teamForm.searchTerm === '') {
+            self.users = [];
+            return;
+        }
+
+        userService.search(self.teamForm.searchTerm, 0, 5, function (response) {
+            self.users = response.data.content;
+            self.filter();
+        }, function () {
+            self.users = [];
+        });
+    };
+
+    self.filter = function () {
+        angular.forEach(self.teamForm.members, function (user) {
+            var i = self.findById(self.users, user.id);
+            if (i !== -1) self.users.splice(i, 1);
+        });
+    };
+
     self.validateForm = function (form) {
         return form.name.length > 1 &&
             form.members.length > 1;
@@ -58,6 +71,9 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
     self.addMember = function (user) {
         self.teamForm.members.push(user);
         self.users.splice(self.findById(self.users, user.id), 1);
+
+        self.teamForm.searchTerm = '';
+        self.search();
     };
 
     self.removeMember = function (user) {
@@ -66,11 +82,20 @@ angular.module('app.ctrl').controller('teamCreateController', function (userServ
         if (self.teamForm.leader === user) self.removeLeader();
     };
 
+    self.toggleLeader = function (user) {
+        if (self.teamForm.leader === user)
+            self.removeLeader();
+        else
+            self.setLeader(user);
+    };
+
     self.setLeader = function (user) {
+        self.removeLeader();
         self.teamForm.leader = user;
     };
 
     self.removeLeader = function () {
+        if (self.teamForm.leader !== '') self.teamForm.leader.checked = false;
         self.teamForm.leader = '';
     };
 
