@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a083ed-17f2-473e-a010-cbda93823cd7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,48 +20,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.srvc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/services/user.srvc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team.create.ctrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="81" column="6" lean-forward="true" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/panel/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="231" column="96" selection-start-line="231" selection-start-column="96" selection-end-line="231" selection-end-column="96" />
+            <state relative-caret-position="1433">
+              <caret line="201" column="85" selection-start-line="201" selection-start-column="85" selection-end-line="201" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.create.tmpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html">
+      <file leaf-file-name="query.custom.create.ctrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+            <state relative-caret-position="330">
+              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/assets/css/style.css">
+      <file leaf-file-name="query.custom.create.tmpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="217" column="1" lean-forward="true" selection-start-line="217" selection-start-column="1" selection-end-line="217" selection-end-column="1" />
+            <state relative-caret-position="128">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -66,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -89,11 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ticketing_system/panel/components/ticket/edit/ticket.edit.tmpl.html" />
-        <option value="$PROJECT_DIR$/ticketing_system/panel/components/ticket/edit/ticket.edit.ctrl.js" />
-        <option value="$PROJECT_DIR$/ticketing_system/panel/index.html" />
-        <option value="$PROJECT_DIR$/ticketing_system/panel/components/team/create/team.create.tmpl.html" />
-        <option value="$PROJECT_DIR$/ticketing_system/panel/components/team/list/team.list.tmpl.html" />
         <option value="$PROJECT_DIR$/ticketing_system/index.html" />
         <option value="$PROJECT_DIR$/.jshintrc" />
         <option value="$PROJECT_DIR$/src/app/app.drct.js" />
@@ -108,7 +90,6 @@
         <option value="$PROJECT_DIR$/src/app/app.rt.js" />
         <option value="$PROJECT_DIR$/app/view2/view2.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/panel/components/logout/logout.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/product/create/product.create.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/product/list/product.list.ctrl.js" />
@@ -123,23 +104,29 @@
         <option value="$PROJECT_DIR$/src/panel/services/product.srvc.js" />
         <option value="$PROJECT_DIR$/src/panel/services/team.srvc.js" />
         <option value="$PROJECT_DIR$/src/panel/services/ticket.srvc.js" />
-        <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/panel/components/product/edit/product.edit.ctrl.js" />
         <option value="$PROJECT_DIR$/src/services/user.srvc.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/query.create.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html" />
-        <option value="$PROJECT_DIR$/src/panel/index.html" />
         <option value="$PROJECT_DIR$/src/panel/app/app.rt.js" />
-        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" />
-        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/services/query.srvc.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/services/user.srvc.js" />
         <option value="$PROJECT_DIR$/src/panel/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js" />
+        <option value="$PROJECT_DIR$/src/panel/app/app.js" />
+        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/cron/cron.tmpl.html" />
+        <option value="$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen.html" />
+        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/cron_template/cron.tmpl.html" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/src/panel/app/app.ctrl.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/panel/index.html" />
+        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" />
+        <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" />
       </list>
     </option>
   </component>
@@ -182,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,28 +185,7 @@
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -235,7 +200,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="team" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -243,19 +208,50 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="team" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
               <item name="create" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+              <item name="create" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+              <item name="list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket" type="462c0819:PsiDirectoryNode" />
+              <item name="create" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,10 +288,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.home">
-    <configuration name="home-dist" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/ticketing_system_frontend/dist/index.html" />
-    <configuration name="home" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63343/ticketing_system_frontend/src/" />
-    <configuration name="panel" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63343/ticketing_system_frontend/src/panel/" />
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ticketing_system_frontend/src/panel/index.html" />
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -327,15 +321,11 @@
     <list>
       <item itemvalue="Gulp.js.minify-in.loco" />
       <item itemvalue="Gulp.js.minify-in-loco" />
-      <item itemvalue="JavaScript Debug.panel" />
-      <item itemvalue="JavaScript Debug.home-dist" />
-      <item itemvalue="JavaScript Debug.home" />
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.home" />
-        <item itemvalue="JavaScript Debug.panel" />
-        <item itemvalue="JavaScript Debug.home-dist" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Gulp.js.minify-in-loco" />
         <item itemvalue="Gulp.js.minify-in.loco" />
       </list>
@@ -362,6 +352,7 @@
       <workItem from="1527708184060" duration="4635000" />
       <workItem from="1527781843375" duration="1860000" />
       <workItem from="1527844795472" duration="578000" />
+      <workItem from="1527947143230" duration="11242000" />
     </task>
     <task id="LOCAL-00001" summary="team">
       <created>1527502292927</created>
@@ -395,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63309000" />
+    <option name="totallyTimeSpent" value="74693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,41 +398,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" order="2" sideWeight="0.25668448" side_tool="true" visible="true" weight="0.24921875" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7433155" visible="true" weight="0.24921875" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32965517" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32965517" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Gulp" order="6" sideWeight="0.25534758" side_tool="true" visible="true" weight="0.24921875" />
+      <window_info id="Gulp" order="6" sideWeight="0.25858587" side_tool="true" visible="true" weight="0.24876674" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.7414141" visible="true" weight="0.24876674" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.32965517" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.32848486" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32848486" />
       <window_info id="npm" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7446524" visible="true" weight="0.24921875" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="18" weight="0.32848486" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.4" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.32965517" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.328877" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.328877" />
-      <window_info anchor="bottom" id="Terminal" order="18" weight="0.32965517" />
-      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="16" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,48 +438,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/gulp-minifier/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/styles.css" />
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/scripts.js" />
-    <entry file="file://$PROJECT_DIR$/dist/bower_components/jquery/src/css/var/swap.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/login/login.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/app/app.srvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/logout/logout.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/profile/profile.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -583,13 +532,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/app.ctrl.js" />
     <entry file="file://$PROJECT_DIR$/dist/app/app.cnfg.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -601,13 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -656,38 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="93" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="61" column="98" selection-start-line="61" selection-start-column="98" selection-end-line="61" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/services/query.srvc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
+        <state relative-caret-position="165">
           <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -709,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="231" column="96" selection-start-line="231" selection-start-column="96" selection-end-line="231" selection-end-column="96" />
         </state>
       </provider>
     </entry>
@@ -751,6 +651,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="81" column="6" lean-forward="true" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="93" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/cronstrue/dist/cronstrue-i18n.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7387">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="103" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen-time-select.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/cron_template/cron.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/app/app.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sancronos-validator/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1433">
+          <caret line="201" column="85" selection-start-line="201" selection-start-column="85" selection-end-line="201" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="18815" column="42" selection-start-line="18815" selection-start-column="42" selection-end-line="18815" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
         </state>
       </provider>
     </entry>

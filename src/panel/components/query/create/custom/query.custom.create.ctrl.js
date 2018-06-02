@@ -14,6 +14,15 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         queryType: ''
     };
 
+    //translate cron only when it has more than n char
+    self.minCronInputChar = 8;
+
+    self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
+
+    self.cronRegex = /^(\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-3])|\*\/([0-9]|1[0-9]|2[0-3])) (\*|(0?[1-9]|1[0-9]|2[0-9]|3[0-1])|\*\/([1-9]|1[0-9]|2[0-9]|3[0-1])) (\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2])) (\?)$/;
+    self.sqlRegex = /^(INSERT|DELETE|UPDATE|CREATE|GRANT|DROP)$/;
+    self.splitRegex = /;|\s/;
+
     self.priorities = [];
 
     self.init = function () {
@@ -39,18 +48,39 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
 
         queryService.create(query, function () {
             alert("Query created");
-            window.location.href = "#/query/list";
+            //window.location.href = "#/query/list";
         }, function () {
             alert("Invalid create");
         });
     };
 
     self.validateSQL = function(sql) {
-        return true;
+
+        var sqlSplitted = self.splitSQL(sql);
+
+        if (sqlSplitted.length > 0) {
+
+            sqlSplitted.forEach(function (element, index, array) {
+                if(element.match(self.sqlRegex)){
+                    return false;
+                }
+
+                return true;
+            })
+
+        } else {
+            return false;
+        }
+
     };
 
     self.validateCron = function(cron) {
-        return true;
+
+        if(cron.length < 1)
+            return false;
+
+        return cron.match(self.cronRegex)
+
     };
 
     self.validateForm = function (form) {
@@ -62,4 +92,23 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
             form.referenceValue !== '' &&
             form.queryType !== '';
     };
+
+    self.formatCron = function (cron){
+
+        if (cron.length > self.minCronInputChar && self.validateCron(cron)) {
+
+            self.cronFormatted = cronstrue.toString(cron, {locale: "en"});
+
+        } else {
+
+            self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
+
+        }
+    }
+
+    self.splitSQL = function (sql) {
+
+        return sql.split(self.splitRegex);
+
+    }
 });
