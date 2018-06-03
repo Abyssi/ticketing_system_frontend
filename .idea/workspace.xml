@@ -4,10 +4,8 @@
     <list default="true" id="c8a083ed-17f2-473e-a010-cbda93823cd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,30 +18,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/index.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ticket.list.ctrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1433">
-              <caret line="201" column="85" selection-start-line="201" selection-start-column="85" selection-end-line="201" selection-end-column="85" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.custom.create.ctrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
+      <file leaf-file-name="ticket.list.tmpl.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+            <state relative-caret-position="285">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.custom.create.tmpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html">
+      <file leaf-file-name="query.create.tmpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state relative-caret-position="225">
+              <caret line="15" column="95" lean-forward="true" selection-start-line="15" selection-start-column="95" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="team.create.tmpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="61" column="45" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="61" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="team.create.ctrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="81" column="6" lean-forward="true" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -76,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ticketing_system/index.html" />
-        <option value="$PROJECT_DIR$/.jshintrc" />
         <option value="$PROJECT_DIR$/src/app/app.drct.js" />
         <option value="$PROJECT_DIR$/src/app/app.ctrl.js" />
         <option value="$PROJECT_DIR$/src/app/app.cnfg.js" />
@@ -127,6 +150,8 @@
         <option value="$PROJECT_DIR$/src/panel/index.html" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" />
+        <option value="$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html" />
+        <option value="$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html" />
       </list>
     </option>
   </component>
@@ -144,6 +169,23 @@
     <gulpfiles>
       <GulpfileState>
         <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <task-name>minify-js</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify-css</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify-html</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify-in-loco</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify</task-name>
+          </GulpTaskState>
+        </tasks>
       </GulpfileState>
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
@@ -185,7 +227,28 @@
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -210,16 +273,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="query" type="462c0819:PsiDirectoryNode" />
               <item name="create" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="query" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -229,23 +282,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="query" type="462c0819:PsiDirectoryNode" />
               <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -257,7 +293,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="/usr/local/lib/node_modules/gulp" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -353,6 +389,7 @@
       <workItem from="1527781843375" duration="1860000" />
       <workItem from="1527844795472" duration="578000" />
       <workItem from="1527947143230" duration="11242000" />
+      <workItem from="1527986045557" duration="4450000" />
     </task>
     <task id="LOCAL-00001" summary="team">
       <created>1527502292927</created>
@@ -386,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74693000" />
+    <option name="totallyTimeSpent" value="79143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -401,26 +438,26 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" order="6" sideWeight="0.25858587" side_tool="true" visible="true" weight="0.24876674" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.7414141" visible="true" weight="0.24876674" />
+      <window_info id="Gulp" order="6" sideWeight="0.2599278" side_tool="true" visible="true" weight="0.24876674" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7400722" visible="true" weight="0.24876674" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32965517" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.32848486" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32848486" />
       <window_info id="npm" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.32848486" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="18" weight="0.32848486" />
-      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.4" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.328877" />
-      <window_info anchor="bottom" id="Messages" order="16" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +479,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js</url>
           <line>58</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -450,13 +486,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/panel/components/profile/profile.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -499,28 +528,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/services/product.srvc.js" />
-    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/js/materialize.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2685">
-          <caret line="5" column="21192" selection-start-line="5" selection-start-column="21188" selection-end-line="5" selection-end-column="21192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/js/materialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/js/materialize.min.js" />
+    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/js/materialize.js" />
     <entry file="file://$PROJECT_DIR$/src/index.min.html" />
     <entry file="file://$PROJECT_DIR$/dist/index.html" />
     <entry file="file://$PROJECT_DIR$/src/index.html">
@@ -605,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/services/user.srvc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -633,27 +636,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="7126" column="1" lean-forward="true" selection-start-line="7126" selection-start-column="1" selection-end-line="7126" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="81" column="6" lean-forward="true" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/materialize/dist/css/materialize.css" />
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -661,20 +644,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="93" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/cronstrue/dist/cronstrue-i18n.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7387">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/cronstrue/dist/cronstrue-i18n.js" />
     <entry file="file://$PROJECT_DIR$/src/panel/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -682,23 +652,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen-time-select.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/cron_template/cron.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/cron_template/cron.tmpl.html" />
+    <entry file="file://$PROJECT_DIR$/src/bower_components/angular-cron-gen/src/templates/cron-gen.html" />
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -720,38 +675,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/sancronos-validator/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sancronos-validator/index.js" />
     <entry file="file://$PROJECT_DIR$/src/panel/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1433">
+        <state relative-caret-position="3015">
           <caret line="201" column="85" selection-start-line="201" selection-start-column="85" selection-end-line="201" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="165">
           <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bower_components/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="18815" column="42" selection-start-line="18815" selection-start-column="42" selection-end-line="18815" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/angular/angular.js" />
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/create/ticket.create.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="81" column="6" lean-forward="true" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/team/create/team.create.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="61" column="45" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="61" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="95" lean-forward="true" selection-start-line="15" selection-start-column="95" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/ticket/list/ticket.list.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

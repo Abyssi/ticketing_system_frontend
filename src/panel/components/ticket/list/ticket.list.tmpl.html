@@ -1,11 +1,36 @@
-<div class="section">
+<div class="section" xmlns:background-image="http://www.w3.org/1999/xhtml">
     <p class="caption">Here you can view all opened tickets</p>
     <div class="divider"></div>
     <div class="col s12">
         <ul class="collection with-header task-card">
-            <li class="collection-header gradient-45deg-light-blue-cyan">
-                <h4 class="task-card-title">My tickets</h4>
-            </li>
+            <div class="row collection-header gradient-45deg-light-blue-cyan">
+                    <div class="col l6 m6 s12">
+                        <h4 class="task-card-title">My tickets</h4>
+                    </div>
+                    <div class="col l6 m6 s12" >
+                            <input type="text" id="autocomplete-input"
+                                   style="border-bottom: 1px solid white;
+                                          width: 100%;
+                                          box-sizing: border-box;
+                                          border-radius: 4px;
+                                          font-size: 16px;
+                                          background-color: white;
+                                          background-repeat: no-repeat;"
+                                    ng-model=""
+                                    ng-change="">
+                        <label for="autocomplete-input" style="color: white">Search ticket</label>
+                        <ul class="collection task-card" ng-if="">
+                            <li ng-repeat="">
+                                <a ng-click="">
+                                    <div class="collection-item">
+                                        <span class="task-cat light-blue"></span>
+                                        <span class="description"></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
             <li ng-repeat="ticket in ticketListController.tickets">
                 <a href="#/ticket/edit/{{ticket.id}}">
                     <div class="collection-item">

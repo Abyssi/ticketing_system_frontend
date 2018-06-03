@@ -16,9 +16,10 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Description" id="description" type="text"
-                                           ng-model="ticketCreateController.ticketForm.description">
                                     <label for="description" class="active">Description</label>
+                                    <textarea ng-maxlength="300" ng-model="ticketCreateController.ticketForm.description"
+                                              placeholder="Description" id="description" type="text">
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="row">
