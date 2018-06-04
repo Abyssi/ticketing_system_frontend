@@ -9,7 +9,11 @@
             <li ng-repeat="query in queryListController.queries">
                 <a href="#/query/edit/{{query.id}}">
                     <div class="collection-item">
-                        <span class="secondary-content description">{{query.cron | toPrettyCron}}</span>
+                        <span class="secondary-content description">{{query.cron | toPrettyCron}}
+                            <i class="material-icons">
+                                alarm
+                            </i>
+                        </span>
                         <span class="task-cat light-blue">{{query.description}}</span>
                         <span class="description">{{query.queryText}}</span>
                     </div>
