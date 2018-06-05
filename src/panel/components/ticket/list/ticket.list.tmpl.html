@@ -1,4 +1,4 @@
-<div class="section" xmlns:background-image="http://www.w3.org/1999/xhtml">
+<div class="section">
     <p class="caption">Here you can view all opened tickets</p>
     <div class="divider"></div>
     <div class="col s12">
@@ -10,15 +10,15 @@
                     <div class="col l6 m6 s12 input-field white-input-field" >
                             <input type="text" id="autocomplete-input"
                                    class="search-input-box"
-                                    ng-model=""
-                                    ng-change="">
+                                    ng-model="ticketListController.searchTerm"
+                                    ng-change="ticketListController.set()">
                         <label for="autocomplete-input" style="color: white">Search ticket</label>
-                        <ul class="collection task-card" ng-if="">
-                            <li ng-repeat="">
+                        <ul class="collection task-card" ng-if="ticketListController.ticketSearch.length > 0">
+                            <li ng-repeat="t in ticketListController.ticketSearch ">
                                 <a ng-click="">
                                     <div class="collection-item">
-                                        <span class="task-cat light-blue"></span>
-                                        <span class="description"></span>
+                                        <span class="task-cat light-blue">{{t.title}}</span>
+                                        <span class="description">{{t.priority}}</span>
                                     </div>
                                 </a>
                             </li>
@@ -30,7 +30,7 @@
                     <div class="collection-item">
                         <span class="secondary-content description">{{ticket.creationTimestamp | toDaysDiff}}</span>
                         <span class="task-cat light-blue">{{ticket.title}}</span>
-                        <span class="description">{{ticket.description}}</span>
+                        <span class="span-description" >{{ticket.description}}</span>
                     </div>
                 </a>
             </li>
@@ -38,7 +38,7 @@
     </div>
     <ul class="pagination">
         <li ng-repeat="i in ticketListController.getPages()"
-            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/ticket/list/{{i}}">{{i}}</a>
+            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/ticket/list/{{i}}/{{$routeParams.searchTerm}}">{{i}}</a>
         </li>
     </ul>
 </div>

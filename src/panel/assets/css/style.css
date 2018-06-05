@@ -259,3 +259,13 @@ p {
     border-image-slice: 1 !important;
     overflow-y:scroll !important;
 }
+
+.span-description {
+    font-weight: lighter;
+    color: black;
+    display: block;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
