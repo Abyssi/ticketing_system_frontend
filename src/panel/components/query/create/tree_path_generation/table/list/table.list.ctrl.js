@@ -1,11 +1,11 @@
-angular.module('app.ctrl').controller('queryTableListController', function (userService, queryService,$timeout) {
+angular.module('app.ctrl').controller('queryTableListController', function (userService, queryService, $timeout) {
     const self = this;
 
     self.tables = [];
 
     self.tableColumns = [];
 
-    self.getTablesMetadata = function() {
+    self.getTablesMetadata = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
         queryService.getTablesMetadata(function (response) {
@@ -16,7 +16,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.getTableColumnsMetadata = function(tableName) {
+    self.getTableColumnsMetadata = function (tableName) {
         if (!userService.isLogged()) window.location.href = "../";
 
         queryService.getTableColumnsMetadata(tableName, function (response) {

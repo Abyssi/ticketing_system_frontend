@@ -3,7 +3,7 @@
 angular.module('app.ctrl').controller('ticketListController', function ($routeParams, userService, ticketService) {
     const self = this;
 
-    self.searchTerm = $routeParams.searchTerm;
+    self.searchTerm = $routeParams.searchTerm == null ? '' : $routeParams.searchTerm;
     self.tickets = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
@@ -50,7 +50,8 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
         });
     };
 
-    self.set = function () {
+    self.set = function (page) {
+        if (page != null) self.currentPage = page;
         self.searchTerm === '' ? self.reset() : self.search();
     };
 

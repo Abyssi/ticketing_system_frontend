@@ -71,7 +71,7 @@ angular.module('app.ctrl').controller('ticketEditController', function ($routePa
         ticketService.update(self.ticketId, ticket, function () {
             alert("Ticket updated");
             window.location.href = "#/ticket/list";
-            }, function () {
+        }, function () {
             alert("Invalid update");
         });
     };
