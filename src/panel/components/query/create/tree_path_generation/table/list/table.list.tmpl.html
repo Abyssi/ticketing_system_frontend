@@ -1,5 +1,6 @@
 <div class="section">
-    <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that table.</p>
+    <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that
+        table.</p>
     <div class="divider"></div>
     <div class="col s12">
         <ul class="collection with-header task-card">
@@ -10,7 +11,8 @@
             </li>
             <ul class="collapsible popout">
                 <li ng-repeat="table in queryTableListController.tables">
-                    <div class="collapsible-header collection-item" ng-click="queryTableListController.getTableColumnsMetadata(table)">
+                    <div class="collapsible-header collection-item"
+                         ng-click="queryTableListController.getTableColumnsMetadata(table)">
                         <span class="task-cat light-blue">
                             {{table}}
                         </span>

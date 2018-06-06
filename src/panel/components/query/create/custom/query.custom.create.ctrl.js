@@ -1,4 +1,3 @@
-
 angular.module('app.ctrl').controller('queryCustomCreateController', function (userService, queryService, $timeout) {
     const self = this;
 
@@ -54,14 +53,14 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         });
     };
 
-    self.validateSQL = function(sql) {
+    self.validateSQL = function (sql) {
 
         var sqlSplitted = self.splitSQL(sql);
 
         if (sqlSplitted.length > 0) {
 
             sqlSplitted.forEach(function (element, index, array) {
-                if(element.match(self.sqlRegex)){
+                if (element.match(self.sqlRegex)) {
                     return false;
                 }
 
@@ -74,9 +73,9 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
 
     };
 
-    self.validateCron = function(cron) {
+    self.validateCron = function (cron) {
 
-        if(cron.length < 1)
+        if (cron.length < 1)
             return false;
 
         return cron.match(self.cronRegex)
@@ -93,7 +92,7 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
             form.queryType !== '';
     };
 
-    self.formatCron = function (cron){
+    self.formatCron = function (cron) {
 
         if (cron.length > self.minCronInputChar && self.validateCron(cron)) {
 

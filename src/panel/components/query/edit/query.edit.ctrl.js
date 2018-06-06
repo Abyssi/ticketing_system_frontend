@@ -71,7 +71,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         ticketService.update(self.ticketId, ticket, function () {
             alert("Ticket updated");
             window.location.href = "#/team/list";
-            }, function () {
+        }, function () {
             alert("Invalid update");
         });
     };
