@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 angular.module('app.ctrl').controller('queryCreateController', function (userService, $timeout) {
     const self = this;
