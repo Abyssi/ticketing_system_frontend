@@ -1,0 +1,34 @@
+<div class="section">
+    <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that table.</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <ul class="collection with-header task-card">
+            <li class="collection-header gradient-45deg-light-blue-cyan">
+                <h4 class="task-card-title">
+                    Tables
+                </h4>
+            </li>
+            <ul class="collapsible popout">
+                <li ng-repeat="table in queryTableListController.tables">
+                    <div class="collapsible-header collection-item" ng-click="queryTableListController.getTableColumnsMetadata(table)">
+                        <span class="task-cat light-blue">
+                            {{table}}
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection with-header task-card">
+                            <li class="collection-header gradient-45deg-light-blue-cyan">
+                                <h4 class="task-card-title">Columns</h4>
+                            </li>
+                            <li ng-repeat="column in queryTableListController.tableColumns">
+                                <span class="task-cat light-blue">
+                                    {{column}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</div>

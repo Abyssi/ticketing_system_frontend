@@ -5,6 +5,8 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
 
     self.SERVER_URI = 'http://localhost:8200/';
     self.QUERY_API_ENDPOINT = 'api/v1/queries/';
+    self.TABLES_METADATA_ENDPOINT = 'tables/';
+    self.TABLE_COLUMNS_METADATA_ENDPOINT = '/columns';
 
     // API
 
@@ -48,6 +50,24 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
             console.log("Error during metadata");
             if (error != null) error(response);
         });
+    };
+
+    self.getTablesMetadata = function(success, error){
+
+        self.httpAsync($http.get(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.TABLES_METADATA_ENDPOINT), success, function (response) {
+            console.log("Error during tables metadata");
+            if (error != null) error(response);
+        });
+
+    };
+
+    self.getTableColumnsMetadata = function(tableName, success, error){
+
+        self.httpAsync($http.get(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.TABLES_METADATA_ENDPOINT + tableName + self.TABLE_COLUMNS_METADATA_ENDPOINT), success, function (response) {
+            console.log("Error during tables metadata");
+            if (error != null) error(response);
+        });
+
     };
 
     // Support functions

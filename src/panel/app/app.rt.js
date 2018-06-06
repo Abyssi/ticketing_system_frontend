@@ -46,9 +46,21 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             controller: 'queryCreateController as queryCreateController'
         })
         .when('/query/create/custom', {
-            templateUrl: 'components/query/create//custom/query.custom.create.tmpl.html',
+            templateUrl: 'components/query/create/custom/query.custom.create.tmpl.html',
             controller: 'queryCustomCreateController as queryCustomCreateController'
         })
+
+        .when('/query/create/tree_path/type', {
+            templateUrl: 'components/query/create/tree_path_generation/query_type/query.type.tmpl.html',
+            controller: 'queryTypeController as queryTypeController'
+        })
+
+        .when('/query/create/tree_path/table/list/:page', {
+            templateUrl: 'components/query/create/tree_path_generation/table/list/table.list.tmpl.html',
+            controller: 'queryTableListController as queryTableListController'
+        })
+        .when('/query/create/tree_path/table/list',  {redirectTo: '/query/create/tree_path/table/list/1'})
+
         .when('/query/edit/:id', {
             templateUrl: 'components/query/edit/query.edit.tmpl.html',
             controller: 'queryEditController as queryEditController'
