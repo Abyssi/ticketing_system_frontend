@@ -10,6 +10,8 @@ angular.module('app.ctrl').controller('targetListController', function ($routePa
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
+        M.AutoInit();
+
         targetService.list(self.currentPage - 1, 10, function (response) {
             self.targets = response.data.content;
             self.totalPages = response.data.totalPages;

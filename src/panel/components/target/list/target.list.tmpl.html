@@ -6,14 +6,16 @@
             <li class="collection-header gradient-45deg-light-blue-cyan">
                 <h4 class="task-card-title">My targets</h4>
             </li>
-            <li ng-repeat="target in targetListController.targets">
-                <a href="#/target/edit/{{target.id}}">
-                    <div class="collection-item">
-                        <span class="task-cat light-blue">{{target.name}}</span>
-                        <span class="description">{{target.version}}</span>
+            <ul class="collapsible popout">
+                <li ng-repeat="target in targetListController.targets">
+                    <div class="collapsible-header"><h6>{{target.name}}</h6></div>
+                    <div class="collapsible-body">
+                        <span>Version: {{target.version}}</span>
+                        <br><br>
+                        <a href="#/target/edit/{{target.id}}">Edit</a>
                     </div>
-                </a>
-            </li>
+                </li>
+            </ul>
         </ul>
     </div>
 
