@@ -3,20 +3,10 @@
 angular.module('app.ctrl').controller('ticketListController', function ($routeParams, userService, ticketService) {
     const self = this;
 
+    self.searchTerm = $routeParams.searchTerm;
     self.tickets = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
-
-    self.init = function () {
-        if (!userService.isLogged()) window.location.href = "../";
-
-        ticketService.list(self.currentPage - 1, 10, function (response) {
-            self.tickets = response.data.content;
-            self.totalPages = response.data.totalPages;
-        }, function () {
-            alert("Invalid get");
-        });
-    }();
 
     self.range = function (min, max) {
         var res = [];
@@ -38,5 +28,35 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
         min = min < givenMin ? givenMin : min;
         return self.range(min, max);
     };
+
+    self.search = function () {
+        ticketService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
+            self.tickets = response.data.content;
+            self.totalPages = response.data.totalPages;
+        }, function () {
+            self.tickets = [];
+            self.totalPages = 0;
+        });
+    };
+
+    self.reset = function () {
+        ticketService.list(self.currentPage - 1, 3, function (response) {
+            self.tickets = response.data.content;
+            self.totalPages = response.data.totalPages;
+        }, function () {
+            alert("Invalid get");
+            self.tickets = [];
+            self.totalPages = 0;
+        });
+    };
+
+    self.set = function () {
+        self.searchTerm === '' ? self.reset() : self.search();
+    };
+
+    self.init = function () {
+        if (!userService.isLogged()) window.location.href = "../";
+        self.set();
+    }();
 
 });

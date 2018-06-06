@@ -19,7 +19,6 @@ angular.module('app.ctrl').controller('ticketCreateController', function (userSe
             id: ''
         }
     };
-
     self.visibilities = [];
     self.categories = [];
     self.targets = [];
