@@ -1,4 +1,4 @@
-angular.module('app.ctrl').controller('queryTableListController', function (userService, queryService, $timeout) {
+angular.module('app.ctrl').controller('queryTableListController', function (userService, queryService, queryBuilderService, $timeout) {
     const self = this;
 
     self.tables = [];
@@ -8,8 +8,17 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
         selected: false
     };
 
+    self.queryText = "SELECT count(*) FROM ";
+
     self.getTablesMetadata = function () {
-        if (!userService.isLogged()) window.location.href = "../";
+        if (!userService.isLogged()) {
+
+            //refresh query because there is a problem in login
+            queryBuilderService.refresh();
+
+            window.location.href = "../";
+
+        }
 
         queryService.getTablesMetadata(function (response) {
             self.tables = response.data;
@@ -62,7 +71,61 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
         column.selected = true;
 
+        if (column === self.generalColumn) {
+            self.goToSummary(table);
+        } else {
+            self.goToWhereClauses(table, column);
+        }
+
+
+
     };
+
+    self.goToSummary = function(table) {
+
+        if (confirm("Table selected: " + table.name + ". Go on?")) {
+
+            self.updateQueryText(table);
+
+            window.location.href = "#/query/create/tree_path/create";
+
+        }
+
+    };
+
+    self.goToWhereClauses = function(table, column) {
+
+        if (confirm("Table selected: " + table.name + ", Column selected: " + column.name + ". Go on?")) {
+
+            self.updateQueryText(table, column);
+
+            window.location.href = "#/query/create/tree_path/where_clauses";
+
+        };
+
+    };
+
+    self.updateQueryText = function(table, column) {
+
+        //update query text
+        self.queryText += table.name;
+
+        //check also if is not undefined
+        if (column != null) {
+
+            self.queryText += " WHERE " + column.name + " ";
+
+        }
+
+        var q = queryBuilderService.get();
+
+        q.queryText = self.queryText;
+
+        queryBuilderService.set(q);
+
+
+    };
+
 
     self.getTableColumnsMetadata = function (tableName) {
         if (!userService.isLogged()) window.location.href = "../";

@@ -35,16 +35,13 @@
                                     </li>
                                     <li ng-repeat="column in table.columns">
                                         <div class="collection-item"
-                                                ng-click="queryTableListController.selectColumn(table, column)">
+                                            ng-click="queryTableListController.selectColumn(table, column)">
                                             <span class="task-cat light-blue">
                                                 {{column.name}}
                                             </span>
                                             <div class="secondary-content right-align">
-                                                <i class="material-icons" ng-hide="column.selected">
-                                                    remove
-                                                </i>
-                                                <i class="material-icons ng-hide" ng-hide="!column.selected">
-                                                    done
+                                                <i class="material-icons">
+                                                    arrow_forward
                                                 </i>
                                             </div>
                                         </div>
