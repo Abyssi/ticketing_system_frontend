@@ -65,6 +65,16 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         })
         .when('/query/create/tree_path/table/list', {redirectTo: '/query/create/tree_path/table/list/1'})
 
+        .when('/query/create/tree_path/where_clauses', {
+            templateUrl: 'components/query/create/tree_path_generation/where_clauses/where.clauses.tmpl.html',
+            controller: 'queryWhereClausesController as queryWhereClausesController'
+        })
+
+        .when('/query/create/tree_path/create', {
+            templateUrl: 'components/query/create/tree_path_generation/create/query.tree.path.create.tmpl.html',
+            controller: 'queryTreePathCreateController as queryTreePathCreateController'
+        })
+
         .when('/query/edit/:id', {
             templateUrl: 'components/query/edit/query.edit.tmpl.html',
             controller: 'queryEditController as queryEditController'
