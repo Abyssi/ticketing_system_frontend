@@ -29,15 +29,43 @@
                 <li ng-repeat="ticket in ticketListController.tickets">
                     <div class="collapsible-header">
                         <span class="task-cat light-blue">{{ticket.title}}</span>
+                        <div class="right-align">
+                            <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        </div>
                     </div>
                     <div class="collapsible-body">
+                        <!--
                         <span>Description: {{ticket.description}}</span>
                         <br><br>
                         <span>Status: {{ticket.status.name}}</span>
                         <br><br>
                         <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
                         <br><br>
-                        <a href="#/ticket/edit/{{ticket.id}}">Edit</a>
+                        -->
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="title">{{ticket.title}}</p>
+                                <label for="title" class="active">Title</label>
+                            </div>
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="description">{{ticket.description}}</p>
+                                <label for="description" class="active">Description</label>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <div class="input-field col s12; right-align">
+                                <input type="submit" value="Delete"
+                                       class="btn waves-effect waves-light col s3 red darken-3"
+                                       ng-click="ticketListController.delete(ticket.id)">
+                                </input>
+                                <a href="#/ticket/edit/{{ticket.id}}">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s3 light-blue darken-3"
+                                           ng-click="ticketEditController.update()">
+                                    </input>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
