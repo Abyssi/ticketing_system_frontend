@@ -11,7 +11,7 @@
             </li>
             <div class="row">
                 <ul class="collapsible popout">
-                    <li ng-repeat="table in queryTableListController.tables">
+                    <li ng-repeat="table in queryTableListController.filteredTables">
                         <div class="collapsible-header collection-item"
                              ng-click="queryTableListController.getTableColumnsMetadata(table.name);
                                         queryTableListController.selectTable(table)">
