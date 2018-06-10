@@ -8,7 +8,9 @@
             </li>
             <ul class="collapsible popout">
                 <li ng-repeat="target in targetListController.targets">
-                    <div class="collapsible-header"><h6>{{target.name}}</h6></div>
+                    <div class="collapsible-header">
+                        <span class="task-cat light-blue">{{target.name}}</span>
+                    </div>
                     <div class="collapsible-body">
                         <span>Version: {{target.version}}</span>
                         <br><br>

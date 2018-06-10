@@ -31,6 +31,8 @@ angular.module('app.ctrl').controller('teamListController', function ($routePara
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
+        M.AutoInit();
+
         teamService.list(self.currentPage - 1, null, function (response) {
             self.teams = response.data.content;
             self.totalPages = response.data.totalPages;

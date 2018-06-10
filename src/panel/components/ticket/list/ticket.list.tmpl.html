@@ -25,15 +25,22 @@
                     </ul>
                 </div>
             </div>
-            <li ng-repeat="ticket in ticketListController.tickets">
-                <a href="#/ticket/edit/{{ticket.id}}">
-                    <div class="collection-item">
-                        <span class="secondary-content description">{{ticket.creationTimestamp | toDaysDiff}}</span>
+            <ul class="collapsible popout">
+                <li ng-repeat="ticket in ticketListController.tickets">
+                    <div class="collapsible-header">
                         <span class="task-cat light-blue">{{ticket.title}}</span>
-                        <span class="span-description">{{ticket.description}}</span>
                     </div>
-                </a>
-            </li>
+                    <div class="collapsible-body">
+                        <span>Description: {{ticket.description}}</span>
+                        <br><br>
+                        <span>Status: {{ticket.status.name}}</span>
+                        <br><br>
+                        <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        <br><br>
+                        <a href="#/ticket/edit/{{ticket.id}}">Edit</a>
+                    </div>
+                </li>
+            </ul>
         </ul>
     </div>
     <ul class="pagination">

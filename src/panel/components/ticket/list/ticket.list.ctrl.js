@@ -57,6 +57,7 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
+        M.AutoInit();
         self.set();
     }();
 
