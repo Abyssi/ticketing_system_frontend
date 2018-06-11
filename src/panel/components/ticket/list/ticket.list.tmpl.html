@@ -4,41 +4,77 @@
     <div class="col s12">
         <ul class="collection with-header task-card">
             <div class="row collection-header gradient-45deg-light-blue-cyan">
-                    <div class="col l6 m6 s12">
-                        <h4 class="task-card-title">My tickets</h4>
-                    </div>
-                    <div class="col l6 m6 s12 input-field white-input-field" >
-                            <input type="text" id="autocomplete-input"
-                                   class="search-input-box"
-                                    ng-model="ticketListController.searchTerm"
-                                    ng-change="ticketListController.set()">
-                        <label for="autocomplete-input" style="color: white">Search ticket</label>
-                        <ul class="collection task-card" ng-if="ticketListController.ticketSearch.length > 0">
-                            <li ng-repeat="t in ticketListController.ticketSearch ">
-                                <a ng-click="">
-                                    <div class="collection-item">
-                                        <span class="task-cat light-blue">{{t.title}}</span>
-                                        <span class="description">{{t.priority}}</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col l6 m6 s12">
+                    <h4 class="task-card-title">My tickets</h4>
+                </div>
+                <div class="col l6 m6 s12 input-field white-input-field">
+                    <input type="text" id="autocomplete-input" style="color: white"
+                           class="search-input-box"
+                           ng-model="ticketListController.searchTerm"
+                           ng-enter="ticketListController.set(1)">
+                    <label for="autocomplete-input" style="color: white" class="active">Search ticket</label>
+                    <ul class="collection task-card" ng-if="ticketListController.ticketSearch.length > 0">
+                        <li ng-repeat="t in ticketListController.ticketSearch ">
+                            <a ng-click="">
+                                <div class="collection-item">
+                                    <span class="task-cat light-blue">{{t.title}}</span>
+                                    <span class="description">{{t.priority}}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <li ng-repeat="ticket in ticketListController.tickets">
-                <a href="#/ticket/edit/{{ticket.id}}">
-                    <div class="collection-item">
-                        <span class="secondary-content description">{{ticket.creationTimestamp | toDaysDiff}}</span>
+            <ul class="collapsible popout">
+                <li ng-repeat="ticket in ticketListController.tickets">
+                    <div class="collapsible-header">
                         <span class="task-cat light-blue">{{ticket.title}}</span>
-                        <span class="span-description" >{{ticket.description}}</span>
+                        <div class="right-align">
+                            <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        </div>
                     </div>
-                </a>
-            </li>
+                    <div class="collapsible-body">
+                        <!--
+                        <span>Description: {{ticket.description}}</span>
+                        <br><br>
+                        <span>Status: {{ticket.status.name}}</span>
+                        <br><br>
+                        <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        <br><br>
+                        -->
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="title">{{ticket.title}}</p>
+                                <label for="title" class="active">Title</label>
+                            </div>
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="description">{{ticket.description}}</p>
+                                <label for="description" class="active">Description</label>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <div class="input-field col s12; right-align">
+                                <input type="submit" value="Delete"
+                                       class="btn waves-effect waves-light col s3 red darken-3"
+                                       ng-click="ticketListController.delete(ticket.id)">
+                                </input>
+                                <a href="#/ticket/edit/{{ticket.id}}">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s3 light-blue darken-3"
+                                           ng-click="ticketEditController.update()">
+                                    </input>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </ul>
     </div>
     <ul class="pagination">
         <li ng-repeat="i in ticketListController.getPages()"
-            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a href="#/ticket/list/{{i}}/{{$routeParams.searchTerm}}">{{i}}</a>
+            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a
+                href="#/ticket/list/{{i}}/{{ticketListController.searchTerm}}">{{i}}</a>
         </li>
     </ul>
 </div>

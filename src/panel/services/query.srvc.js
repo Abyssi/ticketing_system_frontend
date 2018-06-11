@@ -52,7 +52,7 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
         });
     };
 
-    self.getTablesMetadata = function(success, error){
+    self.getTablesMetadata = function (success, error) {
 
         self.httpAsync($http.get(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.TABLES_METADATA_ENDPOINT), success, function (response) {
             console.log("Error during tables metadata");
@@ -61,7 +61,7 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
 
     };
 
-    self.getTableColumnsMetadata = function(tableName, success, error){
+    self.getTableColumnsMetadata = function (tableName, success, error) {
 
         self.httpAsync($http.get(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.TABLES_METADATA_ENDPOINT + tableName + self.TABLE_COLUMNS_METADATA_ENDPOINT), success, function (response) {
             console.log("Error during tables metadata");

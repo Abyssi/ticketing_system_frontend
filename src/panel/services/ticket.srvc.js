@@ -44,7 +44,7 @@ angular.module('app.srvc').service('ticketService', function ($http, $q) {
     };
 
     self.search = function (title, page, pageSize, success, error) {
-        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT +"search/" + title + "?page=" + page + (pageSize != null ? "&pageSize=" + pageSize : "")), success, function (response) {
+        self.httpAsync($http.get(self.SERVER_URI + self.TICKET_API_ENDPOINT + "search/" + title + "?page=" + page + (pageSize != null ? "&pageSize=" + pageSize : "")), success, function (response) {
             console.log("Error during list");
             if (error != null) error(response);
         });

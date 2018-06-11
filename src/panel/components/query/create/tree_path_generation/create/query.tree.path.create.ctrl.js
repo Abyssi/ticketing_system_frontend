@@ -1,4 +1,7 @@
-angular.module('app.ctrl').controller('queryCustomCreateController', function (userService, queryService, $timeout) {
+'use strict';
+
+angular.module('app.ctrl').controller('queryTreePathCreateController', function (userService, queryService, queryBuilderService, $timeout) {
+
     const self = this;
 
     self.queryForm = {
@@ -25,7 +28,17 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
     self.priorities = [];
 
     self.init = function () {
-        if (!userService.isLogged()) window.location.href = "../";
+        if (!userService.isLogged()) {
+
+            //refresh query
+            queryBuilderService.refresh();
+
+            window.location.href = "../";
+        }
+
+        $timeout(function () {
+            self.queryForm = queryBuilderService.get();
+        });
 
         queryService.metadata(function (response) {
             self.priorities = response.data.priorities;
@@ -35,7 +48,10 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         }, function () {
             alert("Invalid metadata");
         });
+
+
     }();
+
 
     self.create = function () {
         if (!self.validateForm(this.queryForm)) {
@@ -63,9 +79,9 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
                 if (element.match(self.sqlRegex)) {
                     return false;
                 }
+            });
 
-                return true;
-            })
+            return true;
 
         } else {
             return false;
@@ -110,4 +126,5 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         return sql.split(self.splitRegex);
 
     }
+
 });

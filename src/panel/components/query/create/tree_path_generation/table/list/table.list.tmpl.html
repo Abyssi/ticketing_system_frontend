@@ -1,5 +1,6 @@
 <div class="section">
-    <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that table.</p>
+    <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that
+        table.</p>
     <div class="divider"></div>
     <div class="col s12">
         <ul class="collection with-header task-card">
@@ -8,27 +9,49 @@
                     Tables
                 </h4>
             </li>
-            <ul class="collapsible popout">
-                <li ng-repeat="table in queryTableListController.tables">
-                    <div class="collapsible-header collection-item" ng-click="queryTableListController.getTableColumnsMetadata(table)">
-                        <span class="task-cat light-blue">
-                            {{table}}
-                        </span>
-                    </div>
-                    <div class="collapsible-body">
-                        <ul class="collection with-header task-card">
-                            <li class="collection-header gradient-45deg-light-blue-cyan">
-                                <h4 class="task-card-title">Columns</h4>
-                            </li>
-                            <li ng-repeat="column in queryTableListController.tableColumns">
-                                <span class="task-cat light-blue">
-                                    {{column}}
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <div class="row">
+                <ul class="collapsible popout">
+                    <li ng-repeat="table in queryTableListController.filteredTables">
+                        <div class="collapsible-header collection-item"
+                             ng-click="queryTableListController.getTableColumnsMetadata(table.name);
+                                        queryTableListController.selectTable(table)">
+                            <span class="task-cat light-blue">
+                                {{table.name}}
+                            </span>
+                            <div class="secondary-content col s1">
+                                <i class="material-icons" ng-hide="table.selected">
+                                    remove
+                                </i>
+                                <i class="material-icons ng-hide" ng-hide="!table.selected">
+                                    done
+                                </i>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <ul class="collection with-header task-card">
+                                    <li class="collection-header gradient-45deg-light-blue-cyan">
+                                        <h4 class="task-card-title">Columns</h4>
+                                    </li>
+                                    <li ng-repeat="column in table.columns">
+                                        <div class="collection-item"
+                                            ng-click="queryTableListController.selectColumn(table, column)">
+                                            <span class="task-cat light-blue">
+                                                {{column.name}}
+                                            </span>
+                                            <div class="secondary-content right-align">
+                                                <i class="material-icons">
+                                                    arrow_forward
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </ul>
     </div>
 </div>

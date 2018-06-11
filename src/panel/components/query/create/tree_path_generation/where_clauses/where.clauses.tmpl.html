@@ -1,0 +1,101 @@
+<div class="section">
+    <div class="row">
+        <span>Table selected: {{queryWhereClausesController.tableName}} </span><span>Column selected: {{queryWhereClausesController.columnName}} </span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form>
+                <!--<div class="row">
+                    <div class="col s3">
+                        Choose a comparison value:
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select ng-model="queryWhereClausesController.whereClauseForm.comparisonSign">
+                            <option value="" disabled selected>Choose comparison</option>
+                            <option value=">">></option>
+                            <option value="<"><</option>
+                            <option value="=">=</option>
+                            <option value="!=">!=</option>
+                            <option value=">=">>=</option>
+                            <option value="<="><=</option>
+                            <option value="LIKE">LIKE</option>
+                        </select>
+                        <label>Choose where comparison</label>
+                    </div>
+                    <!--<div class="col s1">
+                        <label>
+                            <input class="with-gap" value=">" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span>></span>
+                        </label>
+                    </div>
+                    <div class="col s1 offset-s1">
+                        <label>
+                            <input class="with-gap" value="<" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span><</span>
+                        </label>
+                    </div>
+                    <div class="col s1 offset-s1">
+                        <label>
+                            <input class="with-gap" value="=" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span>=</span>
+                        </label>
+                    </div>
+                    <div class="col s1 offset-s1">
+                        <label>
+                            <input class="with-gap" value="!=" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span>!=</span>
+                        </label>
+                    </div>
+                    <div class="col s1 offset-s1">
+                        <label>
+                            <input class="with-gap" value="<=" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span><=</span>
+                        </label>
+                    </div>
+                    <div class="col s1 offset-s1">
+                        <label>
+                            <input class="with-gap" value=">=" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span>>=</span>
+                        </label>
+                    </div>
+                    <div class="col s1">
+                        <label>
+                            <input class="with-gap" value="like" name="comparison_value" type="radio"
+                                   ng-model="queryWhereClausesController.whereClauseForm.comparisonSign"/>
+                            <span>like</span>
+                        </label>
+                    </div>-->
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="reference_value" type="text"
+                               ng-model="queryWhereClausesController.whereClauseForm.comparisonValue">
+                        <label for="reference_value">Reference value (with a comparison value complete the where clause)</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <a class="waves-effect waves-light btn-small light-blue"
+                   ng-click="queryWhereClausesController.goNext('and')">And</a>
+            </div>
+            <div class="col s12 m12 l4">
+                <a class="waves-effect waves-light btn-small light-blue"
+                   ng-click="queryWhereClausesController.goNext('or')">Or</a>
+            </div>
+            <div class="col s12 m12 l4">
+                <a class="waves-effect waves-light btn-small light-blue"
+                   ng-click="queryWhereClausesController.goNext()">Query Summary</a>
+            </div>
+        </div>
+    </div>
+</div>

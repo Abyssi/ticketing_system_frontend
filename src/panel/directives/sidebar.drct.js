@@ -9,7 +9,8 @@ angular.module('app.drct').directive('sidebarActiveLink', function ($location) {
             scope.$on("$routeChangeSuccess", function () {
                 var hrefs = [
                     '#' + $location.path(),
-                    '#' + $location.path().substr(0, $location.path().lastIndexOf('/'))
+                    '#' + $location.path().substr(0, $location.path().lastIndexOf('/')),
+                    '#' + $location.path().substr(0, $location.path().lastIndexOf('/')).substr(0, $location.path().lastIndexOf('/'))
                 ];
 
                 angular.forEach(elem.find('a'), function (a) {

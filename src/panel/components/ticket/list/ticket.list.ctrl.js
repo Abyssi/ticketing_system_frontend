@@ -3,7 +3,7 @@
 angular.module('app.ctrl').controller('ticketListController', function ($routeParams, userService, ticketService) {
     const self = this;
 
-    self.searchTerm = $routeParams.searchTerm;
+    self.searchTerm = $routeParams.searchTerm == null ? '' : $routeParams.searchTerm;
     self.tickets = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
@@ -50,12 +50,25 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
         });
     };
 
-    self.set = function () {
+    self.delete = function (ticketId) {
+        if (confirm("Are you sure you want to delete this ticket?")) {
+            ticketService.delete(ticketId, function () {
+                alert("Ticket deleted");
+                window.location.href = "#/ticket/list";
+            }, function () {
+                alert("Invalid delete");
+            });
+        }
+    };
+
+    self.set = function (page) {
+        if (page != null) self.currentPage = page;
         self.searchTerm === '' ? self.reset() : self.search();
     };
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
+        M.AutoInit();
         self.set();
     }();
 
