@@ -102,7 +102,6 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
         return self.validateSQL(form.queryText) &&
             self.validateCron(form.cron) &&
             form.description.length > 1 &&
-            form.description.length > 1 &&
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
             form.queryType !== '';
