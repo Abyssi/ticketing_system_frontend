@@ -3,7 +3,7 @@
 angular.module('app.ctrl').controller('profileController', function (userService) {
     const self = this;
 
-    self.profileForm = {firstName: '', lastName: '', email: '', password: '', confirmPassword: ''};
+    self.profileForm = {firstName: '', lastName: '', email: '', password: '', confirmPassword: '', roles: ''};
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
@@ -11,6 +11,7 @@ angular.module('app.ctrl').controller('profileController', function (userService
             self.profileForm.firstName = response.data["firstName"];
             self.profileForm.lastName = response.data["lastName"];
             self.profileForm.email = response.data["email"];
+            self.profileForm.roles = angular.toJson(response.data["roles"]);
         }, function () {
             userService.logout(function () {
                 window.location.href = "../";
@@ -29,7 +30,9 @@ angular.module('app.ctrl').controller('profileController', function (userService
             firstName: self.profileForm.firstName,
             lastName: self.profileForm.firstName,
             email: self.profileForm.email,
-            password: self.profileForm.password
+            password: self.profileForm.password,
+            roles: self.profileForm.roles
+
         };
 
         userService.update(user.email, "email", user, function () {

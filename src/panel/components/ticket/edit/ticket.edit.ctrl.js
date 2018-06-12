@@ -75,7 +75,7 @@ angular.module('app.ctrl').controller('ticketEditController', function ($routePa
             alert("Invalid update");
         });
     };
-
+    /*
     self.delete = function () {
         if (confirm("Are you sure you want to delete this ticket?")) {
             ticketService.delete(self.ticketId, function () {
@@ -86,7 +86,7 @@ angular.module('app.ctrl').controller('ticketEditController', function ($routePa
             });
         }
     };
-
+    */
     self.validateForm = function (form) {
         return form.title.length > 1 &&
             form.description.length > 1;

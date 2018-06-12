@@ -38,17 +38,6 @@ angular.module('app.ctrl').controller('targetEditController', function ($routePa
         });
     };
 
-    self.delete = function () {
-        if (confirm("Are you sure you want to delete this target?")) {
-            targetService.delete(self.targetId, function () {
-                alert("Target deleted");
-                window.location.href = "#/target/list";
-            }, function () {
-                alert("Invalid delete");
-            });
-        }
-    };
-
     self.validateForm = function (form) {
         return form.name.length > 1 &&
             form.version.length > 1;

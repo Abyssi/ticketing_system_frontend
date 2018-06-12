@@ -41,4 +41,16 @@ angular.module('app.ctrl').controller('targetListController', function ($routePa
         return self.range(min, max);
     };
 
+
+    self.delete = function (targetId) {
+        if (confirm("Are you sure you want to delete this target?")) {
+            targetService.delete(targetId, function () {
+                alert("Target deleted");
+                window.location.href = "#/target/list";
+            }, function () {
+                alert("Invalid delete");
+            });
+        }
+    };
+
 });

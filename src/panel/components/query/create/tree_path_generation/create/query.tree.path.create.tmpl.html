@@ -10,7 +10,7 @@
                                 <textarea id="query_custom_sql" class="materialize-textarea"
                                           ng-model="queryTreePathCreateController.queryForm.queryText"
                                           ng-change="queryTreePathCreateController.validateSQL(queryTreePathCreateController.queryForm.queryText)"></textarea>
-                                <label for="query_custom_sql">SQL</label>
+                                <label for="query_custom_sql" class="active">SQL</label>
                             </div>
                         </div>
                         <div class="row">
@@ -48,10 +48,10 @@
                             <div class="input-field col s12">
                                 <select ng-model="queryTreePathCreateController.queryForm.comparisonOperator">
                                     <option value="" disabled selected>Choose comparison</option>
-                                    <option value="GRATHER">></option>
+                                    <option value="GREATER">></option>
                                     <option value="LESS"><</option>
                                     <option value="EQUALS">=</option>
-                                    <option value="GRATHER_EQUALS">>=</option>
+                                    <option value="GREATER_EQUALS">>=</option>
                                     <option value="LESS_EQUALS"><=</option>
                                 </select>
                                 <label>Choose query priority (It will be ticket priority)</label>

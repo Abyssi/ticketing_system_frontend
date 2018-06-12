@@ -57,7 +57,11 @@ angular.module('app.ctrl').controller('ticketCreateController', function (userSe
     };
 
     self.validateForm = function (form) {
-        return form.title.length > 1 &&
-            form.description.length > 1;
+        return form.title.length > 10 &&
+            form.description.length > 1 &&
+            form.visibility.id != null &&
+            form.category.id != null &&
+            form.target.id != null;
+        //form.priority.id != null;
     };
 });

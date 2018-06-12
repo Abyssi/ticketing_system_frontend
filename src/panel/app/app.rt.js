@@ -59,16 +59,20 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             controller: 'queryTypeController as queryTypeController'
         })
 
-        .when('/query/create/tree_path/table/list/:page', {
+        .when('/query/create/tree_path/table/list/:table', {
             templateUrl: 'components/query/create/tree_path_generation/table/list/table.list.tmpl.html',
             controller: 'queryTableListController as queryTableListController'
         })
-        .when('/query/create/tree_path/table/list', {redirectTo: '/query/create/tree_path/table/list/1'})
+        .when('/query/create/tree_path/table/list', {redirectTo: '/query/create/tree_path/table/list/0'})
 
-        .when('/query/create/tree_path/where_clauses', {
+        .when('/query/create/tree_path/where_clauses/:table/:column', {
             templateUrl: 'components/query/create/tree_path_generation/where_clauses/where.clauses.tmpl.html',
             controller: 'queryWhereClausesController as queryWhereClausesController'
         })
+        .when('/query/create/tree_path/where_clauses', {redirectTo: '/query/create/tree_path/type'})
+        .when('/query/create/tree_path/where_clauses/:table', {redirectTo: '/query/create/tree_path/type'})
+        .when('/query/create/tree_path/where_clauses/:column', {redirectTo: '/query/create/tree_path/type'})
+
 
         .when('/query/create/tree_path/create', {
             templateUrl: 'components/query/create/tree_path_generation/create/query.tree.path.create.tmpl.html',

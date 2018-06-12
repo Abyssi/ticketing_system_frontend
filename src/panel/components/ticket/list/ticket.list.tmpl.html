@@ -2,7 +2,7 @@
     <p class="caption">Here you can view all opened tickets</p>
     <div class="divider"></div>
     <div class="col s12">
-        <ul class="collection with-header task-card">
+        <div class="collection with-header task-card">
             <div class="row collection-header gradient-45deg-light-blue-cyan">
                 <div class="col l6 m6 s12">
                     <h4 class="task-card-title">My tickets</h4>
@@ -27,26 +27,71 @@
             </div>
             <ul class="collapsible popout">
                 <li ng-repeat="ticket in ticketListController.tickets">
-                    <div class="collapsible-header">
+                    <div class="row collapsible-header collection-item">
                         <span class="task-cat light-blue">{{ticket.title}}</span>
+                        <div class="secondary-content col s1">
+                            <span class="description">{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        </div>
                     </div>
                     <div class="collapsible-body">
+                        <!--
                         <span>Description: {{ticket.description}}</span>
                         <br><br>
                         <span>Status: {{ticket.status.name}}</span>
                         <br><br>
                         <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
                         <br><br>
-                        <a href="#/ticket/edit/{{ticket.id}}">Edit</a>
+                        -->
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="title">{{ticket.title}}</p>
+                                <label for="title" class="active">Title</label>
+                            </div>
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <textarea id="description"
+                                          style="height: 150px;resize: none; border: 1px solid transparent" readonly ad>
+                                    {{ticket.description}}
+                                </textarea>
+                                <label for="description" class="active">Description</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                <p id="visibility">{{ticket.visibility.name}}</p>
+                                <label for="visibility" class="active">Visibility</label>
+                            </div>
+                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                <p id="category">{{ticket.category.name}}</p>
+                                <label for="category" class="active">Category</label>
+                            </div>
+                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                <p id="target">{{ticket.target.name}}</p>
+                                <label for="target" class="active">Target</label>
+                            </div>
+                        </div>
+                        <div style="margin-top: 30px">
+                            <div class="input-field col s12 center-align">
+                                <input type="submit" value="Delete"
+                                       class="btn waves-effect waves-light col s3 red darken-3"
+                                       ng-click="ticketListController.example()">
+                                </input>
+                                <a href="#/ticket/edit/{{ticket.id}}">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s3 light-blue darken-3"
+                                           ng-click="ticketEditController.update()">
+                                    </input>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
+        </div>
+        <ul class="pagination">
+            <li ng-repeat="i in ticketListController.getPages()"
+                class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a
+                    href="#/ticket/list/{{i}}/{{ticketListController.searchTerm}}">{{i}}</a>
+            </li>
         </ul>
     </div>
-    <ul class="pagination">
-        <li ng-repeat="i in ticketListController.getPages()"
-            class="{{ticketListController.currentPage == i ? 'active' : 'waves-effect'}}"><a
-                href="#/ticket/list/{{i}}/{{ticketListController.searchTerm}}">{{i}}</a>
-        </li>
-    </ul>
 </div>
