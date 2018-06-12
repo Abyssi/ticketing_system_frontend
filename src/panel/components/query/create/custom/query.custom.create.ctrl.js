@@ -63,9 +63,9 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
                 if (element.match(self.sqlRegex)) {
                     return false;
                 }
+            });
 
-                return true;
-            })
+            return true;
 
         } else {
             return false;
@@ -85,7 +85,6 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
     self.validateForm = function (form) {
         return self.validateSQL(form.queryText) &&
             self.validateCron(form.cron) &&
-            form.description.length > 1 &&
             form.description.length > 1 &&
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
