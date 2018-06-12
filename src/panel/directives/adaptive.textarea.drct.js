@@ -5,7 +5,7 @@ angular.module('app.drct').directive('adaptiveTextArea', function () {
         restrict: 'A', //use as attribute
         replace: false,
         link: function (scope, element, attr) {
-            var update = function() {
+            var update = function () {
                 var height = element[0].scrollHeight > 0 ? element[0].scrollHeight : 150;
                 element.css('height', (height < 150 ? height : 150) + 'px');
             };

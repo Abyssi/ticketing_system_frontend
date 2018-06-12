@@ -62,6 +62,6 @@ angular.module('app.ctrl').controller('ticketCreateController', function (userSe
             form.visibility.id != null &&
             form.category.id != null &&
             form.target.id != null;
-            //form.priority.id != null;
+        //form.priority.id != null;
     };
 });

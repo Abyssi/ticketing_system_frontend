@@ -37,7 +37,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.resetTableColumns = function(table) {
+    self.resetTableColumns = function (table) {
 
         table.columns = [];
 
@@ -45,7 +45,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.selectTable = function(table) {
+    self.selectTable = function (table) {
 
         //select table only if selectable flag is true
         if (self.selectable) {
@@ -76,7 +76,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.selectColumn = function(table, column) {
+    self.selectColumn = function (table, column) {
 
         //if column is already selected, deselect it and return
         if (column.selected) {
@@ -99,10 +99,9 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
         }
 
 
-
     };
 
-    self.goToSummary = function(table) {
+    self.goToSummary = function (table) {
 
         if (confirm("Table selected: " + table.name + ". Go on?")) {
 
@@ -114,7 +113,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.goToWhereClauses = function(table, column) {
+    self.goToWhereClauses = function (table, column) {
 
         if (confirm("Table selected: " + table.name + ", Column selected: " + column.name + ". Go on?")) {
 
@@ -126,7 +125,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.updateQueryText = function(table, column) {
+    self.updateQueryText = function (table, column) {
 
         // use append feature
         if (self.appendMood) {
@@ -203,7 +202,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
             } else {
 
-                var table = self.tables.filter(function( t ) {
+                var table = self.tables.filter(function (t) {
                     return t.name === $routeParams.table;
                 });
 

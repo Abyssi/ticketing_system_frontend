@@ -3,7 +3,7 @@
 angular.module('app.ctrl').controller('queryCreateController', function (userService, $timeout) {
     const self = this;
 
-    self.toQueryCreation = function(href) {
+    self.toQueryCreation = function (href) {
 
         //go to next step
         window.location.href = href;

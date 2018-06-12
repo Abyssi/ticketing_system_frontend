@@ -211,7 +211,8 @@ p {
 }
 
 .secondary-content {
-    float: right; !important;
+    float: right;
+!important;
 }
 
 .collection-item .description {

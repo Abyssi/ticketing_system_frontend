@@ -5,8 +5,8 @@ angular.module('app.ctrl').controller('queryWhereClausesController', function (u
     const self = this;
 
     self.whereClauseForm = {
-        comparisonSign : '',
-        comparisonValue : ''
+        comparisonSign: '',
+        comparisonValue: ''
     };
 
     self.tableName = $routeParams.table;
@@ -16,13 +16,13 @@ angular.module('app.ctrl').controller('queryWhereClausesController', function (u
     self.queryText = "";
 
 
-    self.updateQueryText = function(whereClauseForm, modality){
+    self.updateQueryText = function (whereClauseForm, modality) {
 
         var q = queryBuilderService.get();
 
         self.queryText = q.queryText;
 
-        if(whereClauseForm.comparisonValue === "null") {
+        if (whereClauseForm.comparisonValue === "null") {
 
             if (whereClauseForm.comparisonSign === "!=") {
 
@@ -34,15 +34,15 @@ angular.module('app.ctrl').controller('queryWhereClausesController', function (u
 
             }
 
-        } else if(whereClauseForm.comparisonValue === "false"){
+        } else if (whereClauseForm.comparisonValue === "false") {
 
             self.queryText += whereClauseForm.comparisonSign + " FALSE";
 
-        } else if(whereClauseForm.comparisonValue === "true" ){
+        } else if (whereClauseForm.comparisonValue === "true") {
 
             self.queryText += whereClauseForm.comparisonSign + "TRUE";
 
-        } else if(whereClauseForm.comparisonSign === "LIKE") {
+        } else if (whereClauseForm.comparisonSign === "LIKE") {
 
             self.queryText += whereClauseForm.comparisonSign + " '" + whereClauseForm.comparisonValue + "%'";
 
@@ -80,7 +80,7 @@ angular.module('app.ctrl').controller('queryWhereClausesController', function (u
 
     };
 
-    self.goNext = function(modality) {
+    self.goNext = function (modality) {
 
         //validate form
         if (!self.validateForm(self.whereClauseForm)) {
@@ -111,12 +111,12 @@ angular.module('app.ctrl').controller('queryWhereClausesController', function (u
 
     };
 
-    self.validateForm = function(whereClauseForm) {
+    self.validateForm = function (whereClauseForm) {
 
         return whereClauseForm.comparisonSign != null
-                && whereClauseForm.comparisonSign !== ""
-                && whereClauseForm.comparisonValue != null
-                && whereClauseForm.comparisonValue !== "";
+            && whereClauseForm.comparisonSign !== ""
+            && whereClauseForm.comparisonValue != null
+            && whereClauseForm.comparisonValue !== "";
 
     };
 

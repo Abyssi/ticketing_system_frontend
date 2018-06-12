@@ -15,13 +15,13 @@ angular.module('app.ctrl').controller('queryTypeController', function (userServi
         queryType: ''
     };
 
-    self.refreshQuery = function(){
+    self.refreshQuery = function () {
 
         queryBuilderService.refresh()
 
     };
 
-    self.setQueryType = function(queryType, href) {
+    self.setQueryType = function (queryType, href) {
 
         self.query.queryType = queryType;
 
