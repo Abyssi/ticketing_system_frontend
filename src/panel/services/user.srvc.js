@@ -116,4 +116,20 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
         return str.join("&");
     };
 
+    self.hasRole = function (checkRole) {
+        var rolesList = [];
+        self.self(function (response) {
+            angular.forEach(response.data["roles"], function(value, key){
+                rolesList.push(value.name);
+                console.log(value.name);
+            })
+        }, function () {
+            userService.logout(function () {
+                window.location.href = "../";
+            });
+            alert("Invalid self");
+        });
+        return rolesList[0] === checkRole;
+    }
+
 });
