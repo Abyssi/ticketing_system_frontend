@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "cronstrue": "^1.30.0",
-    "sancronos-validator": "^1.2.0"
+    "sancronos-validator": "^1.2.0",
+    "sweetalert": "^2.1.0"
   }
 }

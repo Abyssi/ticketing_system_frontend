@@ -35,6 +35,7 @@ angular.module('app.ctrl').controller('teamListController', function ($routePara
 
         teamService.list(self.currentPage - 1, null, function (response) {
             self.teams = response.data.content;
+            console.log(self.teams);
             self.totalPages = response.data.totalPages;
         }, function () {
             alert("Invalid get");

@@ -6,17 +6,39 @@
             <li class="collection-header gradient-45deg-light-blue-cyan">
                 <h4 class="task-card-title">My Teams</h4>
             </li>
-
             <ul class="collapsible popout">
                 <li ng-repeat="team in teamListController.teams">
-                    <div class="collapsible-header">
+                    <div class="row collapsible-header collection-item">
                         <span class="task-cat light-blue">{{team.name}}</span>
                     </div>
                     <div class="collapsible-body">
-                        <span ng-repeat="member in team.members">
-                            <span>{{member.firstName}} {{member.lastName}}</span>
-                        </span>
-                        <!--<a href="#/team/edit/{{team.id}}">Edit</a>-->
+                        <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                            <span id="leader">{{team.leader.firstName}} {{team.leader.lastName}}</span>
+                            <label for="leader" class="active">Leader</label>
+                        </div>
+                        <ul class="collection task-card">
+                            <label style="padding-left: 15px" class="active">Member</label>
+                            <div>
+                                <li ng-repeat="member in team.members" style="border-left: 2px solid #03a9f4">
+                                        <span>{{member.firstName}} {{member.lastName}}</span>
+                                        <span></span>
+                                </li>
+                            </div>
+                        </ul>
+                        <div style="margin-top: 30px">
+                            <div class="input-field col s12 center-align">
+                                <input type="submit" value="Delete"
+                                       class="btn waves-effect waves-light col s3 red darken-3"
+                                       ng-click="teamListController.delete(team.id)">
+                                </input>
+                                <a href="">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s3 light-blue darken-3"
+                                           ng-click="">
+                                    </input>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>

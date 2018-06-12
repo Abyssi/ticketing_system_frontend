@@ -71,5 +71,4 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
         M.AutoInit();
         self.set();
     }();
-
 });
