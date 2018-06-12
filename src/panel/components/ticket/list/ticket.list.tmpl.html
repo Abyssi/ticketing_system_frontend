@@ -29,8 +29,8 @@
                 <li ng-repeat="ticket in ticketListController.tickets">
                     <div class="row collapsible-header collection-item">
                         <span class="task-cat light-blue">{{ticket.title}}</span>
-                        <div class="secondary-content col s1">
-                            <span class="description">{{ticket.creationTimestamp | toDaysDiff}}</span>
+                        <div class="secondary-content col s2">
+                            <span class="description right">{{ticket.creationTimestamp | toDaysDiff}}</span>
                         </div>
                     </div>
                     <div class="collapsible-body">
