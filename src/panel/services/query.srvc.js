@@ -7,6 +7,8 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
     self.QUERY_API_ENDPOINT = 'api/v1/queries/';
     self.TABLES_METADATA_ENDPOINT = 'tables/';
     self.TABLE_COLUMNS_METADATA_ENDPOINT = '/columns';
+    self.DISABLE_QUERY_ENDPOINT = "disable/";
+    self.ACTIVATE_QUERY_ENDPOINT = "activate/";
 
     // API
 
@@ -43,6 +45,24 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
             console.log("Error during list");
             if (error != null) error(response);
         });
+    };
+
+    self.disableOne = function(id, success, error) {
+
+        self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.DISABLE_QUERY_ENDPOINT + id), success, function (response) {
+            console.log("Error during query disabling");
+            if (error != null) error(response);
+        });
+
+    };
+
+    self.activateOne = function(id, success, error) {
+
+        self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.ACTIVATE_QUERY_ENDPOINT + id), success, function (response) {
+            console.log("Error during query activating");
+            if (error != null) error(response);
+        });
+
     };
 
     self.metadata = function (success, error) {

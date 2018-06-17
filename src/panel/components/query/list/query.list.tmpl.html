@@ -6,19 +6,46 @@
             <li class="collection-header gradient-45deg-light-blue-cyan">
                 <h4 class="task-card-title">Queries</h4>
             </li>
-            <li ng-repeat="query in queryListController.queries">
-                <a href="#/query/edit/{{query.id}}">
-                    <div class="collection-item">
-                        <span class="secondary-content description">{{query.cron | toPrettyCron}}
-                            <i class="material-icons">
-                                alarm
-                            </i>
-                        </span>
+            <ul class="collapsible popout">
+                <li ng-repeat="query in queryListController.queries">
+                    <div class="row collapsible-header collection-item"
+                         ng-click="queryListController.getMoreInfo(query)">
                         <span class="task-cat light-blue">{{query.description}}</span>
-                        <span class="description">{{query.queryText}}</span>
+                        <div class="secondary-content col s2">
+                            <span class="description right">{{query.cron | toPrettyCron}}</span>
+                        </div>
+                        <i class="material-icons">
+                            alarm
+                        </i>
                     </div>
-                </a>
-            </li>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <textarea id="query_text" style="height: 150px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
+                                <label for="query_text" class="active">Query text</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="margin-top: 30px">
+                                    <button class="btn waves-effect waves-light col s3 yellow darken-3 left-align"
+                                           ng-click="query.active ? queryListController.disable(query) : queryListController.activate(query)">
+                                        {{query.active ? 'Disable' : 'Enable'}}
+                                    </button>
+                                    <a href="#/query/edit/{{query.id}}">
+                                        <button class="btn waves-effect waves-light col s2 push-s2 light-blue darken-3 center-align">
+                                            Update
+                                        </button>
+                                    </a>
+                                    <button
+                                            class="btn waves-effect waves-light col s3 push-s4 red darken-3 right-align"
+                                            ng-click="queryListController.delete(query)">
+                                        Delete
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </ul>
     </div>
     <ul class="pagination">

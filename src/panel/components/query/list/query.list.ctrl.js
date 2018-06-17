@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryListController', function ($routeParams, userService, queryService) {
+angular.module('app.ctrl').controller('queryListController', function ($routeParams, userService, queryService, $timeout) {
     const self = this;
 
     self.queries = [];
@@ -28,12 +28,86 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
         return self.range(min, max);
     };
 
+    self.setQueryDetails = function(query, details) {
+
+        query.active = details.active;
+
+        query.comparisonOperator = details.comparisonOperator;
+
+        query.queryPriority = details.queryPriority;
+
+        query.queryType = details.queryType;
+
+    };
+
+    self.getMoreInfo = function (query) {
+
+        queryService.get(query.id, function (response) {
+
+            angular.forEach(self.queries, function (q) {
+
+                if (q.id === response.data.id) {
+
+                    self.setQueryDetails(q, response.data);
+
+                }
+
+            });
+
+        }, function () {
+            alert("Invalid get details");
+        });
+    };
+
+    self.disable = function(query) {
+
+        if (!query.active) {
+            alert("Query already disable!")
+            return
+        }
+
+        queryService.disableOne(query.id, function (response) {
+
+            //disable query locally
+            query.active = false;
+
+        }), function(error) {
+
+            alert("Error while disabling query");
+
+        };
+
+    };
+
+    self.activate = function(query) {
+
+        if (query.active) {
+            alert("Query already active!")
+            return
+        }
+
+        queryService.activateOne(query.id, function (response) {
+
+            //activate query locally
+            query.active = true;
+
+        }), function(error) {
+
+            alert("Error while activating query");
+
+        };
+    };
+
+
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
+
+        M.AutoInit();
 
         queryService.list(self.currentPage - 1, null, function (response) {
             self.queries = response.data.content;
             self.totalPages = response.data.totalPages;
+
         }, function () {
             alert("Invalid get");
         });
