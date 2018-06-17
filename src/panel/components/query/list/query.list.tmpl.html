@@ -10,37 +10,65 @@
                 <li ng-repeat="query in queryListController.queries">
                     <div class="row collapsible-header collection-item"
                          ng-click="queryListController.getMoreInfo(query)">
-                        <span class="task-cat light-blue">{{query.description}}</span>
+                        <div class="secondary-content task-cat col s1">
+                            <i class="material-icons"
+                               ng-class="query.active ? ' amber-text accent-4' : 'red-text'">
+                                {{query.active ? 'done' : 'clear'}}
+                            </i>
+                        </div>
+                        <span class="task-cat light-blue col s9 center-align">{{query.description}}</span>
                         <div class="secondary-content col s2">
                             <span class="description right">{{query.cron | toPrettyCron}}</span>
                         </div>
-                        <i class="material-icons">
+                        <i class="material-icons secondary-content">
                             alarm
                         </i>
                     </div>
                     <div class="collapsible-body">
                         <div class="row">
                             <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
-                                <textarea id="query_text" style="height: 150px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
+                                <textarea id="query_description" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.description}}</textarea>
+                                <label for="query_description" class="active">Query full title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <textarea id="query_text" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
                                 <label for="query_text" class="active">Query text</label>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
+                                <p id="query_priority">{{query.queryPriority.name}}</p>
+                                <label for="query_priority" class="active">Priority</label>
+                            </div>
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
+                                <p id="comparison_operator">{{query.comparisonOperator}}</p>
+                                <label for="comparison_operator" class="active">Comparison operator</label>
+                            </div>
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
+                                <p id="reference_value">{{query.referenceValue}}</p>
+                                <label for="reference_value" class="active">Reference value</label>
+                            </div>
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
+                                <p id="query_type">{{query.queryType}}</p>
+                                <label for="query_type" class="active">Query type</label>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div style="margin-top: 30px">
-                                    <button class="btn waves-effect waves-light col s3 yellow darken-3 left-align"
-                                           ng-click="query.active ? queryListController.disable(query) : queryListController.activate(query)">
-                                        {{query.active ? 'Disable' : 'Enable'}}
-                                    </button>
-                                    <a href="#/query/edit/{{query.id}}">
-                                        <button class="btn waves-effect waves-light col s2 push-s2 light-blue darken-3 center-align">
-                                            Update
-                                        </button>
-                                    </a>
-                                    <button
-                                            class="btn waves-effect waves-light col s3 push-s4 red darken-3 right-align"
-                                            ng-click="queryListController.delete(query)">
-                                        Delete
-                                    </button>
+                                <a class="waves-effect waves-light btn col s3 yellow darken-3 left-align"
+                                   ng-click="query.active ? queryListController.disable(query) : queryListController.activate(query)">
+                                    {{query.active ? 'Disable' : 'Enable'}}
+                                </a>
+                                <a href="#/query/edit/{{query.id}}"
+                                   class="waves-effect waves-light btn col s2 push-s2 blue darken-3 center-align">
+                                    Update
+                                </a>
+                                <a class="waves-effect waves-light btn col s3 push-s4 red darken-3"
+                                   ng-click="queryListController.delete(query)">
+                                   Delete
+                                </a>
                             </div>
                         </div>
                     </div>

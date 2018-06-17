@@ -30,13 +30,39 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     self.setQueryDetails = function(query, details) {
 
-        query.active = details.active;
-
         query.comparisonOperator = details.comparisonOperator;
 
         query.queryPriority = details.queryPriority;
 
         query.queryType = details.queryType;
+
+        query.referenceValue = details.referenceValue;
+
+    };
+
+    self.delete = function(query) {
+
+        queryService.delete(query.id, function (response) {
+
+            self.getCurrentPage();
+
+        }, function (error) {
+
+            alert("Error while deleting query");
+
+        });
+
+    };
+
+    self.getCurrentPage = function() {
+
+        queryService.list(self.currentPage - 1, null, function (response) {
+            self.queries = response.data.content;
+            self.totalPages = response.data.totalPages;
+
+        }, function () {
+            alert("Invalid get");
+        });
 
     };
 
