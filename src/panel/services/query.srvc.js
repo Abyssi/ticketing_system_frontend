@@ -26,8 +26,8 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
         });
     };
 
-    self.update = function (id, ticket, success, error) {
-        self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + id, ticket), success, function (response) {
+    self.update = function (id, query, success, error) {
+        self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + id, query), success, function (response) {
             console.log("Error during update");
             if (error != null) error(response);
         });
