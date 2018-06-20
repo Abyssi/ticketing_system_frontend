@@ -15,7 +15,12 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         cron: '',
         comparisonOperator: '',
         referenceValue: '',
-        queryType: ''
+        queryType: '',
+        dbConnectionInfo: {
+            url: '',
+            username: '',
+            password: ''
+        }
     };
 
     //translate cron only when it has more than n char
@@ -23,7 +28,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
 
     self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
 
-    self.cronRegex = /^(\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-3])|\*\/([0-9]|1[0-9]|2[0-3])) (\*|(0?[1-9]|1[0-9]|2[0-9]|3[0-1])|\*\/([1-9]|1[0-9]|2[0-9]|3[0-1])) (\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2])) (\?)$/;
+    self.cronRegex = /^(\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-3])|\*\/([0-9]|1[0-9]|2[0-3])) ((\* \* \?)|(\?\ (((\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2])))|(JAN(\-(FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|FEB(\-(JAN|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|MAR(\-(JAN|FEB|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|APR(\-(JAN|FEB|MAR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|MAY(\-(JAN|FEB|MAR|APR|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|JUN(\-(JAN|FEB|MAR|APR|MAY|JUL|AUG|SEP|OCT|NOV|DEC)|)|JUL(\-(JAN|FEB|MAR|APR|MAY|JUN|AUG|SEP|OCT|NOV|DEC)|)|AUG(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|SEP|OCT|NOV|DEC)|)|SEP(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|OCT|NOV|DEC)|)|OCT(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|NOV|DEC)|)|NOV(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|DEC)|)|DEC(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV)|)))\ (([1-7])|(MON(\-(TUE|WED|THU|FRI|SAT|SUN)|)|TUE(\-(MON|WED|THU|FRI|SAT|SUN)|)|WED(\-(MON|TUE|THU|FRI|SAT|SUN)|)|THU(\-(MON|TUE|WED|FRI|SAT|SUN)|)|FRI(\-(MON|TUE|WED|THU|SAT|SUN)|)|SAT(\-(MON|TUE|WED|THU|FRI|SUN)|)|SUN(\-(MON|TUE|WED|THU|FRI|SAT)|))))|((0?[1-9]|1[0-9]|2[0-9]|3[0-1])|\*\/([1-9]|1[0-9]|2[0-9]|3[0-1])) ((\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2]))\ \?))$/;
     self.sqlRegex = /^(INSERT|DELETE|UPDATE|CREATE|GRANT|DROP)$/;
     self.splitRegex = /;|\s/;
 

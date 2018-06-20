@@ -38,6 +38,8 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
         query.referenceValue = details.referenceValue;
 
+        query.dbConnectionInfo = details.dbConnectionInfo;
+
     };
 
     self.delete = function(query) {
