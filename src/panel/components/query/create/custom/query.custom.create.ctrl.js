@@ -87,13 +87,28 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
 
     };
 
+    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+
+        if (dbConnectionInfo.url === '')
+            dbConnectionInfo.url = null;
+
+        if (dbConnectionInfo.username === '')
+            dbConnectionInfo.username = null;
+
+        if (dbConnectionInfo.password === '')
+            dbConnectionInfo.password = null;
+
+        return true;
+    };
+
     self.validateForm = function (form) {
         return self.validateSQL(form.queryText) &&
             self.validateCron(form.cron) &&
             form.description.length > 1 &&
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
-            form.queryType !== '';
+            form.queryType !== '' &&
+            self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 
     self.formatCron = function (cron) {

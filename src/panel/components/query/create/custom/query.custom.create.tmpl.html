@@ -76,6 +76,37 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <input id="db_connection_url"
+                                       type="text"
+                                       class="tooltipped"
+                                       data-position="bottom"
+                                       data-tooltip="If you want to use default value keep it empty"
+                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.url">
+                                <label for="db_connection_url">Database url to perform query (example: jdbc:postgresql://www.example.com:port/db_name)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="db_connection_username"
+                                       type="text"
+                                       class="tooltipped"
+                                       data-position="bottom"
+                                       data-tooltip="If you want to use default value keep it empty"
+                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.username">
+                                <label for="db_connection_url">Db username to perform query</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="db_connection_password"
+                                       type="password"
+                                       class="tooltipped"
+                                       data-position="bottom"
+                                       data-tooltip="If you want to use default value keep it empty"
+                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.password">
+                                <label for="db_connection_url">Db password to perform query</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
                                 <input type="submit" value="Create"
                                        class="btn waves-effect waves-light col s12 light-blue darken-3"
                                        ng-click="queryCustomCreateController.create()">
