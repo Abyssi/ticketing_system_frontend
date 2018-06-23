@@ -1,55 +1,59 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryEditController', function ($routeParams, userService, ticketService, $timeout) {
+angular.module('app.ctrl').controller('queryEditController', function ($routeParams, userService, queryService, $timeout) {
     const self = this;
 
-    self.ticketForm = {
-        visibility: {
-            id: ''
-        },
+    self.queryId = $routeParams.id;
+
+    self.queryForm = {
+        id: '',
+        queryText: '',
         description: '',
-        assignee: {
+        queryPriority: {
             id: ''
         },
-        category: {
-            id: ''
-        },
-        title: '',
-        target: {
-            id: ''
-        },
-        customerPriority: {
-            id: ''
+        cron: '',
+        comparisonOperator: '',
+        referenceValue: '',
+        queryType: '',
+        dbConnectionInfo: {
+            url: '',
+            username: '',
+            password: ''
         }
     };
-    self.ticketId = $routeParams.id;
 
-    self.visibilities = [];
-    self.assignees = [];
-    self.categories = [];
-    self.targets = [];
+    //translate cron only when it has more than n char
+    self.minCronInputChar = 8;
+
+    self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
+
+    self.cronRegex = /^(\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])|\*\/([0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])) (\*|(0?[0-9]|1[0-9]|2[0-3])|\*\/([0-9]|1[0-9]|2[0-3])) ((\* \* \?)|(\?\ (((\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2])))|(JAN(\-(FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|FEB(\-(JAN|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|MAR(\-(JAN|FEB|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|APR(\-(JAN|FEB|MAR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|MAY(\-(JAN|FEB|MAR|APR|JUN|JUL|AUG|SEP|OCT|NOV|DEC)|)|JUN(\-(JAN|FEB|MAR|APR|MAY|JUL|AUG|SEP|OCT|NOV|DEC)|)|JUL(\-(JAN|FEB|MAR|APR|MAY|JUN|AUG|SEP|OCT|NOV|DEC)|)|AUG(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|SEP|OCT|NOV|DEC)|)|SEP(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|OCT|NOV|DEC)|)|OCT(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|NOV|DEC)|)|NOV(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|DEC)|)|DEC(\-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV)|)))\ (([1-7])|(MON(\-(TUE|WED|THU|FRI|SAT|SUN)|)|TUE(\-(MON|WED|THU|FRI|SAT|SUN)|)|WED(\-(MON|TUE|THU|FRI|SAT|SUN)|)|THU(\-(MON|TUE|WED|FRI|SAT|SUN)|)|FRI(\-(MON|TUE|WED|THU|SAT|SUN)|)|SAT(\-(MON|TUE|WED|THU|FRI|SUN)|)|SUN(\-(MON|TUE|WED|THU|FRI|SAT)|))))|((0?[1-9]|1[0-9]|2[0-9]|3[0-1])|\*\/([1-9]|1[0-9]|2[0-9]|3[0-1])) ((\*|(0?[1-9]|1[0-2])|\*\/([1-9]|1[0-2]))\ \?))$/;
+    self.sqlRegex = /^(INSERT|DELETE|UPDATE|CREATE|GRANT|DROP)$/;
+    self.splitRegex = /;|\s/;
+
     self.priorities = [];
 
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
-        ticketService.get(self.ticketId, function (response) {
-            self.ticketForm.visibility.id = response.data.visibility.id.toString();
-            self.ticketForm.description = response.data.description;
-            self.ticketForm.assignee.id = response.data.assignee.id.toString();
-            self.ticketForm.category.id = response.data.category.id.toString();
-            self.ticketForm.title = response.data.title;
-            self.ticketForm.target.id = response.data.target.id.toString();
-            self.ticketForm.customerPriority.id = response.data.customerPriority.id.toString();
-        }, function () {
+        queryService.get(self.queryId, function (response) {
+            self.queryForm.id = response.data.id;
+            self.queryForm.queryText =  response.data.queryText;
+            self.queryForm.description = response.data.description;
+            self.queryForm.queryPriority.id = response.data.queryPriority.id.toString();
+            self.queryForm.cron = response.data.cron;
+            self.queryForm.comparisonOperator = response.data.comparisonOperator;
+            self.queryForm.referenceValue = response.data.referenceValue;
+            self.queryForm.queryType = response.data.queryType;
+
+        }, function (error) {
+
             alert("Invalid get");
+
         });
 
-        ticketService.metadata(function (response) {
-            self.visibilities = response.data.visibilities;
-            self.assignees = response.data.assignees;
-            self.categories = response.data.categories;
-            self.targets = response.data.targets;
+        queryService.metadata(function (response) {
             self.priorities = response.data.priorities;
             $timeout(function () {
                 M.AutoInit();
@@ -57,38 +61,78 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         }, function () {
             alert("Invalid metadata");
         });
-
     }();
 
     self.update = function () {
-        if (!self.validateForm(this.ticketForm)) {
+        if (!self.validateForm(this.queryForm)) {
             alert("Invalid form");
             return;
         }
 
-        const ticket = self.ticketForm;
+        const query = self.queryForm;
 
-        ticketService.update(self.ticketId, ticket, function () {
-            alert("Ticket updated");
-            window.location.href = "#/team/list";
+        queryService.update(query.id, query, function () {
+            alert("Query updated");
+            window.location.href = "#/query/list";
         }, function () {
-            alert("Invalid update");
+            alert("Invalid create");
         });
     };
 
-    self.delete = function () {
-        if (confirm("Are you sure you want to delete this team?")) {
-            ticketService.delete(self.ticketId, function () {
-                alert("Team deleted");
-                window.location.href = "#/team/list";
-            }, function () {
-                alert("Invalid delete");
+    self.validateSQL = function (sql) {
+
+        var sqlSplitted = self.splitSQL(sql);
+
+        if (sqlSplitted.length > 0) {
+
+            sqlSplitted.forEach(function (element, index, array) {
+                if (element.match(self.sqlRegex)) {
+                    return false;
+                }
             });
+
+            return true;
+
+        } else {
+            return false;
         }
+
+    };
+
+    self.validateCron = function (cron) {
+
+        if (cron.length < 1)
+            return false;
+
+        return cron.match(self.cronRegex)
+
     };
 
     self.validateForm = function (form) {
-        return form.title.length > 1 &&
-            form.description.length > 1;
+        return self.validateSQL(form.queryText) &&
+            self.validateCron(form.cron) &&
+            form.description.length > 1 &&
+            form.comparisonOperator !== '' &&
+            form.referenceValue !== '' &&
+            form.queryType !== '';
     };
+
+    self.formatCron = function (cron) {
+
+        if (cron.length > self.minCronInputChar && self.validateCron(cron)) {
+
+            self.cronFormatted = cronstrue.toString(cron, {locale: "en"});
+
+        } else {
+
+            self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
+
+        }
+    }
+
+    self.splitSQL = function (sql) {
+
+        return sql.split(self.splitRegex);
+
+    }
 });

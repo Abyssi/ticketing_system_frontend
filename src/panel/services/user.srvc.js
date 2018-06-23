@@ -9,7 +9,7 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
     // API
 
     self.register = function (user, success, error) {
-        self.httpAsync($http.put(self.SERVER_URI + self.USER_API_ENDPOINT + "register", user), success, function (response) {
+        self.httpAsync($http.put(self.SERVER_URI + self.USER_API_ENDPOINT, user), success, function (response) {
             console.log("Error during registration");
             if (error != null) error(response);
         });
@@ -115,5 +115,21 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
             str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
         return str.join("&");
     };
+
+    self.hasRole = function (checkRole) {
+        var rolesList = [];
+        self.self(function (response) {
+            angular.forEach(response.data["roles"], function(value, key){
+                rolesList.push(value.name);
+                console.log(value.name);
+            })
+        }, function () {
+            userService.logout(function () {
+                window.location.href = "../";
+            });
+            alert("Invalid self");
+        });
+        return rolesList[0] === checkRole;
+    }
 
 });

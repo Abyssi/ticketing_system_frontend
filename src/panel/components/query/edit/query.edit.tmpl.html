@@ -8,24 +8,24 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="query_custom_sql" class="materialize-textarea"
-                                          ng-model="queryCustomCreateController.queryForm.queryText"
-                                          ng-change="queryCustomCreateController.validateSQL(queryCustomCreateController.queryForm.queryText)"></textarea>
-                                <label for="query_custom_sql">SQL</label>
+                                          ng-model="queryEditController.queryForm.queryText"
+                                          ng-change="queryEditController.validateSQL(queryCustomCreateController.queryForm.queryText)"></textarea>
+                                <label for="query_custom_sql" class="active">SQL</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="query_custom_description" class="materialize-textarea"
-                                          ng-model="queryCustomCreateController.queryForm.description"></textarea>
-                                <label for="query_custom_description">Description (It will appear as ticket
+                                          ng-model="queryEditController.queryForm.description"></textarea>
+                                <label for="query_custom_description" class="active">Description (It will appear as ticket
                                     description)</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="queryCustomCreateController.queryForm.queryPriority.id">
+                                <select ng-model="queryEditController.queryForm.queryPriority.id">
                                     <option value="" disabled selected>Choose priority</option>
-                                    <option ng-repeat="priority in queryCustomCreateController.priorities"
+                                    <option ng-repeat="priority in queryEditController.priorities"
                                             value="{{priority.id}}">{{priority.name}}
                                     </option>
                                 </select>
@@ -35,18 +35,18 @@
                         <div class="row">
                             <div class="input-field col s12 m6 l6">
                                 <input id="cron" type="text"
-                                       ng-model="queryCustomCreateController.queryForm.cron"
-                                       ng-change="queryCustomCreateController.formatCron(queryCustomCreateController.queryForm.cron)"
+                                       ng-model="queryEditController.queryForm.cron"
+                                       ng-change="queryEditController.formatCron(queryEditController.queryForm.cron)"
                                        ng-Trim="true">
                                 <label for="cron" class="active">Cron</label>
                             </div>
                             <div class="input-field col s12 m6 l6">
-                                {{queryCustomCreateController.cronFormatted}}
+                                {{queryEditController.cronFormatted}}
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="queryCustomCreateController.queryForm.comparisonOperator">
+                                <select ng-model="queryEditController.queryForm.comparisonOperator">
                                     <option value="" disabled selected>Choose comparison</option>
                                     <option value="GREATER">></option>
                                     <option value="LESS"><</option>
@@ -60,13 +60,13 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="reference_value" type="number"
-                                       ng-model="queryCustomCreateController.queryForm.referenceValue">
+                                       ng-model="queryEditController.queryForm.referenceValue">
                                 <label for="reference_value" class="active">Reference value</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select ng-model="queryCustomCreateController.queryForm.queryType">
+                                <select ng-model="queryEditController.queryForm.queryType">
                                     <option value="" disabled selected>Choose query type</option>
                                     <option value="DATA_BASE_INSTANT_CHECK">Instant check</option>
                                     <option value="DATA_BASE_TABLE_MONITOR">Monitoring</option>
@@ -76,40 +76,9 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="db_connection_url"
-                                       type="text"
-                                       class="tooltipped"
-                                       data-position="bottom"
-                                       data-tooltip="If you want to use default value keep it empty"
-                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.url">
-                                <label for="db_connection_url">Database url to perform query (example: jdbc:postgresql://www.example.com:port/db_name)</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="db_connection_username"
-                                       type="text"
-                                       class="tooltipped"
-                                       data-position="bottom"
-                                       data-tooltip="If you want to use default value keep it empty"
-                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.username">
-                                <label for="db_connection_url">Db username to perform query</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="db_connection_password"
-                                       type="password"
-                                       class="tooltipped"
-                                       data-position="bottom"
-                                       data-tooltip="If you want to use default value keep it empty"
-                                       ng-model="queryCustomCreateController.queryForm.dbConnectionInfo.password">
-                                <label for="db_connection_url">Db password to perform query</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input type="submit" value="Create"
+                                <input type="submit" value="Update"
                                        class="btn waves-effect waves-light col s12 light-blue darken-3"
-                                       ng-click="queryCustomCreateController.create()">
+                                       ng-click="queryEditController.update()">
                                 </input>
                             </div>
                         </div>

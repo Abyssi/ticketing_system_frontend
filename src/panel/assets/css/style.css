@@ -268,3 +268,17 @@ p {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+.query-details {
+
+    background: #e0f7fa;
+
+}
+
+.query-details textarea {
+
+    padding-top: 18px;
+
+}
+

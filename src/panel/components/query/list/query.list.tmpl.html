@@ -6,19 +6,113 @@
             <li class="collection-header gradient-45deg-light-blue-cyan">
                 <h4 class="task-card-title">Queries</h4>
             </li>
-            <li ng-repeat="query in queryListController.queries">
-                <a href="#/query/edit/{{query.id}}">
-                    <div class="collection-item">
-                        <span class="secondary-content description">{{query.cron | toPrettyCron}}
-                            <i class="material-icons">
-                                alarm
+            <ul class="collapsible popout">
+                <li ng-repeat="query in queryListController.queries">
+                    <div class="row collapsible-header collection-item"
+                         ng-click="queryListController.getMoreInfo(query)">
+                        <div class="secondary-content task-cat col s1">
+                            <i class="material-icons"
+                               ng-class="query.active ? ' amber-text accent-4' : 'red-text'">
+                                {{query.active ? 'done' : 'clear'}}
                             </i>
+                        </div>
+                        <span class="task-cat light-blue col s9 center-align">
+                            <span>{{query.description | limitTo:82}}</span>
+                            <span ng-if="query.description.length >= 82">...</span>
                         </span>
-                        <span class="task-cat light-blue">{{query.description}}</span>
-                        <span class="description">{{query.queryText}}</span>
+                        <div class="secondary-content col s2">
+                            <span class="description right">
+                                <span>{{query.cron | toPrettyCron | limitTo:18}}</span>
+                                <span ng-if="query.cron.length >= 18">...</span>
+                            </span>
+                        </div>
+                        <i class="material-icons secondary-content">
+                            alarm
+                        </i>
                     </div>
-                </a>
-            </li>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col s12 query-details" style="border-left: 2px solid #03a9f4">
+                                <textarea id="query_description" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.description}}</textarea>
+                                <label for="query_description" class="active">Query full title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 query-details" style="border-left: 2px solid #03a9f4">
+                                <textarea id="query_text" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
+                                <label for="query_text" class="active">Query text</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 query-details" style="border-left: 2px solid #03a9f4">
+                                <p id="query_cron">
+                                    {{query.cron}}
+                                    <i class="material-icons" style="display: inline-flex;vertical-align: top;">
+                                        arrow_right_alt
+                                    </i>
+                                    {{query.cron | toPrettyCron}}
+                                </p>
+                                <label for="query_cron" class="active">Query full cron</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s3 query-details" style="border-left: 2px solid #03a9f4;">
+                                <p id="query_priority">{{query.queryPriority.name}}</p>
+                                <label for="query_priority" class="active">Priority</label>
+                            </div>
+                            <div class="input-field col s3 query-details" style="border-left: 2px solid #03a9f4;">
+                                <p id="comparison_operator">{{query.comparisonOperator}}</p>
+                                <label for="comparison_operator" class="active">Comparison operator</label>
+                            </div>
+                            <div class="input-field col s3 query-details" style="border-left: 2px solid #03a9f4;">
+                                <p id="reference_value">{{query.referenceValue}}</p>
+                                <label for="reference_value" class="active">Reference value</label>
+                            </div>
+                            <div class="input-field col s3 query-details" style="border-left: 2px solid #03a9f4;">
+                                <p id="query_type">{{query.queryType}}</p>
+                                <label for="query_type" class="active">Query type</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s8 query-details" style="border-left: 2px solid #03a9f4;">
+                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url != null">{{query.dbConnectionInfo.url}}</p>
+                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url == null">Default database</p>
+                                <label for="db_connection_url" class="active">Database URL</label>
+                            </div>
+                            <div class="input-field col s4 query-details" style="border-left: 2px solid #03a9f4">
+                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username != null">{{query.dbConnectionInfo.username}}</p>
+                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username == null">Default username</p>
+                                <label for="comparison_operator" class="active">DB Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="margin-top: 30px">
+                                <a class="waves-effect waves-light btn col s3 yellow darken-3 left-align"
+                                   ng-click="query.active ? queryListController.disable(query) : queryListController.activate(query)">
+                                    {{query.active ? 'Disable' : 'Enable'}}
+                                    <i class="material-icons" style="display: inline-flex;vertical-align: top;">
+                                        {{query.active ? 'clear' : 'done'}}
+                                    </i>
+                                </a>
+                                <a href="#/query/edit/{{query.id}}"
+                                   class="waves-effect waves-light btn col s2 push-s2 blue darken-3 center-align">
+                                    Update
+                                    <i class="material-icons" style="display: inline-flex;vertical-align: top;">
+                                        update
+                                    </i>
+                                </a>
+                                <a class="waves-effect waves-light btn col s3 push-s4 red darken-3"
+                                   ng-click="queryListController.delete(query)">
+                                   Delete
+                                    <i class="material-icons" style="display: inline-flex;vertical-align: top;">
+                                        delete
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </ul>
     </div>
     <ul class="pagination">
