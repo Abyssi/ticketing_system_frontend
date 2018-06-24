@@ -2,6 +2,49 @@
     <p class="caption">Here you can view all tables in db. Choose table to monitor. Then choose a column in that
         table.</p>
     <div class="divider"></div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="db_connection_url"
+                   type="text"
+                   class="tooltipped"
+                   data-position="bottom"
+                   data-tooltip="If you want to use default value keep it empty"
+                   ng-model="queryTableListController.dbConnectionInfo.url">
+            <label for="db_connection_url" class="active">Database url to perform query (example: jdbc:postgresql://www.example.com:port/db_name)</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="db_connection_username"
+                   type="text"
+                   class="tooltipped"
+                   data-position="bottom"
+                   data-tooltip="If you want to use default value keep it empty"
+                   ng-model="queryTableListController.dbConnectionInfo.username">
+            <label for="db_connection_url" class="active">Db username to perform query</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="db_connection_password"
+                   type="password"
+                   class="tooltipped"
+                   data-position="bottom"
+                   data-tooltip="If you want to use default value keep it empty"
+                   ng-model="queryTableListController.dbConnectionInfo.password">
+            <label for="db_connection_url" class="active">Db password to perform query</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="push-s6">
+            <a class="waves-effect waves-light btn col s2 push-s2 blue darken-3 center-align"
+                ng-click="queryTableListController.refreshTables(queryTableListController.dbConnectionInfo)">
+                Refresh
+                <i class="material-icons" style="display: inline-flex;vertical-align: top;">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+    <div class="divider"></div>
     <div class="col s12">
         <ul class="collection with-header task-card">
             <li class="collection-header gradient-45deg-light-blue-cyan">
@@ -13,8 +56,7 @@
                 <ul class="collapsible popout">
                     <li ng-repeat="table in queryTableListController.filteredTables">
                         <div class="collapsible-header collection-item"
-                             ng-click="queryTableListController.getTableColumnsMetadata(table.name);
-                                        queryTableListController.selectTable(table)">
+                             ng-click="queryTableListController.selectTable(table, queryTableListController.dbConnectionInfo)">
                             <span class="task-cat light-blue">
                                 {{table.name}}
                             </span>

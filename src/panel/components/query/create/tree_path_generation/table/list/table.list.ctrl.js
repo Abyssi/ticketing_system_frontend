@@ -5,6 +5,12 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     self.filteredTables = [];
 
+    self.dbConnectionInfo = {
+        url: null,
+        username: null,
+        password: null
+    };
+
     self.generalColumn = {
         name: "General Query (select this line to perform query without where clauses)",
         selected: false
@@ -18,7 +24,38 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
     // append modality feature flag
     self.appendMood = false;
 
-    self.getTablesMetadata = function () {
+    //get tables metadata using db connection info
+    self.refreshTables = function(dbConnectionInfo) {
+
+        if (dbConnectionInfo == null) {
+
+            dbConnectionInfo = {
+                url: null,
+                username: null,
+                password: null
+            };
+
+        } else {
+
+            if (dbConnectionInfo.url == null || dbConnectionInfo.url === '') {
+                dbConnectionInfo.url = null;
+            }
+
+            if (dbConnectionInfo.username == null || dbConnectionInfo.username === '') {
+                dbConnectionInfo.username = null;
+            }
+
+            if (dbConnectionInfo.password == null || dbConnectionInfo.password === '') {
+                dbConnectionInfo.password = null;
+            }
+
+        }
+
+        self.getTablesMetadata(dbConnectionInfo);
+
+    };
+
+    self.getTablesMetadata = function (dbConnectionInfo) {
         if (!userService.isLogged()) {
 
             //refresh query because there is a problem in login
@@ -28,9 +65,33 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
         }
 
-        queryService.getTablesMetadata(function (response) {
+        queryService.getTablesMetadata(dbConnectionInfo, function (response) {
+
             self.tables = response.data;
-            [].push.apply(self.filteredTables, self.tables);
+
+            if (!self.appendMood) {
+
+                self.filteredTables = [];
+
+                [].push.apply(self.filteredTables, self.tables);
+
+
+            } else {
+
+                var table = self.tables.filter(function (t) {
+                    return t.name === $routeParams.table;
+                });
+
+                if (table == null) {
+                    alert("Error: try again from beginning");
+
+                    //redirect to query path beginning
+                    window.location.href = "/query/create/tree_path/type";
+                }
+
+                self.selectTable(table[0], dbConnectionInfo);
+
+            }
         }, function () {
             alert("Invalid tables metadata");
         });
@@ -45,7 +106,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.selectTable = function (table) {
+    self.selectTable = function (table, dbConnectionInfo) {
 
         //select table only if selectable flag is true
         if (self.selectable) {
@@ -72,7 +133,12 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
             //filter tables
             self.filteredTables = [table];
 
+        } else {
+            //filter tables
+            self.filteredTables = [table];
         }
+
+        self.getTableColumnsMetadata(table.name, dbConnectionInfo);
 
     };
 
@@ -93,17 +159,19 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
         column.selected = true;
 
         if (column === self.generalColumn) {
-            self.goToSummary(table);
+            self.goToSummary(table, self.dbConnectionInfo);
         } else {
-            self.goToWhereClauses(table, column);
+            self.goToWhereClauses(table, column, self.dbConnectionInfo);
         }
 
 
     };
 
-    self.goToSummary = function (table) {
+    self.goToSummary = function (table, dbConnectionInfo) {
 
         if (confirm("Table selected: " + table.name + ". Go on?")) {
+
+            self.updateQueryDbConnectionInfo(dbConnectionInfo);
 
             self.updateQueryText(table);
 
@@ -113,15 +181,27 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.goToWhereClauses = function (table, column) {
+    self.goToWhereClauses = function (table, column, dbConnectionInfo) {
 
         if (confirm("Table selected: " + table.name + ", Column selected: " + column.name + ". Go on?")) {
+
+            self.updateQueryDbConnectionInfo(dbConnectionInfo);
 
             self.updateQueryText(table, column);
 
             window.location.href = "#/query/create/tree_path/where_clauses/" + table.name + "/" + column.name;
 
         }
+
+    };
+
+    self.updateQueryDbConnectionInfo = function(dbConnectionInfo) {
+
+        var q = queryBuilderService.get();
+
+        q.dbConnectionInfo = dbConnectionInfo;
+
+        queryBuilderService.set(q)
 
     };
 
@@ -167,10 +247,10 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
     };
 
 
-    self.getTableColumnsMetadata = function (tableName) {
+    self.getTableColumnsMetadata = function (tableName, dbConnection) {
         if (!userService.isLogged()) window.location.href = "../";
 
-        queryService.getTableColumnsMetadata(tableName, function (response) {
+        queryService.getTableColumnsMetadata(tableName, dbConnection, function (response) {
 
             angular.forEach(self.tables, function (table) {
 
@@ -190,44 +270,39 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
+    self.getDbConnectionInfo = function() {
+
+        var q = queryBuilderService.get();
+
+        self.dbConnectionInfo = q.dbConnectionInfo;
+
+    };
+
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
-        queryService.getTablesMetadata(function (response) {
-            self.tables = response.data;
+        if ($routeParams.table === "0") {
 
-            if ($routeParams.table === "0") {
+            //charge table from system's db
+            self.refreshTables(null);
 
-                [].push.apply(self.filteredTables, self.tables);
+        } else {
 
-            } else {
+            //update db connection info
+            self.getDbConnectionInfo();
 
-                var table = self.tables.filter(function (t) {
-                    return t.name === $routeParams.table;
-                });
+            self.refreshTables(self.dbConnectionInfo);
 
-                if (table == null) {
-                    alert("Error: try again from beginning");
+            //single table feature
+            self.selectable = false;
 
-                    //redirect to query path beginning
-                    window.location.href = "/query/create/tree_path/type";
-                }
-
-                self.selectTable(table[0]);
-
-                //single table mood
-                self.selectable = false;
-
-                //append modality
-                self.appendMood = true;
-
-            }
+            //append feature
+            self.appendMood = true;
+        }
 
             $timeout(function () {
                 M.AutoInit();
             });
-        }, function () {
-            alert("Invalid tables metadata");
-        });
+
     }();
 });
