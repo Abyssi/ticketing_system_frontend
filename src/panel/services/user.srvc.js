@@ -9,7 +9,7 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
     // API
 
     self.register = function (user, success, error) {
-        self.httpAsync($http.put(self.SERVER_URI + self.USER_API_ENDPOINT + "register", user), success, function (response) {
+        self.httpAsync($http.put(self.SERVER_URI + self.USER_API_ENDPOINT, user), success, function (response) {
             console.log("Error during registration");
             if (error != null) error(response);
         });

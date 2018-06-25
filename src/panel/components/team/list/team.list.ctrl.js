@@ -28,6 +28,17 @@ angular.module('app.ctrl').controller('teamListController', function ($routePara
         return self.range(min, max);
     };
 
+    self.delete = function (teamId) {
+        if (confirm("Are you sure you want to delete this team?")) {
+            teamService.delete(teamId, function () {
+                alert("Team deleted");
+                window.location.href = "#/team/list";
+            }, function () {
+                alert("Invalid delete");
+            });
+        }
+    };
+
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
