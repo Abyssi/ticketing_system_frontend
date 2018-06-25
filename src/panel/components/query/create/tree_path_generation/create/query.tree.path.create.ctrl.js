@@ -32,31 +32,6 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
     self.priorities = [];
 
-    self.init = function () {
-        if (!userService.isLogged()) {
-
-            //refresh query
-            queryBuilderService.refresh();
-
-            window.location.href = "../";
-        }
-
-        $timeout(function () {
-            self.queryForm = queryBuilderService.get();
-        });
-
-        queryService.metadata(function (response) {
-            self.priorities = response.data.priorities;
-            $timeout(function () {
-                M.AutoInit();
-            });
-        }, function () {
-            alert("Invalid metadata");
-        });
-
-
-    }();
-
 
     self.create = function () {
         if (!self.validateForm(this.queryForm)) {
@@ -68,6 +43,9 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
         queryService.create(query, function () {
             alert("Query created");
+
+            queryBuilderService.refresh();
+
             window.location.href = "#/query/list";
         }, function () {
             alert("Invalid create");
@@ -103,13 +81,28 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
     };
 
+    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+
+        if (dbConnectionInfo.url === '')
+            dbConnectionInfo.url = null;
+
+        if (dbConnectionInfo.username === '')
+            dbConnectionInfo.username = null;
+
+        if (dbConnectionInfo.password === '')
+            dbConnectionInfo.password = null;
+
+        return true;
+    };
+
     self.validateForm = function (form) {
         return self.validateSQL(form.queryText) &&
             self.validateCron(form.cron) &&
             form.description.length > 1 &&
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
-            form.queryType !== '';
+            form.queryType !== '' &&
+            self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 
     self.formatCron = function (cron) {
@@ -130,5 +123,30 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
         return sql.split(self.splitRegex);
 
     }
+
+    self.init = function () {
+        if (!userService.isLogged()) {
+
+            //refresh query
+            queryBuilderService.refresh();
+
+            window.location.href = "../";
+        }
+
+        $timeout(function () {
+            self.queryForm = queryBuilderService.get();
+        });
+
+        queryService.metadata(function (response) {
+            self.priorities = response.data.priorities;
+            $timeout(function () {
+                M.AutoInit();
+            });
+        }, function () {
+            alert("Invalid metadata");
+        });
+
+
+    }();
 
 });

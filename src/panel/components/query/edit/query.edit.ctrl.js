@@ -46,6 +46,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
             self.queryForm.comparisonOperator = response.data.comparisonOperator;
             self.queryForm.referenceValue = response.data.referenceValue;
             self.queryForm.queryType = response.data.queryType;
+            self.queryForm.dbConnectionInfo = response.data.dbConnectionInfo;
 
         }, function (error) {
 
@@ -108,13 +109,38 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
 
     };
 
+    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+
+        if (dbConnectionInfo.url !== '' &&
+            dbConnectionInfo.username !== '' &&
+            (dbConnectionInfo.password === '' || dbConnectionInfo.password == null)) {
+
+            //custom url and username need password
+            alert("Insert db password to complete credentials!");
+
+            return false;
+        }
+
+        if (dbConnectionInfo.url === '')
+            dbConnectionInfo.url = null;
+
+        if (dbConnectionInfo.username === '')
+            dbConnectionInfo.username = null;
+
+        if (dbConnectionInfo.password === '')
+            dbConnectionInfo.password = null;
+
+        return true;
+    };
+
     self.validateForm = function (form) {
         return self.validateSQL(form.queryText) &&
             self.validateCron(form.cron) &&
             form.description.length > 1 &&
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
-            form.queryType !== '';
+            form.queryType !== '' &&
+            self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 
     self.formatCron = function (cron) {
