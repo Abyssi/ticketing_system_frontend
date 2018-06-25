@@ -56,6 +56,24 @@
             <ul ng-controller="userRolesController as userRolesController" id="slide-out" class="sidenav sidenav-fixed leftside-navigation" sidebar-active-link>
                 <li class="no-padding">
                     <ul class="collapsible" data-collapsible="accordion">
+
+                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
+                            <a class="collapsible-header waves-effect waves-block">
+                                <i class="material-icons">build</i>
+                                <span class="nav-text">Admin Tools</span>
+                            </a>
+                            <div  class="collapsible-body">
+                                <ul >
+                                    <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
+                                        <a  href="#/record/list">
+                                            <i  class="material-icons">archive</i>
+                                            <span>Display records</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
                         <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_MEMBER', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_COORDINATOR', 'ROLE_CUSTOMER', 'ROLE_HELP_DESK_OPERATOR'])" class="bold">
                             <a class="collapsible-header waves-effect waves-block">
                                 <i class="material-icons">message</i>
@@ -223,6 +241,8 @@
 <!-- Controllers -->
 <script type="text/javascript" src="components/logout/logout.ctrl.js"></script>
 
+<script type="text/javascript" src="components/record/list/record.list.ctrl.js"></script>
+
 <script type="text/javascript" src="components/target/create/target.create.ctrl.js"></script>
 <script type="text/javascript" src="components/target/edit/target.edit.ctrl.js"></script>
 <script type="text/javascript" src="components/target/list/target.list.ctrl.js"></script>
@@ -270,6 +290,7 @@
 <!-- Routers -->
 
 <!-- Services -->
+<script type="text/javascript" src="services/record.srvc.js"></script>
 <script type="text/javascript" src="services/target.srvc.js"></script>
 <script type="text/javascript" src="services/query.srvc.js"></script>
 <script type="text/javascript" src="services/team.srvc.js"></script>

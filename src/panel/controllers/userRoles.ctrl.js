@@ -10,7 +10,6 @@ angular.module('app.ctrl').controller('userRolesController', function (userServi
         userService.self(function (response) {
             angular.forEach(response.data["roles"], function(value, key){
                 self.roles.push(value.name);
-                console.log(value.name);
             })
         }, null
         );
