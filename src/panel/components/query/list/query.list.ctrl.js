@@ -44,15 +44,18 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     self.delete = function(query) {
 
-        queryService.delete(query.id, function (response) {
+        if (confirm("Are you sure to delete query whit ID: " + query.id + "?")) {
 
-            self.getCurrentPage();
+            queryService.delete(query.id, function (response) {
 
-        }, function (error) {
+                self.getCurrentPage();
 
-            alert("Error while deleting query");
+            }, function (error) {
 
-        });
+                alert("Error while deleting query");
+
+            });
+        }
 
     };
 
@@ -89,41 +92,48 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     self.disable = function(query) {
 
-        if (!query.active) {
-            alert("Query already disable!")
-            return
+        if (confirm("Are you sure to disable query whit ID: " + query.id + "?")) {
+
+            if (!query.active) {
+                alert("Query already disable!");
+                return
+            }
+
+            queryService.disableOne(query.id, function (response) {
+
+                //disable query locally
+                query.active = false;
+
+            }), function (error) {
+
+                alert("Error while disabling query");
+
+            };
+
         }
-
-        queryService.disableOne(query.id, function (response) {
-
-            //disable query locally
-            query.active = false;
-
-        }), function(error) {
-
-            alert("Error while disabling query");
-
-        };
 
     };
 
     self.activate = function(query) {
 
-        if (query.active) {
-            alert("Query already active!")
-            return
+        if (confirm("Are you sure you want to enable query whit ID: " + query.id + "?")) {
+
+            if (query.active) {
+                alert("Query already active!");
+                return
+            }
+
+            queryService.activateOne(query.id, function (response) {
+
+                //activate query locally
+                query.active = true;
+
+            }), function (error) {
+
+                alert("Error while activating query");
+
+            };
         }
-
-        queryService.activateOne(query.id, function (response) {
-
-            //activate query locally
-            query.active = true;
-
-        }), function(error) {
-
-            alert("Error while activating query");
-
-        };
     };
 
 

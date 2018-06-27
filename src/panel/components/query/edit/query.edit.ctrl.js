@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryEditController', function ($routeParams, userService, queryService, $timeout) {
+angular.module('app.ctrl').controller('queryEditController', function ($scope, $routeParams, userService, queryService, $timeout) {
     const self = this;
 
     self.queryId = $routeParams.id;
@@ -161,4 +161,8 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         return sql.split(self.splitRegex);
 
     }
+
+    $scope.$on("$destroy", function () {
+        document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))
+    })
 });
