@@ -76,6 +76,16 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <select ng-model="queryCustomCreateController.queryForm.isEnable">
+                                    <option value="" disabled selected>Choose log options</option>
+                                    <option value="true">Enable</option>
+                                    <option value="false">Disable</option>
+                                </select>
+                                <label>Choose to enable/disable log</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
                                 <input id="db_connection_url"
                                        type="text"
                                        class="tooltipped"

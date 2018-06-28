@@ -11,6 +11,7 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         comparisonOperator: '',
         referenceValue: '',
         queryType: '',
+        isEnable: '',
         dbConnectionInfo: {
             url: '',
             username: '',
@@ -108,6 +109,7 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
             form.queryType !== '' &&
+            form.isEnable != null && form.isEnable !== '' &&
             self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 

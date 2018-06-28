@@ -81,6 +81,22 @@
                                         <label for="email" class="active">Category</label>
                                     </div>
                                 </div>
+                                <div ng-if="record.payloads[0].classType === 'DataBaseTimeQuery'">
+                                    <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                        <p id="title">{{record.payloads[0].json.description}}</p>
+                                        <label for="title" class="active">Title</label>
+                                    </div>
+                                    <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                        <p id="cron">{{record.payloads[0].json.cron | toPrettyCron}}</p>
+                                        <label for="cron" class="active">Schedule</label>
+                                    </div>
+                                </div>
+                                <div ng-if="record.payloads[0].classType === 'String'">
+                                    <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                        <p id="sql">{{record.payloads[0].json}}</p>
+                                        <label for="sql" class="active">SQL</label>
+                                    </div>
+                                </div>
                             </div>
 
                         <div class="row">
