@@ -12,6 +12,15 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             templateUrl: 'components/logout/logout.tmpl.html',
             controller: 'logoutController as logoutController'
         })
+        .when('/record/list/:page/:searchTerm', {
+            templateUrl: 'components/record/list/record.list.tmpl.html',
+            controller: 'recordListController as recordListController'
+        })
+        .when('/record/list/:page', {
+            templateUrl: 'components/record/list/record.list.tmpl.html',
+            controller: 'recordListController as recordListController'
+        })
+        .when('/record/list', {redirectTo: '/record/list/1'})
 
         .when('/ticket/create', {
             templateUrl: 'components/ticket/create/ticket.create.tmpl.html',

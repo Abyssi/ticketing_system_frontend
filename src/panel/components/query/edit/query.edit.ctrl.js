@@ -16,6 +16,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
         comparisonOperator: '',
         referenceValue: '',
         queryType: '',
+        isEnable: '',
         dbConnectionInfo: {
             url: '',
             username: '',
@@ -46,6 +47,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
             self.queryForm.comparisonOperator = response.data.comparisonOperator;
             self.queryForm.referenceValue = response.data.referenceValue;
             self.queryForm.queryType = response.data.queryType;
+            self.queryForm.isEnable = response.data.isEnable;
             self.queryForm.dbConnectionInfo = response.data.dbConnectionInfo;
 
         }, function (error) {
@@ -140,6 +142,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
             form.queryType !== '' &&
+            form.isEnable != null && form.isEnable !== '' &&
             self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 
