@@ -32,7 +32,7 @@ angular.module('app.ctrl').controller('targetEditController', function ($routePa
 
         targetService.update(self.targetId, product, function () {
             alert("Target updated");
-            window.location.reload();
+            window.location.href = "#/target/list"
         }, function () {
             alert("Invalid update");
         });
