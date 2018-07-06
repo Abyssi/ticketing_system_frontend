@@ -14,6 +14,7 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
         comparisonOperator: '',
         referenceValue: '',
         queryType: '',
+        isEnable: '',
         dbConnectionInfo: {
             url: '',
             username: '',
@@ -102,6 +103,7 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
             form.queryType !== '' &&
+            form.isEnable !== '' &&
             self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 

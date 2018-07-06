@@ -12,19 +12,22 @@
                         <span class="task-cat light-blue">{{team.name}}</span>
                     </div>
                     <div class="collapsible-body">
-                        <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
-                            <span id="leader">{{team.leader.firstName}} {{team.leader.lastName}}</span>
-                            <label for="leader" class="active">Leader</label>
-                        </div>
-                        <ul class="collection task-card">
-                            <label style="padding-left: 15px" class="active">Member</label>
-                            <div>
-                                <li ng-repeat="member in team.members" style="border-left: 2px solid #03a9f4">
-                                    <span>{{member.firstName}} {{member.lastName}}</span>
-                                    <span></span>
-                                </li>
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="leader">{{team.leader.firstName}} {{team.leader.lastName}}</p>
+                                <label for="leader" class="active">Leader</label>
                             </div>
-                        </ul>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <ul id="member" class="collection task-card">
+                                    <li ng-repeat="member in team.members">
+                                        <p>{{member.firstName}} {{member.lastName}}</p>
+                                    </li>
+                                </ul>
+                                <label for="member" class="active">Member</label>
+                            </div>
+                        </div>
                         <div style="margin-top: 30px">
                             <div class="input-field col s12 center-align">
                                 <input type="submit" value="Delete"

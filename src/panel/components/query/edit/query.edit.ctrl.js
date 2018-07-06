@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryEditController', function ($routeParams, userService, queryService, $timeout) {
+angular.module('app.ctrl').controller('queryEditController', function ($scope, $routeParams, userService, queryService, $timeout) {
     const self = this;
 
     self.queryId = $routeParams.id;
@@ -16,6 +16,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         comparisonOperator: '',
         referenceValue: '',
         queryType: '',
+        isEnable: '',
         dbConnectionInfo: {
             url: '',
             username: '',
@@ -46,6 +47,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
             self.queryForm.comparisonOperator = response.data.comparisonOperator;
             self.queryForm.referenceValue = response.data.referenceValue;
             self.queryForm.queryType = response.data.queryType;
+            self.queryForm.isEnable = response.data.isEnable;
             self.queryForm.dbConnectionInfo = response.data.dbConnectionInfo;
 
         }, function (error) {
@@ -140,6 +142,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
             form.comparisonOperator !== '' &&
             form.referenceValue !== '' &&
             form.queryType !== '' &&
+            form.isEnable != null && form.isEnable !== '' &&
             self.validateDbConnectionInfo(form.dbConnectionInfo);
     };
 
@@ -161,4 +164,8 @@ angular.module('app.ctrl').controller('queryEditController', function ($routePar
         return sql.split(self.splitRegex);
 
     }
+
+    $scope.$on("$destroy", function () {
+        document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))
+    })
 });

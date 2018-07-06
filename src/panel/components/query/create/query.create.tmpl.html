@@ -2,7 +2,8 @@
     <div class="row">
         <!-- Custom query card -->
         <div class="col l6 m6 s12">
-            <div class="card hoverable" ng-click="queryCreateController.toQueryCreation('#/query/create/custom')">
+            <div class="card hoverable" style="height: 100%"
+                 ng-click="queryCreateController.toQueryCreation('#/query/create/custom')">
                 <div class="container">
                     <div class="card-image">
                         <img src="assets/img/query_custom_icon.png">
@@ -10,14 +11,13 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">Custom Query</span>
-                    <p>Create a custom data base query. You can insert directly SQL in it and create a new db
-                        listener!</p>
+                    <p>Create a custom data base query. You can insert directly SQL in it and create a listener!</p>
                 </div>
             </div>
         </div>
         <!-- DB query card -->
         <div class="col l6 m6 s12">
-            <div class="card hoverable"
+            <div class="card hoverable" style="height: 100%"
                  ng-click="queryCreateController.toQueryCreation('#/query/create/tree_path/type')">
                 <div class="container">
                     <div class="card-image">
@@ -26,7 +26,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">DB Query</span>
-                    <p>Create a data base query. Generate new query while navigate!</p>
+                    <p>Create a data base query. Generate new query while navigating the creation path tree!</p>
                 </div>
             </div>
         </div>
