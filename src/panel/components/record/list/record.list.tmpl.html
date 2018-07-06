@@ -42,14 +42,14 @@
                             </div>
                             <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
                                 <div ng-if="record.payloads[0].classType === 'Target'">
-                                        <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
-                                            <p id="target">{{record.payloads[0].json.name}}</p>
-                                            <label for="target" class="active">Target</label>
-                                        </div>
-                                        <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
-                                            <p id="version">{{record.payloads[0].json.version}}</p>
-                                            <label for="version" class="active">Version</label>
-                                        </div>
+                                    <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                        <p id="target">{{record.payloads[0].json.name}}</p>
+                                        <label for="target" class="active">Target</label>
+                                    </div>
+                                    <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                        <p id="version">{{record.payloads[0].json.version}}</p>
+                                        <label for="version" class="active">Version</label>
+                                    </div>
                                 </div>
                                 <div ng-if="record.payloads[0].classType === 'Team'">
                                     <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
@@ -73,7 +73,8 @@
                                 </div>
                                 <div ng-if="record.payloads[0].classType === 'User'">
                                     <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
-                                        <p id="name">{{record.payloads[0].json.firstName}} {{record.payloads[0].json.lastName}}</p>
+                                        <p id="name">{{record.payloads[0].json.firstName}}
+                                            {{record.payloads[0].json.lastName}}</p>
                                         <label for="name" class="active">Name</label>
                                     </div>
                                     <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
@@ -99,17 +100,17 @@
                                 </div>
                             </div>
 
-                        <div class="row">
-                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
-                                <p id="operation">{{record.operationName}}</p>
-                                <label for="operation" class="active">Operation</label>
-                            </div>
-                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
-                                <p id="author">{{record.author}}</p>
-                                <label for="author" class="active">Author</label>
+                            <div class="row">
+                                <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                    <p id="operation">{{record.operationName}}</p>
+                                    <label for="operation" class="active">Operation</label>
+                                </div>
+                                <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                                    <p id="author">{{record.author}}</p>
+                                    <label for="author" class="active">Author</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </li>
             </ul>

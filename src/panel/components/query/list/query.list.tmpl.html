@@ -33,13 +33,15 @@
                     <div class="collapsible-body">
                         <div class="row">
                             <div class="input-field col s12 query-details" style="border-left: 2px solid #03a9f4">
-                                <textarea id="query_description" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.description}}</textarea>
+                                <textarea id="query_description"
+                                          style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.description}}</textarea>
                                 <label for="query_description" class="active">Query full title</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 query-details" style="border-left: 2px solid #03a9f4">
-                                <textarea id="query_text" style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
+                                <textarea id="query_text"
+                                          style="height: 50px;resize: none; border: 1px solid transparent" readonly>{{query.queryText}}</textarea>
                                 <label for="query_text" class="active">Query text</label>
                             </div>
                         </div>
@@ -79,13 +81,17 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s8 query-details" style="border-left: 2px solid #03a9f4;">
-                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url != null">{{query.dbConnectionInfo.url}}</p>
-                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url == null">Default database</p>
+                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url != null">
+                                    {{query.dbConnectionInfo.url}}</p>
+                                <p id="db_connection_url" ng-if="query.dbConnectionInfo.url == null">Default
+                                    database</p>
                                 <label for="db_connection_url" class="active">Database URL</label>
                             </div>
                             <div class="input-field col s4 query-details" style="border-left: 2px solid #03a9f4">
-                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username != null">{{query.dbConnectionInfo.username}}</p>
-                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username == null">Default username</p>
+                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username != null">
+                                    {{query.dbConnectionInfo.username}}</p>
+                                <p id="db_connection_username" ng-if="query.dbConnectionInfo.username == null">Default
+                                    username</p>
                                 <label for="comparison_operator" class="active">DB Username</label>
                             </div>
                         </div>
@@ -107,7 +113,7 @@
                                 </a>
                                 <a class="waves-effect waves-light btn col s3 push-s4 red darken-3"
                                    ng-click="queryListController.delete(query)">
-                                   Delete
+                                    Delete
                                     <i class="material-icons" style="display: inline-flex;vertical-align: top;">
                                         delete
                                     </i>

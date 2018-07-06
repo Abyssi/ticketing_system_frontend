@@ -88,7 +88,7 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
 
     };
 
-    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+    self.validateDbConnectionInfo = function (dbConnectionInfo) {
 
         if (dbConnectionInfo.url === '')
             dbConnectionInfo.url = null;
