@@ -119,7 +119,7 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
     self.hasRole = function (checkRole) {
         var rolesList = [];
         self.self(function (response) {
-            angular.forEach(response.data["roles"], function(value, key){
+            angular.forEach(response.data["roles"], function (value, key) {
                 rolesList.push(value.name);
                 console.log(value.name);
             })

@@ -28,7 +28,7 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
         return self.range(min, max);
     };
 
-    self.setQueryDetails = function(query, details) {
+    self.setQueryDetails = function (query, details) {
 
         query.comparisonOperator = details.comparisonOperator;
 
@@ -42,7 +42,7 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     };
 
-    self.delete = function(query) {
+    self.delete = function (query) {
 
         if (confirm("Are you sure to delete query whit ID: " + query.id + "?")) {
 
@@ -59,7 +59,7 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     };
 
-    self.getCurrentPage = function() {
+    self.getCurrentPage = function () {
 
         queryService.list(self.currentPage - 1, null, function (response) {
             self.queries = response.data.content;
@@ -90,7 +90,7 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
         });
     };
 
-    self.disable = function(query) {
+    self.disable = function (query) {
 
         if (confirm("Are you sure to disable query whit ID: " + query.id + "?")) {
 
@@ -114,7 +114,7 @@ angular.module('app.ctrl').controller('queryListController', function ($routePar
 
     };
 
-    self.activate = function(query) {
+    self.activate = function (query) {
 
         if (confirm("Are you sure you want to enable query whit ID: " + query.id + "?")) {
 

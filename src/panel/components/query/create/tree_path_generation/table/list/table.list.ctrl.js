@@ -25,7 +25,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
     self.appendMood = false;
 
     //get tables metadata using db connection info
-    self.refreshTables = function(dbConnectionInfo) {
+    self.refreshTables = function (dbConnectionInfo) {
 
         if (dbConnectionInfo == null) {
 
@@ -195,7 +195,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.updateQueryDbConnectionInfo = function(dbConnectionInfo) {
+    self.updateQueryDbConnectionInfo = function (dbConnectionInfo) {
 
         var q = queryBuilderService.get();
 
@@ -270,7 +270,7 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
 
     };
 
-    self.getDbConnectionInfo = function() {
+    self.getDbConnectionInfo = function () {
 
         var q = queryBuilderService.get();
 
@@ -300,9 +300,9 @@ angular.module('app.ctrl').controller('queryTableListController', function (user
             self.appendMood = true;
         }
 
-            $timeout(function () {
-                M.AutoInit();
-            });
+        $timeout(function () {
+            M.AutoInit();
+        });
 
     }();
 });

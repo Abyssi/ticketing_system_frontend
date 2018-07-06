@@ -47,7 +47,7 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
         });
     };
 
-    self.disableOne = function(id, success, error) {
+    self.disableOne = function (id, success, error) {
 
         self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.DISABLE_QUERY_ENDPOINT + id), success, function (response) {
             console.log("Error during query disabling");
@@ -56,7 +56,7 @@ angular.module('app.srvc').service('queryService', function ($http, $q) {
 
     };
 
-    self.activateOne = function(id, success, error) {
+    self.activateOne = function (id, success, error) {
 
         self.httpAsync($http.post(self.SERVER_URI + self.QUERY_API_ENDPOINT + self.ACTIVATE_QUERY_ENDPOINT + id), success, function (response) {
             console.log("Error during query activating");

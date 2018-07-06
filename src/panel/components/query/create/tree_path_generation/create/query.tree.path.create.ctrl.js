@@ -82,7 +82,7 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
     };
 
-    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+    self.validateDbConnectionInfo = function (dbConnectionInfo) {
 
         if (dbConnectionInfo.url === '')
             dbConnectionInfo.url = null;

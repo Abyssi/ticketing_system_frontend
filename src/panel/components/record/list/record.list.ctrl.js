@@ -9,7 +9,6 @@ angular.module('app.ctrl').controller('recordListController', function ($routePa
     self.totalPages = -1;
 
 
-
     self.search = function () {
         recordService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
             self.records = response.data.content;
@@ -20,7 +19,7 @@ angular.module('app.ctrl').controller('recordListController', function ($routePa
         });
     };
 
-    self.formatRecords = function(){
+    self.formatRecords = function () {
 
         angular.forEach(self.records, function (record) {
 
@@ -32,7 +31,6 @@ angular.module('app.ctrl').controller('recordListController', function ($routePa
 
     self.reset = function () {
         recordService.list(self.currentPage - 1, 3, function (response) {
-            console.log(response);
             self.records = response.data.content;
 
             self.formatRecords();
