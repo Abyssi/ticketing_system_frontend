@@ -1,0 +1,76 @@
+<div class="section">
+    <p class="caption">Here you can view all the users</p>
+    <div class="divider"></div>
+    <div class="col s12">
+        <div class="collection with-header task-card">
+            <div class="row collection-header gradient-45deg-light-blue-cyan">
+                <div class="col l6 m6 s12">
+                    <h4 class="task-card-title">Users</h4>
+                </div>
+                <div class="col l6 m6 s12 input-field white-input-field">
+                    <input type="text" id="autocomplete-input" style="color: white"
+                           class="search-input-box"
+                           ng-model="userListController.searchTerm"
+                           ng-enter="userListController.set(1)">
+                    <label for="autocomplete-input" style="color: white" class="active">Search users</label>
+                    <ul class="collection task-card" ng-if="userListController.userSearch.length > 0">
+                        <li ng-repeat="user in userListController.userSearch ">
+                            <a ng-click="">
+                                <div class="collection-item">
+                                    <span class="task-cat light-blue">{{user.email}}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="collapsible popout">
+                <li ng-repeat="user in userListController.users">
+                    <div class="row collapsible-header collection-item">
+                        <span class="task-cat light-blue">{{user.email}}</span>
+                        <div class="secondary-content col s1">
+                            <!--<span class="description">{{}}</span>-->
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col s6" style="border-left: 2px solid #03a9f4">
+                                <p id="firstName">{{user.firstName}}</p>
+                                <label for="firstName" class="active">First name</label>
+                            </div>
+                            <div class="input-field col s6" style="border-left: 2px solid #03a9f4">
+                                <p id="lastName">{{user.lastName}}</p>
+                                <label for="lastName" class="active">Last name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6" style="border-left: 2px solid #03a9f4">
+                                <p id="eMail">{{user.email}}</p>
+                                <label for="eMail" class="active">E-mail</label>
+                            </div>
+                            <div class="input-field col s6" style="border-left: 2px solid #03a9f4">
+                                <p id="company">{{user.company.domain}}</p>
+                                <label for="company" class="active">Company domain</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
+                                <p id="roles">{{user.roles[0].name}}</p>
+                                <label for="roles" class="active">User roles</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <ul class="pagination">
+        <li ng-repeat="i in userListController.getPages()"
+            class="{{userListController.currentPage == i ? 'active' : 'waves-effect'}}"><a
+                href="#/user/list/{{i}}">{{i}}</a>
+        </li>
+    </ul>
+</div>

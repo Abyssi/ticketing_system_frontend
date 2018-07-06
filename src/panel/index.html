@@ -71,6 +71,14 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <ul >
+                                    <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
+                                        <a  href="#/user/list">
+                                            <i  class="material-icons">archive</i>
+                                            <span>Display users</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
 
@@ -242,6 +250,7 @@
 <script type="text/javascript" src="components/logout/logout.ctrl.js"></script>
 
 <script type="text/javascript" src="components/record/list/record.list.ctrl.js"></script>
+<script type="text/javascript" src="components/user/list/user.list.ctrl.js"></script>
 
 <script type="text/javascript" src="components/target/create/target.create.ctrl.js"></script>
 <script type="text/javascript" src="components/target/edit/target.edit.ctrl.js"></script>
