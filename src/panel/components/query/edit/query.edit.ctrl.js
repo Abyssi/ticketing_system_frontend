@@ -78,7 +78,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
             alert("Query updated");
             window.location.href = "#/query/list";
         }, function () {
-            alert("Invalid create");
+            alert("Invalid update");
         });
     };
 
