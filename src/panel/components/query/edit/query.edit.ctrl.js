@@ -40,7 +40,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
 
         queryService.get(self.queryId, function (response) {
             self.queryForm.id = response.data.id;
-            self.queryForm.queryText =  response.data.queryText;
+            self.queryForm.queryText = response.data.queryText;
             self.queryForm.description = response.data.description;
             self.queryForm.queryPriority.id = response.data.queryPriority.id.toString();
             self.queryForm.cron = response.data.cron;
@@ -111,7 +111,7 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
 
     };
 
-    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+    self.validateDbConnectionInfo = function (dbConnectionInfo) {
 
         if ((dbConnectionInfo.url !== '' && dbConnectionInfo.url != null) &&
             (dbConnectionInfo.username !== '' && dbConnectionInfo != null) &&

@@ -1,44 +1,32 @@
 'use strict';
 
-angular.module('app.ctrl').controller('recordListController', function ($routeParams, recordService, userService) {
+angular.module('app.ctrl').controller('userListController', function ($routeParams, userService) {
     const self = this;
 
     self.searchTerm = $routeParams.searchTerm == null ? '' : $routeParams.searchTerm;
-    self.records = [];
+    self.users = [];
     self.currentPage = $routeParams.page;
     self.totalPages = -1;
 
 
     self.search = function () {
-        recordService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
-            self.records = response.data.content;
+        userService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
+            self.users = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
-            self.records = [];
+            self.users = [];
             self.totalPages = 0;
         });
     };
 
-    self.formatRecords = function () {
-
-        angular.forEach(self.records, function (record) {
-
-            record.payloads[0].json = JSON.parse(record.payloads[0].json);
-
-        })
-
-    };
 
     self.reset = function () {
-        recordService.list(self.currentPage - 1, 3, function (response) {
-            self.records = response.data.content;
-
-            self.formatRecords();
-
+        userService.list(self.currentPage - 1, 3, function (response) {
+            self.users = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
             alert("Invalid get");
-            self.records = [];
+            self.users = [];
             self.totalPages = 0;
         });
     };

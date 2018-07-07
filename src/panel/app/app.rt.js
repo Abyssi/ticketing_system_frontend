@@ -22,6 +22,16 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         })
         .when('/record/list', {redirectTo: '/record/list/1'})
 
+        .when('/user/list/:page/:searchTerm', {
+            templateUrl: 'components/user/list/user.list.tmpl.html',
+            controller: 'userListController as userListController'
+        })
+        .when('/user/list/:page', {
+            templateUrl: 'components/user/list/user.list.tmpl.html',
+            controller: 'userListController as userListController'
+        })
+        .when('/user/list', {redirectTo: '/user/list/1'})
+
         .when('/ticket/create', {
             templateUrl: 'components/ticket/create/ticket.create.tmpl.html',
             controller: 'ticketCreateController as ticketCreateController'

@@ -82,15 +82,15 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
     };
 
-    self.validateDbConnectionInfo = function(dbConnectionInfo) {
+    self.validateDbConnectionInfo = function (dbConnectionInfo) {
 
-        if (dbConnectionInfo.url === '')
+        if (dbConnectionInfo.url === '' || dbConnectionInfo.url == null)
             dbConnectionInfo.url = null;
 
-        if (dbConnectionInfo.username === '')
+        if (dbConnectionInfo.username === '' || dbConnectionInfo.username == null)
             dbConnectionInfo.username = null;
 
-        if (dbConnectionInfo.password === '')
+        if (dbConnectionInfo.password === '' || dbConnectionInfo.password == null || dbConnectionInfo.password === undefined)
             dbConnectionInfo.password = null;
 
         return true;

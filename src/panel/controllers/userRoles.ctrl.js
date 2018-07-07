@@ -8,10 +8,10 @@ angular.module('app.ctrl').controller('userRolesController', function (userServi
 
     self.init = function () {
         userService.self(function (response) {
-            angular.forEach(response.data["roles"], function(value, key){
-                self.roles.push(value.name);
-            })
-        }, null
+                angular.forEach(response.data["roles"], function (value, key) {
+                    self.roles.push(value.name);
+                })
+            }, null
         );
     }();
 

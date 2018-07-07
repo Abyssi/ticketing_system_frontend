@@ -18,7 +18,6 @@
     "prestart": "npm install"
   },
   "dependencies": {
-    "cronstrue": "^1.30.0",
-    "sancronos-validator": "^1.2.0"
+    "cronstrue": "^1.30.0"
   }
 }

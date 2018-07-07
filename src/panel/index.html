@@ -50,10 +50,11 @@
     </div>
 </header>
 
-<div  id="main">
-    <div  class="wrapper">
-        <aside  id="left-sidebar-nav">
-            <ul ng-controller="userRolesController as userRolesController" id="slide-out" class="sidenav sidenav-fixed leftside-navigation" sidebar-active-link>
+<div id="main">
+    <div class="wrapper">
+        <aside id="left-sidebar-nav">
+            <ul ng-controller="userRolesController as userRolesController" id="slide-out"
+                class="sidenav sidenav-fixed leftside-navigation" sidebar-active-link>
                 <li class="no-padding">
                     <ul class="collapsible" data-collapsible="accordion">
 
@@ -62,28 +63,37 @@
                                 <i class="material-icons">build</i>
                                 <span class="nav-text">Admin Tools</span>
                             </a>
-                            <div  class="collapsible-body">
-                                <ul >
+                            <div class="collapsible-body">
+                                <ul>
                                     <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
-                                        <a  href="#/record/list">
-                                            <i  class="material-icons">archive</i>
+                                        <a href="#/record/list">
+                                            <i class="material-icons">archive</i>
                                             <span>Display records</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
+                                        <a href="#/user/list">
+                                            <i class="material-icons">archive</i>
+                                            <span>Display users</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_MEMBER', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_COORDINATOR', 'ROLE_CUSTOMER', 'ROLE_HELP_DESK_OPERATOR'])" class="bold">
+                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_MEMBER', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_COORDINATOR', 'ROLE_CUSTOMER', 'ROLE_HELP_DESK_OPERATOR'])"
+                            class="bold">
                             <a class="collapsible-header waves-effect waves-block">
                                 <i class="material-icons">message</i>
                                 <span class="nav-text">Ticket</span>
                             </a>
-                            <div  class="collapsible-body">
-                                <ul >
+                            <div class="collapsible-body">
+                                <ul>
                                     <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_HELP_DESK_OPERATOR'])">
-                                        <a  href="#/ticket/create">
-                                            <i  class="material-icons">add_circle_outline</i>
+                                        <a href="#/ticket/create">
+                                            <i class="material-icons">add_circle_outline</i>
                                             <span>Create new ticket</span>
                                         </a>
                                     </li>
@@ -96,7 +106,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_COORDINATOR', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_MEMBER'])" class="bold">
+                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_COORDINATOR', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_MEMBER'])"
+                            class="bold">
                             <a class="collapsible-header waves-effect waves-block">
                                 <i class="material-icons">store</i>
                                 <span class="nav-text">Target</span>
@@ -118,7 +129,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_COORDINATOR', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_MEMBER'])" class="bold">
+                        <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_TEAM_COORDINATOR', 'ROLE_TEAM_MANAGER', 'ROLE_TEAM_MEMBER'])"
+                            class="bold">
                             <a class="collapsible-header waves-effect waves-block">
                                 <i class="material-icons">group</i>
                                 <span class="nav-text">Team</span>
@@ -217,7 +229,6 @@
 
 <!-- Dependencies -->
 <script type="text/javascript" src="../../node_modules/cronstrue/dist/cronstrue-i18n.min.js"></script>
-<script type="text/javascript" src="../../node_modules/sancronos-validator/index.js"></script>
 
 <!-- Bower dependencies -->
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
@@ -242,6 +253,7 @@
 <script type="text/javascript" src="components/logout/logout.ctrl.js"></script>
 
 <script type="text/javascript" src="components/record/list/record.list.ctrl.js"></script>
+<script type="text/javascript" src="components/user/list/user.list.ctrl.js"></script>
 
 <script type="text/javascript" src="components/target/create/target.create.ctrl.js"></script>
 <script type="text/javascript" src="components/target/edit/target.edit.ctrl.js"></script>
@@ -273,8 +285,6 @@
 <script type="text/javascript" src="components/ticket/list/ticket.list.ctrl.js"></script>
 
 <script type="text/javascript" src="controllers/userRoles.ctrl.js"></script>
-
-
 
 <!-- Directives -->
 <script type="text/javascript" src="directives/adaptive.textarea.drct.js"></script>
