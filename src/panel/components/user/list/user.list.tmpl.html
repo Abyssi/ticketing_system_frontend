@@ -27,8 +27,10 @@
             <ul class="collapsible popout">
                 <li ng-repeat="user in userListController.users">
                     <div class="row collapsible-header collection-item">
-                        <span class="task-cat light-blue">{{user.email}}</span>
-                        <div class="secondary-content col s1">
+                        <span class="task-cat light-blue">{{user.firstName}} {{user.lastName}}</span>
+
+                        <div class="secondary-content col s2">
+                            <span class="secondary-content">   {{user.email}}</span>
                             <!--<span class="description">{{}}</span>-->
                         </div>
                     </div>
