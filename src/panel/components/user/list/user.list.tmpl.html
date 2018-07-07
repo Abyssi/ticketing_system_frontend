@@ -59,6 +59,20 @@
                                 <label for="roles" class="active">User roles</label>
                             </div>
                         </div>
+                        <div style="margin-top: 30px">
+                            <div class="input-field col s12 center-align">
+                                <input type="submit" value="Delete"
+                                       class="btn waves-effect waves-light col s3 red darken-3"
+                                       ng-click="userListController.delete(user.id)">
+                                </input>
+                                <a href="#/user/edit/{{user.id}}">
+                                    <input type="submit" value="Update"
+                                           class="btn waves-effect waves-light col s3 light-blue darken-3"
+                                           ng-click="userEditController.update()">
+                                    </input>
+                                </a>
+                            </div>
+                        </div>
 
                     </div>
                 </li>

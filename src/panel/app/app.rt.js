@@ -122,5 +122,10 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
         })
         .when('/target/list', {redirectTo: '/target/list/1'})
 
+        .when('/user/edit/:id', {
+            templateUrl: 'components/user/edit/user.edit.tmpl.html',
+            controller: 'userEditController as userEditController'
+        })
+
         .otherwise({redirectTo: '/profile'});
 });

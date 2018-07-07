@@ -43,6 +43,27 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
         });
     };
 
+    self.metadata = function (success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.USER_API_ENDPOINT + "metadata"), success, function (response) {
+            console.log("Error during metadata");
+            if (error != null) error(response);
+        });
+    };
+
+    self.get = function (term, type, success, error) {
+        self.httpAsync($http.get(self.SERVER_URI + self.USER_API_ENDPOINT + term + "?type=" + type), success, function (response) {
+            console.log("Error during get");
+            if (error != null) error(response);
+        });
+    };
+
+    self.delete = function (term, type, success, error) {
+        self.httpAsync($http.delete(self.SERVER_URI + self.USER_API_ENDPOINT + + term + "?type=" + type), success, function (response) {
+            console.log("Error during delete");
+            if (error != null) error(response);
+        });
+    };
+
     // Authentication
 
     self.isLogged = function () {

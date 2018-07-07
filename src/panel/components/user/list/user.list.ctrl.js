@@ -57,6 +57,17 @@ angular.module('app.ctrl').controller('userListController', function ($routePara
         self.searchTerm === '' ? self.reset() : self.search();
     };
 
+    self.delete = function (userId) {
+        if (confirm("Are you sure you want to delete this user?")) {
+            userService.delete(userId, 'id', function () {
+                alert("User deleted");
+                window.location.href = "#/user/list";
+            }, function () {
+                alert("Invalid delete");
+            });
+        }
+    };
+
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
         M.AutoInit();
