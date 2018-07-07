@@ -21,7 +21,7 @@ angular.module('app.ctrl').controller('teamEditController', function ($routePara
             self.teamForm.name = response.data.name;
             self.teamForm.leader = response.data.leader;
             self.teamForm.members = response.data.members;
-        }), function (){
+        }), function () {
             alert("Invalid get");
         };
     }();

@@ -22,7 +22,8 @@
                             <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
                                 <ul id="member" class="collection task-card">
                                     <li ng-repeat="member in team.members">
-                                        <p ng-if="team.leader.id !== member.id">{{member.firstName}} {{member.lastName}}</p>
+                                        <p ng-if="team.leader.id !== member.id">{{member.firstName}}
+                                            {{member.lastName}}</p>
                                     </li>
                                 </ul>
                                 <label for="member" class="active">Member</label>

@@ -58,7 +58,7 @@ angular.module('app.srvc').service('userService', function ($http, $q, $cookies,
     };
 
     self.delete = function (term, type, success, error) {
-        self.httpAsync($http.delete(self.SERVER_URI + self.USER_API_ENDPOINT + + term + "?type=" + type), success, function (response) {
+        self.httpAsync($http.delete(self.SERVER_URI + self.USER_API_ENDPOINT + +term + "?type=" + type), success, function (response) {
             console.log("Error during delete");
             if (error != null) error(response);
         });
