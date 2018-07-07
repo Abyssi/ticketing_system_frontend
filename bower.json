@@ -11,6 +11,7 @@
     "angular-cookies": "latest",
     "angular-base64": "latest",
 
-    "materialize": "1.0.0-rc.1"
+    "materialize": "1.0.0-rc.1",
+    "cronstrue": "latest"
   }
 }
