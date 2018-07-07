@@ -21,7 +21,6 @@ angular.module('app.ctrl').controller('userEditController', function ($routePara
     self.companies = [];
 
 
-
     self.init = function () {
         if (!userService.isLogged()) window.location.href = "../";
 
@@ -53,7 +52,7 @@ angular.module('app.ctrl').controller('userEditController', function ($routePara
             return;
         }
 
-        if(self.userForm.password == null || self.userForm.password === ''){
+        if (self.userForm.password == null || self.userForm.password === '') {
             delete self.userForm.password;
         }
 

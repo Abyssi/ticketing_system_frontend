@@ -30,7 +30,6 @@ angular.module('app.ctrl').controller('profileController', function (userService
             lastName: self.profileForm.firstName,
             email: self.profileForm.email,
             password: self.profileForm.password
-
         };
 
         userService.update(user.email, "email", user, function () {
