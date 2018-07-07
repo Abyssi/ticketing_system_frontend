@@ -113,9 +113,9 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
 
     self.validateDbConnectionInfo = function(dbConnectionInfo) {
 
-        if (dbConnectionInfo.url !== '' &&
-            dbConnectionInfo.username !== '' &&
-            (dbConnectionInfo.password === '' || dbConnectionInfo.password == null)) {
+        if ((dbConnectionInfo.url !== '' && dbConnectionInfo.url != null) &&
+            (dbConnectionInfo.username !== '' && dbConnectionInfo != null) &&
+            (dbConnectionInfo.password === '' || dbConnectionInfo.password == null || dbConnectionInfo.password === undefined)) {
 
             //custom url and username need password
             alert("Insert db password to complete credentials!");
@@ -123,13 +123,13 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
             return false;
         }
 
-        if (dbConnectionInfo.url === '')
+        if (dbConnectionInfo.url === '' || dbConnectionInfo.url == null)
             dbConnectionInfo.url = null;
 
-        if (dbConnectionInfo.username === '')
+        if (dbConnectionInfo.username === '' || dbConnectionInfo.username == null)
             dbConnectionInfo.username = null;
 
-        if (dbConnectionInfo.password === '')
+        if (dbConnectionInfo.password === '' || dbConnectionInfo.password == null || dbConnectionInfo.password === undefined)
             dbConnectionInfo.password = null;
 
         return true;
