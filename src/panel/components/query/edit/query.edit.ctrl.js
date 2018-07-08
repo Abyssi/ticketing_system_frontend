@@ -88,11 +88,9 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
 
         if (sqlSplitted.length > 0) {
 
-            sqlSplitted.forEach(function (element, index, array) {
-                if (element.match(self.sqlRegex)) {
+            for (let i = 0; i < sqlSplitted.length; i++)
+                if (sqlSplitted[i].match(self.sqlRegex))
                     return false;
-                }
-            });
 
             return true;
 

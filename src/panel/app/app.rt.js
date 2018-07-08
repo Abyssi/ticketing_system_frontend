@@ -127,5 +127,5 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             controller: 'userEditController as userEditController'
         })
 
-        .otherwise({redirectTo: '/profile'});
+        .otherwise({redirectTo: '/ticket/list'});
 });
