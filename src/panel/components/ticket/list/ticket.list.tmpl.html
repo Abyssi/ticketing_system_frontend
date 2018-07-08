@@ -34,14 +34,6 @@
                         </div>
                     </div>
                     <div class="collapsible-body">
-                        <!--
-                        <span>Description: {{ticket.description}}</span>
-                        <br><br>
-                        <span>Status: {{ticket.status.name}}</span>
-                        <br><br>
-                        <span>{{ticket.creationTimestamp | toDaysDiff}}</span>
-                        <br><br>
-                        -->
                         <div class="row">
                             <div class="input-field col s12" style="border-left: 2px solid #03a9f4">
                                 <p id="title">{{ticket.title}}</p>
@@ -54,17 +46,21 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
                                 <p id="visibility">{{ticket.visibility.name}}</p>
                                 <label for="visibility" class="active">Visibility</label>
                             </div>
-                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
                                 <p id="category">{{ticket.category.name}}</p>
                                 <label for="category" class="active">Category</label>
                             </div>
-                            <div class="input-field col s4" style="border-left: 2px solid #03a9f4">
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
                                 <p id="target">{{ticket.target.name}}</p>
                                 <label for="target" class="active">Target</label>
+                            </div>
+                            <div class="input-field col s3" style="border-left: 2px solid #03a9f4">
+                                <p id="status">{{ticket.status.name}}</p>
+                                <label for="status" class="active">Status</label>
                             </div>
                         </div>
                         <div style="margin-top: 30px">

@@ -75,7 +75,7 @@
                                 <ul>
                                     <li ng-if="userRolesController.hasRole(['ROLE_ADMIN'])">
                                         <a href="#/user/list">
-                                            <i class="material-icons">archive</i>
+                                            <i class="material-icons">group</i>
                                             <span>Display users</span>
                                         </a>
                                     </li>
@@ -91,7 +91,7 @@
                             </a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_HELP_DESK_OPERATOR'])">
+                                    <li ng-if="userRolesController.hasRole(['ROLE_ADMIN', 'ROLE_HELP_DESK_OPERATOR', 'ROLE_CUSTOMER'])">
                                         <a href="#/ticket/create">
                                             <i class="material-icons">add_circle_outline</i>
                                             <span>Create new ticket</span>
