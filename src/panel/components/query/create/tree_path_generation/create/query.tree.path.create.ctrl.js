@@ -151,4 +151,8 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
     }();
 
+    $scope.$on("$destroy", function () {
+        document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))
+    })
+
 });

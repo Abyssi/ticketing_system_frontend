@@ -131,4 +131,8 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
         return sql.split(self.splitRegex);
 
     }
+
+    $scope.$on("$destroy", function () {
+        document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))
+    })
 });
