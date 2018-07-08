@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c8a083ed-17f2-473e-a010-cbda93823cd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.tmpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.tmpl.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.create.tmpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html">
+      <file leaf-file-name="query.custom.create.ctrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+            <state relative-caret-position="311">
+              <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -38,31 +42,17 @@
       <file leaf-file-name="query.edit.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+            <state relative-caret-position="1350">
+              <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.custom.create.ctrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="query.create.ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="query.tree.path.create.ctrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="query.tree.path.create.ctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="151" column="8" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
+            <state relative-caret-position="446">
+              <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -131,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/panel/controllers/userRoles.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/list/query.list.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/components/record/list/record.list.tmpl.html" />
-        <option value="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/team/list/team.list.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/app/app.rt.js" />
         <option value="$PROJECT_DIR$/src/panel/components/user/list/user.list.tmpl.html" />
@@ -145,6 +134,7 @@
         <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.tmpl.html" />
         <option value="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.tmpl.html" />
+        <option value="$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js" />
         <option value="$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js" />
       </list>
@@ -288,28 +278,6 @@
               <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="query" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
-              <item name="tree_path_generation" type="462c0819:PsiDirectoryNode" />
-              <item name="query_type" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="query" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
-              <item name="tree_path_generation" type="462c0819:PsiDirectoryNode" />
-              <item name="table" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketing_system_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketing_system_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="query" type="462c0819:PsiDirectoryNode" />
               <item name="edit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -438,7 +406,7 @@
       <workItem from="1530184334556" duration="3316000" />
       <workItem from="1530748462672" duration="1628000" />
       <workItem from="1530974003331" duration="2036000" />
-      <workItem from="1531057430923" duration="938000" />
+      <workItem from="1531057430923" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="team">
       <created>1527502292927</created>
@@ -507,7 +475,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162934000" />
+    <option name="totallyTimeSpent" value="163676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,16 +490,17 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" order="6" sideWeight="0.26395938" side_tool="true" weight="0.2524785" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7360406" visible="true" weight="0.2515625" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32868022" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" weight="0.3292232" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32741117" />
       <window_info id="npm" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="5" weight="0.32741117" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="18" weight="0.32741117" />
+      <window_info id="Gulp" order="6" sideWeight="0.26395938" side_tool="true" weight="0.2524785" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7360406" visible="true" weight="0.2515625" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32868022" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39974618" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,7 +509,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32868022" />
       <window_info anchor="bottom" id="Messages" order="16" />
     </layout>
     <layout-to-restore>
@@ -612,20 +580,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/panel/services/user.list.srvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="10" selection-start-column="4" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/app/app.rt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/record/list/record.list.tmpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -917,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="244" column="62" lean-forward="true" selection-start-line="244" selection-start-column="62" selection-end-line="244" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.tmpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -934,24 +881,45 @@
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/query.create.ctrl.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="151" column="8" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
+        <state relative-caret-position="233">
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bower_components/cronstrue/dist/cronstrue-i18n.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20051">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="244" column="62" lean-forward="true" selection-start-line="244" selection-start-column="62" selection-end-line="244" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/edit/query.edit.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+        <state relative-caret-position="1350">
+          <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/custom/query.custom.create.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        <state relative-caret-position="311">
+          <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panel/components/query/create/tree_path_generation/create/query.tree.path.create.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
         </state>
       </provider>
     </entry>

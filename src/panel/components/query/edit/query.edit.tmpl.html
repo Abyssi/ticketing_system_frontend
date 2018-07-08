@@ -55,9 +55,13 @@
                                     <option value="GREATER_EQUALS">>=</option>
                                     <option value="LESS_EQUALS"><=</option>
                                     <option value="PERCENT_GROWTH"
-                                            ng-if="queryEditController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">+ %</option>
+                                            ng-if="queryEditController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
+                                        + %
+                                    </option>
                                     <option value="PERCENT_DROP"
-                                            ng-if="queryEditController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">- %</option>
+                                            ng-if="queryEditController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
+                                        - %
+                                    </option>
 
                                 </select>
                                 <label>Choose comparison operator</label>

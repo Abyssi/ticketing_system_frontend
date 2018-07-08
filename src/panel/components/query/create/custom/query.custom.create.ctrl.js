@@ -1,4 +1,4 @@
-angular.module('app.ctrl').controller('queryCustomCreateController', function (userService, queryService, $timeout) {
+angular.module('app.ctrl').controller('queryCustomCreateController', function (userService, queryService, $timeout, $scope) {
     const self = this;
 
     self.queryForm = {
@@ -65,11 +65,9 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
 
         if (sqlSplitted.length > 0) {
 
-            sqlSplitted.forEach(function (element, index, array) {
-                if (element.match(self.sqlRegex)) {
+            for (let i = 0; i < sqlSplitted.length; i++)
+                if (sqlSplitted[i].match(self.sqlRegex))
                     return false;
-                }
-            });
 
             return true;
 

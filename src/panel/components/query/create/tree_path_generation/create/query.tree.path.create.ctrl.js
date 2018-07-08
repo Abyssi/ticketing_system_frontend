@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ctrl').controller('queryTreePathCreateController', function (userService, queryService, queryBuilderService, $timeout) {
+angular.module('app.ctrl').controller('queryTreePathCreateController', function (userService, queryService, queryBuilderService, $timeout, $scope) {
 
     const self = this;
 
@@ -59,11 +59,9 @@ angular.module('app.ctrl').controller('queryTreePathCreateController', function 
 
         if (sqlSplitted.length > 0) {
 
-            sqlSplitted.forEach(function (element, index, array) {
-                if (element.match(self.sqlRegex)) {
+            for (let i = 0; i < sqlSplitted.length; i++)
+                if (sqlSplitted[i].match(self.sqlRegex))
                     return false;
-                }
-            });
 
             return true;
 

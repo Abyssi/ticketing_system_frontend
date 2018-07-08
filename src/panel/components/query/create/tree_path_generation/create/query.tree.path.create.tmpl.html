@@ -54,9 +54,13 @@
                                     <option value="GREATER_EQUALS">>=</option>
                                     <option value="LESS_EQUALS"><=</option>
                                     <option value="PERCENT_GROWTH"
-                                            ng-if="queryTreePathCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">+ %</option>
+                                            ng-if="queryTreePathCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
+                                        + %
+                                    </option>
                                     <option value="PERCENT_DROP"
-                                            ng-if="queryTreePathCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">- %</option>
+                                            ng-if="queryTreePathCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
+                                        - %
+                                    </option>
                                 </select>
                                 <label>Choose query priority (It will be ticket priority)</label>
                             </div>
