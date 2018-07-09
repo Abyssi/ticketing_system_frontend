@@ -127,5 +127,9 @@ angular.module('app.rt', ['ngRoute']).config(function ($locationProvider, $route
             controller: 'userEditController as userEditController'
         })
 
+        .when('/support', {
+            templateUrl: 'components/support/support.tmpl.html'
+        })
+
         .otherwise({redirectTo: '/ticket/list'});
 });
