@@ -14,18 +14,6 @@ angular.module('app.ctrl').controller('teamEditController', function ($routePara
     self.teamId = $routeParams.id;
     self.members = [];
 
-    self.init = function () {
-        if (!userService.isLogged()) window.location.href = "../";
-
-        teamService.get(self.teamId, function (response) {
-            self.teamForm.name = response.data.name;
-            self.teamForm.leader = response.data.leader;
-            self.teamForm.members = response.data.members;
-        }), function () {
-            alert("Invalid get");
-        };
-    }();
-
     self.update = function () {
         if (!self.validateForm(this.teamForm)) {
             alert("Invalid form");
@@ -124,4 +112,17 @@ angular.module('app.ctrl').controller('teamEditController', function ($routePara
     self.validateForm = function (form) {
         return form.name.length > 1;
     };
+
+    self.init = function () {
+        if (!userService.isLogged()) window.location.href = "../";
+
+        teamService.get(self.teamId, function (response) {
+            self.teamForm.name = response.data.name;
+            self.teamForm.members = response.data.members;
+            self.toggleLeader(response.data.leader);
+            self.teamForm.members[self.findById(self.teamForm.members, self.teamForm.leader.id)].checked = true;
+        }), function () {
+            alert("Invalid get");
+        };
+    }();
 });

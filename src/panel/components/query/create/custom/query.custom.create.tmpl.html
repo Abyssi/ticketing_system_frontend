@@ -23,6 +23,17 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
+                                <select ng-model="queryCustomCreateController.queryForm.queryType"
+                                        ng-change="queryCustomCreateController.changeType()">
+                                    <option value="" disabled selected>Choose query type</option>
+                                    <option value="DATA_BASE_INSTANT_CHECK">Instant check</option>
+                                    <option value="DATA_BASE_TABLE_MONITOR">Monitoring</option>
+                                </select>
+                                <label>Choose query type (It will influence query's behaviour)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
                                 <select ng-model="queryCustomCreateController.queryForm.queryPriority.id">
                                     <option value="" disabled selected>Choose priority</option>
                                     <option ng-repeat="priority in queryCustomCreateController.priorities"
@@ -53,14 +64,8 @@
                                     <option value="EQUALS">=</option>
                                     <option value="GREATER_EQUALS">>=</option>
                                     <option value="LESS_EQUALS"><=</option>
-                                    <option value="PERCENT_GROWTH"
-                                            ng-if="queryCustomCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
-                                        + %
-                                    </option>
-                                    <option value="PERCENT_DROP"
-                                            ng-if="queryCustomCreateController.queryForm.queryType === 'DATA_BASE_TABLE_MONITOR'">
-                                        - %
-                                    </option>
+                                    <option value="PERCENT_GROWTH" ng-disabled="queryCustomCreateController.queryForm.queryType != 'DATA_BASE_TABLE_MONITOR'">+ %</option>
+                                    <option value="PERCENT_DROP" ng-disabled="queryCustomCreateController.queryForm.queryType != 'DATA_BASE_TABLE_MONITOR'">- %</option>
                                 </select>
                                 <label>Choose comparison operator</label>
                             </div>
@@ -70,16 +75,6 @@
                                 <input id="reference_value" type="number"
                                        ng-model="queryCustomCreateController.queryForm.referenceValue">
                                 <label for="reference_value" class="active">Reference value</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <select ng-model="queryCustomCreateController.queryForm.queryType">
-                                    <option value="" disabled selected>Choose query type</option>
-                                    <option value="DATA_BASE_INSTANT_CHECK">Instant check</option>
-                                    <option value="DATA_BASE_TABLE_MONITOR">Monitoring</option>
-                                </select>
-                                <label>Choose query type (It will influence query's behaviour)</label>
                             </div>
                         </div>
                         <div class="row">

@@ -122,13 +122,19 @@ angular.module('app.ctrl').controller('queryCustomCreateController', function (u
             self.cronFormatted = "It isn't a valid cron (ex: * * * * * ?)";
 
         }
-    }
+    };
 
     self.splitSQL = function (sql) {
 
         return sql.split(self.splitRegex);
 
-    }
+    };
+
+    self.changeType = function () {
+        $timeout(function () {
+            M.AutoInit();
+        });
+    };
 
     $scope.$on("$destroy", function () {
         document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))

@@ -163,6 +163,12 @@ angular.module('app.ctrl').controller('queryEditController', function ($scope, $
 
     }
 
+    self.changeType = function () {
+        $timeout(function () {
+            M.AutoInit();
+        });
+    };
+
     $scope.$on("$destroy", function () {
         document.querySelectorAll('.material-tooltip').forEach(e => e.parentNode.removeChild(e))
     })

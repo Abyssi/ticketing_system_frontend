@@ -30,7 +30,7 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
     };
 
     self.search = function () {
-        ticketService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
+        ticketService.search(self.searchTerm, self.currentPage - 1, 10, function (response) {
             self.tickets = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
@@ -40,7 +40,7 @@ angular.module('app.ctrl').controller('ticketListController', function ($routePa
     };
 
     self.reset = function () {
-        ticketService.list(self.currentPage - 1, 3, function (response) {
+        ticketService.list(self.currentPage - 1, 10, function (response) {
             self.tickets = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
