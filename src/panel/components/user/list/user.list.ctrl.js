@@ -10,7 +10,7 @@ angular.module('app.ctrl').controller('userListController', function ($routePara
 
 
     self.search = function () {
-        userService.search(self.searchTerm, self.currentPage - 1, 3, function (response) {
+        userService.search(self.searchTerm, self.currentPage - 1, 5, function (response) {
             self.users = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
@@ -21,7 +21,7 @@ angular.module('app.ctrl').controller('userListController', function ($routePara
 
 
     self.reset = function () {
-        userService.list(self.currentPage - 1, 3, function (response) {
+        userService.list(self.currentPage - 1, 5, function (response) {
             self.users = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {

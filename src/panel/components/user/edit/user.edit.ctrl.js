@@ -30,6 +30,9 @@ angular.module('app.ctrl').controller('userEditController', function ($routePara
             self.userForm.email = response.data.email;
             self.userForm.company.id = response.data.company.id.toString();
             self.userForm.roles[0].id = response.data.roles[0].id.toString();
+            $timeout(function () {
+                M.AutoInit();
+            });
         }, function () {
             alert("Invalid get");
         });

@@ -10,7 +10,7 @@ angular.module('app.ctrl').controller('recordListController', function ($routePa
 
 
     self.search = function () {
-        recordService.search(self.searchTerm.toUpperCase(), self.currentPage - 1, 3, function (response) {
+        recordService.search(self.searchTerm.toUpperCase(), self.currentPage - 1, 4, function (response) {
             self.records = response.data.content;
             self.totalPages = response.data.totalPages;
         }, function () {
@@ -30,7 +30,7 @@ angular.module('app.ctrl').controller('recordListController', function ($routePa
     };
 
     self.reset = function () {
-        recordService.list(self.currentPage - 1, 3, function (response) {
+        recordService.list(self.currentPage - 1, 4, function (response) {
             self.records = response.data.content;
 
             self.formatRecords();

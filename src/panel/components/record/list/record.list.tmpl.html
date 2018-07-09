@@ -12,7 +12,7 @@
                            class="search-input-box"
                            ng-model="recordListController.searchTerm"
                            ng-enter="recordListController.set(1)">
-                    <label for="autocomplete-input" style="color: white" class="active">Search records ny tag</label>
+                    <label for="autocomplete-input" style="color: white" class="active">Search records by tag</label>
                     <ul class="collection task-card" ng-if="recordListController.recordSearch.length > 0">
                         <li ng-repeat="record in recordListController.recordSearch ">
                             <a ng-click="">
